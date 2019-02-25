@@ -4,4 +4,5 @@
     <filter root="/apps/sling" />
     <filter root="/etc/FPL" />
     <filter root="/etc/nextEra" />
+    <filter root="/etc/texas" />
 </workspaceFilter>
