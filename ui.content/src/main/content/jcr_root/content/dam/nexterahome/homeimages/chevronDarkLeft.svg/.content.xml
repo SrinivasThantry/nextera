@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="cc45d619-dbbf-4cb4-804d-dbce9ed8aad3">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/homeimages/chevronDarkLeft.svg"
+        jcr:lastModified="{Date}2019-02-14T06:33:49.324+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-02-14T06:33:44.397+05:30"
+            dam:sha1="e64ea6c95a763f2a9bbe65cd16e0bd62ae54b383"
+            dam:size="{Long}1202"
+            dc:format="image/svg+xml"
+            dc:modified="{Date}2019-01-18T05:43:38.769Z"
+            jcr:lastModified="{Date}2019-02-14T06:33:49.324+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

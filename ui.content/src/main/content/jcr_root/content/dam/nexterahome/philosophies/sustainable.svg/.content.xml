@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="910204ab-d1c6-4904-a964-912bcd161760">
+    <jcr:content
+        cq:lastReplicated="{Date}2019-01-30T18:03:24.208Z"
+        cq:lastReplicatedBy="peakster3"
+        cq:lastReplicationAction="Activate"
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/philosophies/sustainable.svg"
+        jcr:lastModified="{Date}2019-02-14T06:34:02.869+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-02-14T06:34:01.350+05:30"
+            dam:sha1="ccf02c11964610b20c0806c8ac90b51260389acd"
+            dam:size="{Long}2341"
+            dc:format="image/svg+xml"
+            dc:modified="{Date}2019-01-20T15:52:01.543-05:00"
+            jcr:lastModified="{Date}2019-02-14T06:33:21.850+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

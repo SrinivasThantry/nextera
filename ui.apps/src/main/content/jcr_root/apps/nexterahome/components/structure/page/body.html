@@ -1,0 +1,17 @@
+<sly data-sly-resource="${'header' @ resourceType='wcm/foundation/components/iparsys'}"/>
+
+<!-- END HEADER -->
+
+<!-- START NAVBAR -->
+
+<!-- END NAVBAR -->
+
+<!-- START PARSYS -->
+<sly data-sly-test="${wcmmode.edit}">Body Content Start</sly>
+<sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/parsys'}"/>
+<sly data-sly-test="${wcmmode.edit}">Body Content End</sly>
+<!-- END PARSYS -->
+
+<!-- START FOOTER -->
+<sly data-sly-resource="${'footer' @ resourceType='wcm/foundation/components/iparsys'}"/>
+<!-- END FOOTER -->

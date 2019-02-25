@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="14ef8b3d-06ff-49f1-af59-8952a410bc83">
+    <jcr:content
+        cq:lastReplicated="{Date}2019-02-05T18:40:17.980Z"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/homeimages/nexterahomeLogoBW.svg"
+        jcr:lastModified="{Date}2019-02-14T06:33:45.707+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-02-14T06:33:22.199+05:30"
+            dam:sha1="73f4f1e8df495673ace3b1825ab5eb636b69ec07"
+            dam:size="{Long}2655"
+            dc:format="image/svg+xml"
+            dc:modified="{Date}2019-02-02T01:23:45.319-05:00"
+            jcr:lastModified="{Date}2019-02-14T06:33:45.706+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

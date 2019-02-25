@@ -1,0 +1,46 @@
+<div class="heroBkrd" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrdTopRight.svg'); background-repeat: no-repeat !important; background-position: top right;">
+<div class="container">  
+      <div class="row">    
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="heading" data-sly-test="${properties.headerlabel}">${properties.headerlabel}</div>
+            <div class="subHeading center" data-sly-test="${properties.description}">${properties.description}</div>
+        </div>
+      </div>
+
+
+<!-- FAQ SECTION -->
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12" data-sly-use.logic="${'nexterahome.core.models.ServiceproviderCheck' @ child='faqAns'}">>
+
+        <div data-sly-test="${logic.size == 'true'}" class="faq-wrap" data-sly-use.nexterafaqs="${resource.path}/faqAns"> 
+		<div id="accordion" data-sly-list.faqwithans="${nexterafaqs.listChildren}">
+      	<div class="question">
+          <div class="title-wrap clearfix">
+              <h6 class="accordion-toggle">${faqwithans.faqTitle}</h6>
+              <div class="accordion-icon"><img class="open-icon" src="/content/dam/nexterahome/homeimages/e-add.svg"><img class="close-icon" src="/content/dam/nexterahome/homeimages/e-delete.svg"></div>
+          </div>
+          <div class="accordion-content">
+            <p>${faqwithans.faqAnswer}</p>
+          </div>
+
+        </div>
+		</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- END FAQ SECTION -->
+</div>
+
+<div class="advantageBkrd">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+  
+      </div>
+    </div>
+  </div>
+</div>

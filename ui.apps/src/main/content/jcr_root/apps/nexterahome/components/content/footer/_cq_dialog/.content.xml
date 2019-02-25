@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Footer"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_4_docs_component_en#Image - HTL">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <details
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Details"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <nextEraLogo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Select Next Era Logo"
+                                fieldLabel="Next Era Logo"
+                                name="./nextEraLogo"
+                                rootPath="/content/dam"/>
+                            <nextEraLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="http://www.nexterahome.com"
+                                fieldLabel="Next Era Logo CTA"
+                                name="./nextEraLogoCta"/>
+                            <fplLogo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Select FPL Logo"
+                                fieldLabel="FPL Logo"
+                                name="./fplLogo"
+                                rootPath="/content/dam"/>
+                            <fplLogoLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="http://www.fplhome.com"
+                                fieldLabel="FPL Logo CTA"
+                                name="./fplLogoCta"/>
+                            <copyRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="&amp;copy;2018 NextEra Home. All rights reserved."
+                                fieldLabel="Copy Right"
+                                name="./copyRight"/>
+                            <facebookpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Facebook URL"
+                                name="./fburl"/>
+                            <instapath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Instagram URL"
+                                name="./instaurl"/>
+                            <twitterpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Twitter URL"
+                                name="./twitterurl"/>
+                        </items>
+                    </column>
+                </items>
+            </details>
+            <topLinks
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Top Links"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <topLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Top Links">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./topLinks">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Link Title"
+                                                    name="./linkTitle"/>
+                                                <pathbr
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Select Path"
+                                                    fieldLabel="Path"
+                                                    name="./pathbr"
+                                                    rootPath="/content"/>
+                                                <opennewtab
+                                                    cq:lastReplicated="{Date}2019-01-24T03:22:32.477Z"
+                                                    cq:lastReplicatedBy="peakster4"
+                                                    cq:lastReplicationAction="Activate"
+                                                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    defaultValue="no"
+                                                    fieldLabel="Open in new tab?"
+                                                    name="./openInNewTab"
+                                                    value="no">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <no
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="No"
+                                                            value="no"/>
+                                                        <yes
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Yes"
+                                                            value="yes"/>
+                                                    </items>
+                                                </opennewtab>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </topLinks>
+                        </items>
+                    </column>
+                </items>
+            </topLinks>
+            <bottomLinks
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bottom Links"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <bottomLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Bottom Links">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./bottomLinks">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Link Title"
+                                                    name="./linkTitle"/>
+                                                <pathbr
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Select Path"
+                                                    fieldLabel="Path"
+                                                    name="./pathbr"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </bottomLinks>
+                        </items>
+                    </column>
+                </items>
+            </bottomLinks>
+        </items>
+    </content>
+</jcr:root>

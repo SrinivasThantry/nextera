@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="7630d354-9020-450c-b2b1-a7dc297ebb55">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="nextEra/nextEra-validzipcodes.xlsx"
+        jcr:lastModified="{Date}2019-02-14T06:34:21.204+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Application="Microsoft Excel"
+            dam:AppVersion="{Decimal}16.0300"
+            dam:created="{Date}2018-11-09T19:01:33.000Z"
+            dam:DocSecurity="{Long}0"
+            dam:extracted="{Date}2019-02-14T06:33:48.827+05:30"
+            dam:HeadingPairs="Worksheets2"
+            dam:HyperlinksChanged="false"
+            dam:i4="{Long}2"
+            dam:lastModifiedBy="vamsi"
+            dam:LinksUpToDate="false"
+            dam:lpstr="Radius Export 0-50 11-9-2018 1-"
+            dam:modified="{Date}2018-12-25T23:50:17.000Z"
+            dam:ScaleCrop="false"
+            dam:sha1="fff565b606bc9b50eb9183c2a93b1e8749a92c8f"
+            dam:SharedDoc="false"
+            dam:size="{Long}58514"
+            dam:TitlesOfParts="List - No dupsRadius Export 0-50 11-9-2018 1-"
+            dam:variant="{Long}2"
+            dam:vector="List - No dupsRadius Export 0-50 11-9-2018 1-"
+            dc:creator="[Stewart A Clark]"
+            dc:creator_xmpArrayType="rdf:Bag"
+            dc:format="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            dc:modified="{Date}2019-01-15T03:33:41.770Z"
+            jcr:lastModified="{Date}2019-02-14T06:34:21.204+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Next Era Enroll Now"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_4_docs_component_en#Image - HTL">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <details
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Details"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="TItle"
+                                fieldLabel="Title"
+                                name="./title"/>
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Heading"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+                        </items>
+                    </column>
+                </items>
+            </details>
+            <primaryAddress
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Primary Address Lables"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <forminstruction
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Form Heading"
+                                fieldLabel="Form Heading"
+                                name="./formHeading"
+                                required="true"/>
+                            <firstName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter First Name Label"
+                                fieldLabel="First Name"
+                                name="./firstName"
+                                required="true"/>
+                            <lastName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Last Name Label"
+                                fieldLabel="Last Name"
+                                name="./lastName"
+                                required="true"/>
+                            <mailingAddress
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Mailing Address Label"
+                                fieldLabel="Mailing Address"
+                                name="./mailingAddress"
+                                required="true"/>
+                            <mailingAddressOptional
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Mailing Address Label (optional)"
+                                fieldLabel="Mailing Address (optional)"
+                                name="./mailingAddressOptional"
+                                required="true"/>
+                            <zipcode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="ZIP Code"
+                                fieldLabel="ZIP Code Label"
+                                name="./zipcode"
+                                required="true"/>
+                            <city
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter City"
+                                fieldLabel="City Label"
+                                name="./city"
+                                required="true"/>
+                            <state
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter State Label"
+                                fieldLabel="State"
+                                name="./state"
+                                required="true"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Email Label"
+                                fieldLabel="Email"
+                                name="./email"/>
+                            <reEnterEmail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Re Enter Email"
+                                fieldLabel="Re Enter Email"
+                                name="./reEnterEmail"
+                                required="true"/>
+                        </items>
+                    </column>
+                </items>
+            </primaryAddress>
+            <service
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Covered Service"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <copy
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Covered Service copy"
+                                fieldLabel="Covered Service copy"
+                                name="./converedService"/>
+                            <legalaggrement
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Legal Agreement"
+                                fieldLabel="Legal Agreement copy"
+                                name="./legalAgreementCopy"/>
+                        </items>
+                    </column>
+                </items>
+            </service>
+            <secondaryPrimaryAddress
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Primary Address Lables"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <forminstruction
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Form Heading"
+                                fieldLabel="Form Heading"
+                                name="./formHeadingSecondary"
+                                required="true"/>
+                            <firstName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter First Name Label"
+                                fieldLabel="First Name"
+                                name="./firstNameSecondary"
+                                required="true"/>
+                            <lastName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Last Name Label"
+                                fieldLabel="Last Name"
+                                name="./lastNameSecondary"
+                                required="true"/>
+                            <mailingAddress
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Mailing Address Label"
+                                fieldLabel="Mailing Address"
+                                name="./mailingAddressSecondary"
+                                required="true"/>
+                            <mailingAddressOptional
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Mailing Address Label (optional)"
+                                fieldLabel="Mailing Address (optional)"
+                                name="./mailingAddressOptionalSecondary"
+                                required="true"/>
+                            <zipcode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="ZIP Code"
+                                fieldLabel="ZIP Code Label"
+                                name="./zipcodeSecondary"
+                                required="true"/>
+                            <city
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter City"
+                                fieldLabel="City Label"
+                                name="./citySecondary"
+                                required="true"/>
+                            <state
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter State Label"
+                                fieldLabel="State"
+                                name="./stateSecondary"
+                                required="true"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Email Label"
+                                fieldLabel="Email"
+                                name="./emailSecondary"
+                                required="true"/>
+                        </items>
+                    </column>
+                </items>
+            </secondaryPrimaryAddress>
+            <submit
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CTA"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <submit
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Submit Label"
+                                fieldLabel="Submit Button Label"
+                                name="./submit"/>
+                        </items>
+                    </column>
+                </items>
+            </submit>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,54 @@
+ <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<sly data-sly-call="${clientLib.all @ categories='nexterahome.base'}"></sly>
+
+
+
+<div class="heroBkrd" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrd.svg'); background-repeat: no-repeat !important; background-position: top center;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 d-lg-none">
+          <div class="heroAnimation">
+              <img src="${properties.imagepath}">
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+          <h3>${properties.heading @ context='html'}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6">
+
+        <div class="subHeading">
+          ${properties.subheader @ context='html'}
+        </div>
+        <div class="heroBody">${properties.description @ context='html'}</div>
+        <div class="heroCTA">${properties.ctadescription @ context='html'}</div>
+        <form id="zipfinder">
+        <input type="text" id="zip" class="rectangle" name="zip" placeholder="Enter Zip Code">
+        <a class="white" href="${properties.ctaurl}.html"><button id="zipsubmit" class="btn btn-secondary">${properties.ctalabel}</button></a>
+        </form>
+        <!-- <div class="marginBottom"></div> -->
+         <div class="mb25"></div> 
+        <div class="disclaimer">${properties.disclaimertext @ context='html'}</div>
+      </div>
+
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-4 offset-lg-1">
+        <div class="heroAnimation">
+          <img src="${properties.imagepath}">
+        </div>
+      </div>
+
+    </div>
+
+   <div class="row">
+   <div class="col-sm-12 col-md-12 col-lg-12">
+   <sly data-sly-resource="${'howitworksection' @ resourceType='nexterahome/components/content/howitworks'}"/>
+  </div>
+  </div>
+ </div>
+</div>
+
+</sly>

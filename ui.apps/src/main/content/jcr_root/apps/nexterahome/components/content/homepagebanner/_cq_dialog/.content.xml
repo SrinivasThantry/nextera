@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Banner Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <imagepath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldDescription="Image Path"
+                                fieldLabel="Image Path"
+                                name="./imagepath"/>
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Header"
+                                fieldLabel="Header"
+                                name="./heading"/>
+                            <subheader
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Sub Header"
+                                fieldLabel="Sub Header"
+                                name="./subheader"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Description"
+                                fieldLabel="Description"
+                                name="./description"/>
+                            <ctadescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="CTA Description"
+                                fieldLabel="CTA Description"
+                                name="./ctadescription"/>
+                            <ctalabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="CTA Description"
+                                fieldLabel="CTA Description"
+                                name="./ctalabel"/>
+                            <ctaurl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldDescription="CTA URL"
+                                fieldLabel="CTA URL"
+                                name="./ctaurl"
+                                rootPath="/content/nexterahome"/>
+                            <disclaimertext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Disclaimer Text"
+                                fieldLabel="Disclaimer Text"
+                                name="./disclaimertext"/>
+                            <howitworkscta
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="howitworksdescription"
+                                fieldLabel="howitworkslabel"
+                                name="./howitworks"/>
+                            <howitworksurl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldDescription="how it works url path"
+                                fieldLabel="how it works url label"
+                                name="./howitworksurl"/>
+                            <howitworksheading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="How It Works Heading"
+                                fieldLabel="How It Works Heading"
+                                name="./heading1"/>
+                            <howitworkstext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="How It Works Heading"
+                                fieldLabel="How It Works Heading"
+                                name="./howitworkstext"/>
+                        </items>
+                    </column>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-12-29T04:36:57.072+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="English"
+        sling:resourceType="nexterahome/components/structure/page"
+        pageTitle="Nextera Home English">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <image_1
+                jcr:created="{Date}2015-01-01T00:00:00.000Z"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mfHTL62/components/content/image"
+                fileReference="/content/dam/mfHTL62/asset.jpg"/>
+            <text
+                jcr:created="{Date}2018-04-17T13:41:53.252-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-12-29T04:36:57.063+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/text"
+                iDashboard="Dash1"
+                text="&lt;p>content is here&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+        </par>
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+    </jcr:content>
+    <homestrcture/>
+</jcr:root>

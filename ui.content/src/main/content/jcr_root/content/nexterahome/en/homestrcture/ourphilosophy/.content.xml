@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-05T18:18:05.565Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-01-30T18:03:24.208Z"
+        cq:lastReplicatedBy="peakster3"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/nexterahome/templates/nextera-home"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Our Philosophy"
+        jcr:uuid="c92fcbc9-69b2-4dbc-8f5b-de638b9dc97a"
+        sling:resourceType="nexterahome/components/structure/page"
+        navTitle="Our Philosophy"
+        pageTitle="Our Philosophy">
+        <logo
+            jcr:lastModified="{Date}2018-12-31T05:41:23.034+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/logo"
+            logoimagepath="/content/dam/nexterahome/homeimages/nexterahomeLogo.png"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:lastModified="{Date}2019-01-03T00:03:13.329-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/text"
+                text="&lt;p>This is a Our Philosophy&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+            <ourphilosophy
+                cq:lastReplicated="{Date}2019-01-24T03:05:56.418Z"
+                cq:lastReplicatedBy="peakster4"
+                cq:lastReplicationAction="Activate"
+                jcr:created="{Date}2019-01-17T16:53:11.472Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-05T18:18:05.556Z"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/ourphilosophy"
+                heading="Caring for the homes of the future"
+                hyperlinktext="Nextera Home"
+                hyperlinkurl="/content/nexterahome/en/homestrcture.html"
+                imagePath="/content/dam/nexterahome/philosophies/philosophy.png"
+                serviceDescription="&lt;b>NextEra Home&lt;/b> transforms the home warranty industry by offering a simple healthy home monthly service plan. As an affiliate of the largest renewable energy company in the world, &lt;a target=&quot;_blank&quot; href=&quot;http://www.nexteraenergy.com/&quot;>NextEra Energy&lt;/a>, NextEra Home offers service plans that can help you manage your home and become a responsible citizen of a sustainable world. "
+                serviceDescription2="Backed by the largest renewable energy company in the world, we help you manage your home and become a responsible citizen of a sustainable world."
+                serviceTitle="A new, modern approach to home services."
+                subtitle="Transforming the home warranty industry"
+                title="Our philosophy">
+                <philosophies jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        philosophyDescription="The houses of tomorrow are built on strength and wellness. Appliance and home system repairs will be worry-free and more affordable."
+                        philosophyHeader="We Look Forward"
+                        philosophyImage="/content/dam/nexterahome/philosophies/look-forward.svg"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        philosophyDescription="We’re innovating ideas to help keep your home smart and safe. Additional peace of mind brightens the years ahead."
+                        philosophyHeader="We Are Ambitious"
+                        philosophyImage="/content/dam/nexterahome/philosophies/ambitious.svg"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        philosophyDescription="The house of the future will be powered by efficient, American-made energy to meet the evolving needs of your home – and your wallet."
+                        philosophyHeader="We Are Sustainable"
+                        philosophyImage="/content/dam/nexterahome/philosophies/sustainable.svg"/>
+                </philosophies>
+            </ourphilosophy>
+        </par>
+    </jcr:content>
+</jcr:root>

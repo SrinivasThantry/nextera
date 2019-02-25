@@ -1,0 +1,19 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='nexterahome.thankyou'}"/>
+</sly> 
+<div class="heroBkrd" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrdTopRight.svg');"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="thank-you-wrap">
+                <div class="heading">${properties.headerlabel}</div>
+                <div class="subHeading">${properties.description}</div>
+                <a target="_blank" data-sly-test="${properties.ctaurl}" href="${properties.ctaurl}">
+                    <button class="btn btn-secondary">${properties.ctalabel}</button>
+                </a>
+                <div class="buttonSpacing"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

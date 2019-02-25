@@ -1,0 +1,311 @@
+<sly data-sly-test="${request.requestParameterMap['plan'][0].toString}">
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    <sly data-sly-call="${clientlib.js @ categories='nexterahome.enrollnow'}" />    
+    <!-- END NAVBAR -->
+    <div id="enrollNowForm" class="heroBkrd"" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrdTopRight.svg'); background-repeat: no-repeat !important; background-position: top right;">
+        <div class="container">  
+            <div class="row">    
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="heading" data-sly-test="${properties.title}">${properties.title}</div>
+                    <div id="plan" class="subHeading center" data-sly-test="${request.requestParameterMap['plan'][0].toString}">${request.requestParameterMap['plan'][0].toString}</div>
+                </div>
+            </div>
+
+
+    <!-- ENROLL NOW SECTION -->
+
+            <div class="row">
+                <div class="col-sm-12 offset-md-1 col-md-10 offset-lg-1 col-lg-10">
+                    <div class="formBkrd"> 
+                    <form class="clearfix">
+                        <div class="enrollText" data-sly-test="${properties.formHeading}">${properties.formHeading}</div>
+                        <!-- ROW 1 -->
+                        <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.firstName}">
+                            <label>${properties.firstName}</label>
+                            <input required id="firstName" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.lastName}">
+                            <label>${properties.lastName}</label>
+                            <input required id="lastName" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- ROW 2 -->
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-block floating-field" data-sly-test="${properties.mailingAddress}">
+                            <label>${properties.mailingAddress}</label>
+                            <input required id="mailingAddress" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- ROW 3 -->
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-block floating-field" data-sly-test="${properties.mailingAddressOptional}">
+                            <label>${properties.mailingAddressOptional}</label>
+                            <input id="mailingAddressOptional" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+
+
+                    <!-- ROW 4 -->
+                        <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="input-block floating-field" data-sly-test="${properties.zipcode}">
+                            <label>${properties.zipcode}</label>
+                            <input required id="form1Zipcode" value="" type="text" maxlength="15" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="input-block floating-field" data-sly-test="${properties.city}">
+                            <label>${properties.city}</label>
+                            <input required id="city" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+							<div class="form-group" data-sly-test="${properties.state}">
+                      			<label>${properties.state}</label>
+                                    <select required class="form-control" id="MailingAddressState" type="text" name="MailingAddress[State]" tabindex="7">
+                                        <option>AL</option>
+                                        <option>AK</option>
+                                        <option>AZ</option>
+                                        <option>AR</option>
+                                        <option>CA</option>
+                                        <option>CO</option>
+                                        <option>CT</option>
+                                        <option>DE</option>
+                                        <option>D.C</option>
+                                        <option>FL</option>
+                                        <option>GA</option>
+                                        <option>HI</option>
+                                        <option>ID</option>
+                                        <option>IL</option>
+                                        <option>IN</option>
+                                        <option>IA</option>
+                                        <option>KS</option>
+                                        <option>KY</option>
+                                        <option>LA</option>
+                                        <option>ME</option>
+                                        <option>MD</option>
+                                        <option>MA</option>
+                                        <option>MI</option>
+                                        <option>MN</option>
+                                        <option>MS</option>
+                                        <option>MO</option>
+                                        <option>MT</option>
+                                        <option>NE</option>
+                                        <option>NV</option>
+                                        <option>NH</option>
+                                        <option>NJ</option>
+                                        <option>NM</option>
+                                        <option>NY</option>
+                                        <option>NC</option>
+                                        <option>ND</option>
+                                        <option>OH</option>
+                                        <option>OK</option>
+                                        <option>PA</option>
+                                        <option>RI</option>
+                                        <option>SC</option>
+                                        <option>SD</option>
+                                        <option>TN</option>
+                                        <option>TX</option>
+                                        <option>UT</option>
+                                        <option>VT</option>
+                                        <option>VA</option>
+                                        <option>WA</option>
+                                        <option>WV</option>
+                                        <option>WI</option>
+                                        <option>WY</option>
+                                  </select>                         
+                    			</div>
+                        	</div>
+                       	</div>
+
+                        <!-- ROW 5 -->
+                        <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.email}">
+                            <label>${properties.email}</label>
+                            <input required id="email" value="" type="email" maxlength="100" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.reEnterEmail}">
+                            <label>${properties.reEnterEmail}</label>
+                            <input required id="reEnterEmail" value="" type="email"  maxlength="100" class="form-control">
+                            </div>
+                            <div class="error-label">Email does not match.</div>
+                        </div>
+                        </div>
+
+                    <!-- CHECKBOXES -->
+                    <div class="row checkbox-group">
+                        <div class="col-md-12">
+                                <label class="control control-checkbox" data-sly-test="${properties.converedService}">
+                                <input type="checkbox" id="serviceAddressChk" />${properties.converedService}
+                                <div class="control-indicator"></div>
+                                </label>
+                                <label data-sly-test="${properties.legalAgreementCopy}" class="control control-checkbox" id="legalAgreementCopy">${properties.legalAgreementCopy}
+                                <input type="checkbox"/>
+                                <div class="control-indicator"></div>	
+                        </div>
+                    </div>
+
+                    <!-- DIFFERENT SERVICE ADDRESS FORM - HIDDEN UNLESS USER CHECKS FIRST CHECKBOX -->
+                        <div class="diff-service-address" style="display:none;" id="serviceAddressSct">
+                        <div class="enrollText" data-sly-test="${properties.formHeadingSecondary}">${properties.formHeadingSecondary}</div>
+
+                        <!-- ROW 1 -->
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.firstNameSecondary}">
+                                <label>${properties.firstNameSecondary}</label>
+                                <input required id="firstNameSecondary" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="${properties.lastNameSecondary}">
+                                <label>${properties.lastNameSecondary}</label>
+                                <input required id="lastNameSecondary" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- ROW 2 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div class="input-block floating-field" data-sly-test="${properties.mailingAddressSecondary}">
+                                <label>${properties.mailingAddressSecondary}</label>
+                                <input required id="mailingAddressSecondary" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- ROW 3 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div class="input-block floating-field" data-sly-test="${properties.mailingAddressOptionalSecondary}">
+                                <label>${properties.mailingAddressOptionalSecondary}</label>
+                                <input id="mailingAddressOptionalSecondary" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+
+
+                        <!-- ROW 4 -->
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                            <div class="input-block floating-field" data-sly-test="${properties.zipcodeSecondary}">
+                                <label>${properties.zipcodeSecondary}</label>
+                                <input required id="form2Zipcode" value="" type="text" maxlength="15" class="form-control">
+                            </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                            <div class="input-block floating-field" data-sly-test="${properties.citySecondary}">
+                                <label>${properties.citySecondary}</label>
+                                <input required id="citySecondary" value="" type="text" maxlength="40" class="form-control">
+                            </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+								<div class="form-group" data-sly-test="${properties.stateSecondary}">
+                      				<label>${properties.stateSecondary}</label>
+                                    	<select required class="form-control" id="stateSecondary" type="text" name="CoverageAddress[State]" tabindex="18">
+                                            <option>AL</option>
+                                            <option>AK</option>
+                                            <option>AZ</option>
+                                            <option>AR</option>
+                                            <option>CA</option>
+                                            <option>CO</option>
+                                            <option>CT</option>
+                                            <option>DE</option>
+                                            <option>D.C</option>
+                                            <option>FL</option>
+                                            <option>GA</option>
+                                            <option>HI</option>
+                                            <option>ID</option>
+                                            <option>IL</option>
+                                            <option>IN</option>
+                                            <option>IA</option>
+                                            <option>KS</option>
+                                            <option>KY</option>
+                                            <option>LA</option>
+                                            <option>ME</option>
+                                            <option>MD</option>
+                                            <option>MA</option>
+                                            <option>MI</option>
+                                            <option>MN</option>
+                                            <option>MS</option>
+                                            <option>MO</option>
+                                            <option>MT</option>
+                                            <option>NE</option>
+                                            <option>NV</option>
+                                            <option>NH</option>
+                                            <option>NJ</option>
+                                            <option>NM</option>
+                                            <option>NY</option>
+                                            <option>NC</option>
+                                            <option>ND</option>
+                                            <option>OH</option>
+                                            <option>OK</option>
+                                            <option>PA</option>
+                                            <option>RI</option>
+                                            <option>SC</option>
+                                            <option>SD</option>
+                                            <option>TN</option>
+                                            <option>TX</option>
+                                            <option>UT</option>
+                                            <option>VT</option>
+                                            <option>VA</option>
+                                            <option>WA</option>
+                                            <option>WV</option>
+                                            <option>WI</option>
+                                            <option>WY</option>
+                                  		</select>                         
+                    				</div>
+                            	</div>
+                        	</div>
+                    
+                        <!-- ROW 5 -->
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6" data-sly-test="${properties.emailSecondary}">
+                            <div class="input-block floating-field">
+                                <label>${properties.emailSecondary}</label>
+                                <input required id="emailSecondary" value="" type="text" maxlength="100" class="form-control">
+                            </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END DIFFERENT SERVICE ADDRESS FORM -->
+
+						<a id="submitRedirect" href="" data-sly-test="${properties.submit}">
+                        	<button type="button" id="submit" class="btn btn-primary float-right">
+                            	${properties.submit}
+                        	</button>
+                        </a>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantageBkrd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+<!-- END ENROLL FORM -->

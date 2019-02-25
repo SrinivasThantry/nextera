@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e68a3c70-2690-4713-8f89-8b1b88805fa1">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/homeimages/hamburger.svg"
+        jcr:lastModified="{Date}2019-02-14T06:33:47.654+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-02-14T06:33:28.580+05:30"
+            dam:sha1="30fc00bfae752b07c347f7de0c363271d2aa7d94"
+            dam:size="{Long}5193"
+            dc:format="image/svg+xml"
+            dc:modified="{Date}2019-01-21T22:24:14.720-05:00"
+            jcr:lastModified="{Date}2019-02-14T06:33:47.653+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

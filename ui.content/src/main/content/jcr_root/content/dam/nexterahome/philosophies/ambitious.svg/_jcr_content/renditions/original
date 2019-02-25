@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ambitious</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Our-Philosophy" transform="translate(-796.000000, -979.000000)">
+            <g id="Group" transform="translate(695.000000, 983.000000)">
+                <g id="ambitious" transform="translate(105.000000, 0.000000)">
+                    <circle id="Oval" stroke="#0096D6" stroke-width="9.31" opacity="0.2" cx="39.86" cy="39.86" r="39.21"></circle>
+                    <path d="M57,75.46 L21.78,75.46 C18.3542132,75.4600044 15.5755166,72.6857824 15.57,69.26 L15.57,12 C15.5810037,8.57650079 18.3564875,5.80548636 21.78,5.8 L57,5.8 C60.415702,5.81645711 63.1790566,8.58427585 63.19,12 L63.19,69.26 C63.1845137,72.6779897 60.4179764,75.4489964 57,75.46 Z" id="Path" stroke="#231F20" stroke-width="2" fill="#FFFFFF"></path>
+                    <rect id="Rectangle" fill="#0898D6" x="16.57" y="16.95" width="45.63" height="45"></rect>
+                    <path d="M15.57,17.31 L63.4,17.31" id="Path" stroke="#231F20" stroke-width="2"></path>
+                    <path d="M15.57,62.06 L63.4,62.06" id="Path" stroke="#231F20" stroke-width="2"></path>
+                    <path d="M41.85,69.23 L37.66,69.23 C36.6272275,69.23 35.79,68.3927725 35.79,67.36 C35.79,66.3272275 36.6272275,65.49 37.66,65.49 L41.85,65.49 C42.8827725,65.49 43.72,66.3272275 43.72,67.36 C43.72,68.3927725 42.8827725,69.23 41.85,69.23 Z" id="Path" fill="#333333"></path>
+                    <path d="M41.64,14.46 L38.39,14.46 C37.6911012,14.5112113 37.0222287,14.1673672 36.6571515,13.5692027 C36.2920742,12.9710383 36.2920742,12.2189617 36.6571515,11.6207973 C37.0222287,11.0226328 37.6911012,10.6787887 38.39,10.73 L41.64,10.73 C42.6171332,10.8015987 43.3733435,11.6152471 43.3733435,12.595 C43.3733435,13.5747529 42.6171332,14.3884013 41.64,14.46 Z" id="Path" fill="#333333"></path>
+                    <circle id="Oval" stroke="#231F20" stroke-width="2" fill="#76BC21" stroke-linecap="round" stroke-linejoin="round" cx="64.33" cy="39.3" r="13.75"></circle>
+                    <polyline id="Path" stroke="#FFFFFF" stroke-width="2" fill="#76BC21" stroke-linecap="round" stroke-linejoin="round" points="56.21 39.36 61.58 44.73 72.46 33.86"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+<sly data-sly-test="${!request.requestParameterMap['plan'][0].toString}">
+<!-- START NEXTERA ADVANTAGE -->
+<div class="container">
+   <div class="row">
+     <div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+       <div class="responsiveSpacing" data-sly-test="${properties.worksheader}">
+         <h1>${properties.worksheader}</h1>
+         <div class="greenBar2"></div>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+       <div class="howitWorksText">${properties.workdescription @ context='html'}</div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-12 col-md-12 col-lg-12" data-sly-use.model="${'nexterahome.core.models.ServiceproviderCheck' @ child='iconTexts'}">
+       <div data-sly-test="${model.size == 'true'}" class="coveredProductContainer" data-sly-use.icontextsection="${resource.path}/iconTexts">
+           <div class="itemSpace" data-sly-repeat.iconsection="${icontextsection.listChildren}">
+               <div class="coveredProduct">
+                   <img src="${iconsection.iconpath}" title="${iconsection.icontitle}">
+               </div>
+               <div class="coveredItems">${iconsection.icondescription @ context='html'}</div>
+           </div>
+
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 center">
+         <a href="${properties.ctaurl}"><button class="btn btn-primary howitworksSpacing">
+              ${properties.ctalabel}
+            </button></a>
+       </div>
+     </div>
+ </div>
+<!-- END NEXTERA ADVANTAGE -->

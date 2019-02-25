@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="27f6cdb0-4751-4882-b298-c9a761025665">
+    <jcr:content
+        cq:name="Sample Dec Page_Health Appliances.pdf"
+        cq:parentPath="/content/dam/nexterahome/Pdf"
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/Pdf/Sample Dec Page_Health Appliances.pdf"
+        jcr:lastModified="{Date}2019-02-14T06:33:58.272+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Author="Amy Jurden"
+            dam:extracted="{Date}2019-02-14T06:33:55.870+05:30"
+            dam:numPages="{Long}9"
+            dam:Physicalheightininches="{Decimal}11.0"
+            dam:Physicalwidthininches="{Decimal}8.5"
+            dam:Producer="Adobe PDF Library 11.0"
+            dam:sha1="a3eddd466c53dd8c25082b211295f9d1ce4c0e6b"
+            dam:size="{Long}121388"
+            dc:creator="[Amy Jurden]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:format="application/pdf"
+            dc:modified="{Date}2019-02-11T15:50:05.950Z"
+            jcr:lastModified="{Date}2019-02-14T06:33:50.898+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            pdf:Producer="Adobe PDF Library 11.0"
+            pdfx:Company="NextEra Energy"
+            pdfx:SourceModified="D:20190206211055"
+            xmp:CreateDate="{Date}2019-02-07T02:43:04.000+05:30"
+            xmp:CreatorTool="Acrobat PDFMaker 11 for Word"
+            xmp:MetadataDate="{Date}2019-02-14T06:33:54.000+05:30"
+            xmp:ModifyDate="{Date}2019-02-14T06:33:54.000+05:30"
+            xmpMM:DocumentID="uuid:d737b4a9-29fc-476c-bfa4-6153a0b3bdf8"
+            xmpMM:InstanceID="uuid:ca905662-fe96-4002-ab3b-0b9b8b0ef339"
+            xmpMM:subject="{Long}[2]"
+            xmpMM:subject_xmpArrayType="rdf:Seq"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

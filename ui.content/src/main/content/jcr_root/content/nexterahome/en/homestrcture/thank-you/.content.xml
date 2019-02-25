@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-01-14T10:45:18.364-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/nexterahome/templates/nextera-home"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Thank You"
+        jcr:uuid="0d4967c7-aff6-4a84-ba6a-ca5de5ecbf8a"
+        sling:resourceType="nexterahome/components/structure/page">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/text"
+                text="&lt;p>This is a home page&lt;/p>"
+                textIsRich="true"/>
+            <thankyou
+                jcr:created="{Date}2019-01-14T00:33:03.404+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-01-14T10:45:18.359-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/thankyou"
+                description="Thank you for your interest in NextEra Home. We will be in touch with you as soon as service is available in your area"
+                headerlabel="Thank you !"/>
+        </par>
+    </jcr:content>
+</jcr:root>

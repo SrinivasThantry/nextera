@@ -1,0 +1,119 @@
+<!-- START NEXTERA ADVANTAGE -->
+<div class="advantageBkrd">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h1 data-sly-test="${properties.title}">${properties.title}</h1>
+        <div class="greenBar"></div>
+      </div>
+    </div>
+    <!--START Home Warranties-->
+    <div class="row pb50">
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-5">
+        <h2 class="h2Spacing"  data-sly-test="${properties.homeWarrantiesHeading}">${properties.homeWarrantiesHeading}</h2>
+        <div class="bodyText spacingBodyText" data-sly-test="${properties.homewarrantiesDescription}">${properties.homewarrantiesDescription}</div>
+        <div class="disclaimer2">*Coverages vary by plan. View service plans for options, details, and provider information.</div>
+        <div class="mb25"></div> 
+        <div class="hideSMMD" data-sly-test="${properties.homewarrantiesCTA}">
+			<a href="${properties.homewarrantiesCTA}.html">
+                <button class="btn btn-primary" data-sly-test="${properties.homeWarrantiesButtonText}">
+                    ${properties.homeWarrantiesButtonText}
+				</button>
+			</a>
+       </div>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="center" data-sly-test="${properties.homeWarrantiesImagePath}">
+        <img src="${properties.homeWarrantiesImagePath}" class="animations"/>
+      </div>
+      </div>
+      <div class="d-sm-block d-md-block d-lg-none col-sm-12">
+        <div class="hideLG">
+        	<div class="center" data-sly-test="${properties.homewarrantiesCTA}">
+        		<a href="${properties.homewarrantiesCTA}.html">
+					<button class="btn btn-primary mt25" data-sly-test="${properties.homeWarrantiesButtonText}">
+            			${properties.homeWarrantiesButtonText}
+          			</button>
+          		</a>
+			</div>
+        </div>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+    </div>
+    <!--END Home Warranties-->
+    <!--START Total Home Care-->
+    <div class="row pb50">
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-sm-12 col-md-12 col-lg-4">
+          <div class="center" data-sly-test="${properties.totalhomecareImagePath}">
+          	<img src="${properties.totalhomecareImagePath}" class="animations"/>
+          </div>
+      </div>
+      <div class="d-none d-sm-none d-md-block d-lg-block col-lg-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-5" data-sly-test="${properties.totalhomecareHeading}">
+          <h2 class="h2">${properties.totalhomecareHeading}</h2>
+
+          <div class="bodyText" data-sly-test="${properties.totalhomecareDescription}">${properties.totalhomecareDescription}</div>
+          <ul class="benefitsList" data-sly-test="${resource.path}">
+          <div data-sly-use.features="${resource.path}/totalhomecareFeatures">
+                <div data-sly-list="${features.listChildren}">
+                    <li>${item.feature}</li>
+                </div>
+		  </div>
+
+
+          </ul>
+          <div class="d-sm-block d-md-block d-lg-none col-sm-12 col-md-12 col-lg-4" data-sly-test="${properties.totalhomecareImagePath}">
+			<img src="${properties.totalhomecareImagePath}" class="animations"/>
+          </div>
+          <div class="btnSpacingLeft">
+			<div class="responsiveCenter" data-sly-test="${properties.totalhomecareCTA}">
+          		<a href="${properties.totalhomecareCTA}.html">
+            		<button class="btn btn-primary mt25" data-sly-test="${properties.totalhomecareButtonText}">
+              			${properties.totalhomecareButtonText}
+            		</button>   
+            	</a>
+			</div>
+          </div>
+      </div>
+
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+    </div>
+    <!--END Total Home Care-->
+    <!--START Total Home Care-->
+    <div class="row pb50">
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-5" data-sly-test="${properties.homecareHeading}">
+        <h2 class="h2Spacing">${properties.homecareHeading}</h2>
+        <div class="bodyText spacingBodyText" data-sly-test="${properties.homecareDescription}">${properties.homecareDescription}</div>
+        <div class="hideSMMD" data-sly-test="${properties.homecareCTA}">
+            <a href="${properties.homecareCTA}.html">
+                <button class="btn btn-primary" data-sly-test="${properties.homecareButtonText}">
+                    ${properties.homecareButtonText}
+				</button>
+			</a>
+       </div>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+      	<div class="center" data-sly-test="${properties.homecareImagePath}">
+        	<img src="${properties.homecareImagePath}" class="animations"/>
+        </div>
+      </div>
+      <div class="d-sm-block d-md-block d-lg-none col-sm-12">
+      	<div class="center" data-sly-test="${properties.homecareCTA}">
+      		<a href="${properties.homecareCTA}.html">
+          		<button class="btn btn-primary mt25" data-sly-test="${properties.homecareButtonText}">
+             		${properties.homecareButtonText}
+          		</button>
+        	</a>
+		</div>
+      </div>
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
+    </div>
+  </div>
+</div>
+<!--END Total Home Care-->
+<!-- END NEXTERA ADVANTAGE -->

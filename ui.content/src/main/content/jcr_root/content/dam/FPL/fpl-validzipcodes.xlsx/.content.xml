@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="8083f462-9ee6-44be-894d-d160e5200d42">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="FPL/fpl-validzipcodes.xlsx"
+        jcr:lastModified="{Date}2019-02-14T06:33:49.691+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Application="Microsoft Excel"
+            dam:AppVersion="{Decimal}16.0300"
+            dam:created="{Date}2018-12-27T14:37:36.000Z"
+            dam:DocSecurity="{Long}0"
+            dam:extracted="{Date}2019-02-14T06:33:20.531+05:30"
+            dam:HeadingPairs="Worksheets1"
+            dam:HyperlinksChanged="false"
+            dam:i4="{Long}1"
+            dam:lastModifiedBy="vamsi"
+            dam:LinksUpToDate="false"
+            dam:lpstr="FPL Zips (1)"
+            dam:modified="{Date}2018-12-27T14:37:36.000Z"
+            dam:ScaleCrop="false"
+            dam:sha1="e6f744747036b71a3cc4827454eda4715b69c0ab"
+            dam:SharedDoc="false"
+            dam:size="{Long}13309"
+            dam:TitlesOfParts="FPL Zips (1)"
+            dam:variant="{Long}1"
+            dam:vector="FPL Zips (1)"
+            dc:creator="[vamsikrishna]"
+            dc:creator_xmpArrayType="rdf:Bag"
+            dc:format="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            dc:modified="{Date}2019-01-15T03:33:41.834Z"
+            jcr:lastModified="{Date}2019-02-14T06:33:49.690+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

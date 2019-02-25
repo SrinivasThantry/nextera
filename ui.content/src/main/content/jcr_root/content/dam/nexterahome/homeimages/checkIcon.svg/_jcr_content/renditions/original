@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>layer</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Service-Plans" transform="translate(-974.000000, -934.000000)">
+            <g id="Group-5" transform="translate(226.000000, 380.000000)">
+                <g id="layer" transform="translate(748.000000, 554.000000)">
+                    <circle id="Oval" fill="#76BC21" cx="12.5" cy="12.5" r="12.5"></circle>
+                    <path d="M10.9108747,16.6666667 C10.7471879,16.6666667 10.5971418,16.6084476 10.4743767,16.4774547 L7.75990515,13.5810555 C7.51437505,13.3190697 7.51437505,12.9115361 7.75990515,12.6495503 C8.00543524,12.3875644 8.38737094,12.3875644 8.63290103,12.6495503 L10.9245152,15.0801968 L16.367099,9.28739848 C16.6126291,9.02541263 16.9945648,9.02541263 17.2400949,9.28739848 C17.4856249,9.54938433 17.4856249,9.95691788 17.2400949,10.2189037 L11.3610132,16.4774547 C11.2246076,16.6084476 11.0745614,16.6666667 10.9108747,16.6666667 Z" id="XMLID_712_-Copy-2" stroke="#FFFFFF" stroke-width="1.30500001" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

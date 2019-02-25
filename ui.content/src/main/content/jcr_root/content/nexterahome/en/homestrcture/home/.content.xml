@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-12T14:50:48.546-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
+        cq:lastReplicatedBy="peakster1"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/nexterahome/templates/nextera-home"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home"
+        jcr:uuid="4a520499-5e41-4da5-b1f8-421b1a636fd6"
+        sling:resourceType="nexterahome/components/structure/page"
+        navTitle="Home"
+        pageTitle="Home">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <homepagebanner
+                jcr:created="{Date}2019-01-09T23:38:41.246+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-06T16:18:56.724Z"
+                jcr:lastModifiedBy="peakster3"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/homepagebanner"
+                ctadescription="View the healthy home service plan options available in Illinois."
+                ctalabel="FIND A PLAN"
+                ctaurl="/content/nexterahome/en/homestrcture/serviceplans"
+                description="A service plan offered through NextEra Home provides repairs and replacement of your major home appliances, HVAC, plumbing and more*."
+                disclaimertext="*Coverages vary by plan. View &lt;a href=&quot;/content/nexterahome/en/homestrcture/serviceplans.html&quot;>&lt;font color=&quot;white&quot;>&lt;u>service plans&lt;/u>&lt;/font>&lt;/a>  for options, details, and provider information."
+                heading="Healthy House.&lt;br/>Happy Home."
+                heading1="How it works"
+                howitworks="VIEW SERVICE PLANS"
+                howitworkstext="Sign up for a plan, and put your worry to rest. Low monthly payments, no long-term contracts and the freedom to cancel anytime."
+                howitworksurl="/content/nexterahome/en/homestrcture/serviceplans"
+                imagepath="/content/dam/nexterahome/homeimages/heroAnimation.gif"
+                showworksection="yes"
+                subheader="Introducing a health plan for your house.">
+                <footer
+                    jcr:lastModified="{Date}2019-01-09T23:50:17.161+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexterahome/components/content/text"
+                    text="&lt;p>Healthy house.&lt;/p>&#xa;&lt;p>Happy home.&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <rtetext
+                    jcr:lastModified="{Date}2019-01-10T09:15:15.913+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexterahome/components/content/text"
+                    text="&lt;h3>Healthy House.&lt;/h3>&#xd;&#xa;&lt;h3>Healthy Home.&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <howitworksection
+                    jcr:lastModified="{Date}2019-02-11T19:13:49.416Z"
+                    jcr:lastModifiedBy="peakster1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexterahome/components/content/howitworks"
+                    ctalabel="VIEW SERVICE PLANS"
+                    ctaurl="/content/nexterahome/en/homestrcture/serviceplans.html"
+                    iconssize="four"
+                    showfullwidth="no"
+                    workdescription="Enroll in a plan, and put your worry to rest. Low monthly payments, no long-term contracts and the freedom to cancel anytime."
+                    worksheader="How it works">
+                    <iconTexts jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            icondescription="Help keep your home healthy and happy."
+                            iconpath="/content/dam/nexterahome/homeimages/home.svg"
+                            icontitle="Phone"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            icondescription="Appliance or system sick? &lt;br>Call&lt;/br> &lt;u> &lt;a href=&quot;tel:+18003157452&quot; id=&quot;home-page-phone&quot;>&lt;b>800-315-7452&lt;/b>&lt;/a>&lt;/u> today. "
+                            iconpath="/content/dam/nexterahome/homeimages/phone.svg"
+                            icontitle="Home"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            icondescription="Technicians for quick repair and replacement."
+                            iconpath="/content/dam/nexterahome/homeimages/truck.svg"
+                            icontitle="Truck"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            icondescription="The work is handled so you can get back to your life."
+                            iconpath="/content/dam/nexterahome/homeimages/hammock.svg"
+                            icontitle="Hammock"/>
+                    </iconTexts>
+                </howitworksection>
+                <links jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        covereditem="/content/dam/nexterahome/homeimages/phone.svg"
+                        covereditemsimagealttext="Phone"
+                        covereditemtitle="We help keep your home healthy."/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        covereditem="/content/dam/nexterahome/homeimages/home.svg"
+                        covereditemsimagealttext="If an appliance or system ever gets sick, just let us know."
+                        covereditemtitle="Home"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        covereditem="/content/dam/nexterahome/homeimages/truck.svg"
+                        covereditemsimagealttext="We'll send the right technician for fast repair or replacement."
+                        covereditemtitle="Truck"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        covereditem="/content/dam/nexterahome/homeimages/hammock.svg"
+                        covereditemsimagealttext="You can get right back to life."
+                        covereditemtitle="Hammock"/>
+                </links>
+            </homepagebanner>
+            <advantage
+                jcr:lastModified="{Date}2019-02-12T14:47:53.861-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/advantage"
+                disclaimertext="&lt;font color=&quot;black&quot;>*Coverages vary by plan. View &lt;a href=&quot;/content/nexterahome/en/homestrcture/serviceplans.html&quot;>&lt;u>service plans&lt;/u>&lt;/a> for options, details, and provider information.&lt;/font>"
+                homecareButtonText="READY TO ENROLL?"
+                homecareCTA="/content/nexterahome/en/homestrcture/serviceplans"
+                homecareDescription="Your home is full of complex mechanics and parts that need constant care and attention, just like you. Simple service plans for your major home systems and appliances so we are here if a surprise arises. There is no long term commitment because you can cancel at any time."
+                homecareHeading="A plan for those who hate to plan"
+                homecareImagePath="/content/dam/nexterahome/homeimages/planAnimated.gif"
+                homeWarrantiesButtonText="VIEW SERVICE PLANS"
+                homewarrantiesCTA="/content/nexterahome/en/homestrcture/serviceplans"
+                homewarrantiesDescription="A service plan offered through NextEra Home provides repairs and replacement of your major home appliances, HVAC, plumbing and more*."
+                homeWarrantiesHeading="The next era of home health has arrived"
+                homeWarrantiesImagePath="/content/dam/nexterahome/homeimages/homeWarrantiesAnimated.gif"
+                title="The NextEra home advantage"
+                totalhomecareButtonText="HAVE A QUESTION?"
+                totalhomecareCTA="/content/nexterahome/en/homestrcture/faq"
+                totalhomecareDescription="With a NextEra subscription, you will receive:"
+                totalhomecareHeading="Total home care"
+                totalhomecareImagePath="/content/dam/nexterahome/homeimages/totalHomeCareAnimated.gif">
+                <totalhomecareFeatures jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        feature="House calls by expert technicians."/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        feature="Schedule your service around the clock."/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        feature="Affordable monthly rates and a low deductible."/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        feature="Access to NextEra Home's monthly tips and tricks for house sustainability."/>
+                </totalhomecareFeatures>
+            </advantage>
+        </par>
+        <footer
+            jcr:lastModified="{Date}2019-01-11T15:06:18.389Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <iparsys_fake_par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/iparsys/par"/>
+        </footer>
+        <header
+            jcr:lastModified="{Date}2019-01-11T15:09:25.650Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <iparsys_fake_par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/iparsys/par"/>
+        </header>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,65 @@
+<!-- START NAVBAR -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+<div data-sly-test="${wcmmode.edit}" data-sly-resource="${'logo' @ resourceType='nexterahome/components/structure/logo'}"></div>
+ <sly data-sly-test="${wcmmode.disabled}" data-sly-resource="${'logo' @ resourceType='nexterahome/components/structure/logo'}"></sly>
+    <button id="changeToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <div id="navbar-hamburger" class="navbar-toggler-icon">
+              	<i class="fas fa-bars fa-lg"></i>
+              </div>
+              <div id="navbar-close" class="hidden">
+                  <i class="fas fa-times brandIcon"></i>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" data-sly-use.logic="${'nexterahome.core.models.ServiceproviderCheck' @ child='navLinks'}">
+    			<ul data-sly-test="${logic.size == 'true'}" class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
+              <sly data-sly-list.navlink="${nexterahome.listChildren}">
+                <li class="nav-item ${currentPage.path == navlink.pathurl ? 'active' : ''}">
+                    <a class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}" href="${navlink.pathurl}.html">${navlink.linkTitle}</a>
+                </li>
+                </sly>
+                <div class="hideLGMD">
+                  <li class="nav-item">
+                      <a target=_blank class="nav-link" href="${properties.loginurl}">Login</a>
+                  </li>
+                  <div class="btnSpacing">
+                    <a href="${properties.findplanurl}"><button class="btn btn-primary inlineBlock">
+                        Find a Plan
+                    </button></a>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="horizLine"></div>
+                  <div class="connect">Connect With Us</div>
+                  <div class="clearfix"></div>
+                  <div class="socialContainer">
+                    <a href="${properties.fburl}" target="_blank">
+                      <i class="fab fa-2x fa-facebook-f brandColor inlineBlock mr15"></i>
+                    </a>
+                    <a href="${properties.instaurl}" target="_blank">
+                      <i class="fab fa-2x fa-instagram brandColor inlineBlock mr15"></i>
+                    </a>
+                    <a href="${properties.twitterurl}" target="_blank">
+                      <i class="fab fa-2x fa-twitter brandColor inlineBlock"></i>
+                    </a>
+                  </div>
+                </div>
+              </ul>
+              <div class="frHideSM">
+                  <a target=_blank class="nav-link inlineBlock" href="${properties.loginurl}">Login</a>
+                  <div class="btnSpacing">
+                   <a href="${properties.findplanurl}"><button class="btn btn-primary inlineBlock">
+                        Find a Plan
+                    </button></a>
+                  </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+  </div>
+</div>
+<!-- END NAVBAR -->

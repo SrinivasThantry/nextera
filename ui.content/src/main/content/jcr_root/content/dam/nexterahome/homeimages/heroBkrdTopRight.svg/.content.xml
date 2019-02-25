@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="1c4d5720-e05d-457b-bc57-ffbc0637987f">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/homeimages/heroBkrdTopRight.svg"
+        jcr:lastModified="{Date}2019-02-14T06:34:21.136+05:30"
+        jcr:lastModifiedBy="peakster7"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-02-14T06:34:19.060+05:30"
+            dam:sha1="195831f21b1b465a90bfcf9eeaeadb059a48e563"
+            dam:size="{Long}7580"
+            dc:format="image/svg+xml"
+            dc:modified="{Date}2019-02-02T01:23:47.140-05:00"
+            jcr:lastModified="{Date}2019-02-14T06:33:55.803+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

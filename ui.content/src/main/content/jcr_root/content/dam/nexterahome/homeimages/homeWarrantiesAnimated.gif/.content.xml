@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="44bc9519-16ac-4316-b875-5d848bdba4bb">
+    <jcr:content
+        cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
+        cq:lastReplicatedBy="peakster1"
+        cq:lastReplicationAction="Activate"
+        dam:assetState="processed"
+        dam:relativePath="nexterahome/homeimages/homeWarrantiesAnimated.gif"
+        jcr:lastModified="{Date}2019-02-14T06:34:21.257+05:30"
+        jcr:lastModifiedBy="peakster3"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}7"
+            dam:extracted="{Date}2019-02-14T06:34:10.118+05:30"
+            dam:Fileformat="GIF"
+            dam:MIMEtype="image/gif"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}12.5"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}12.5"
+            dam:Progressive="no"
+            dam:sha1="6e555e10e0b666a09a2e89c1a58396a416e19e13"
+            dam:size="{Long}8625834"
+            dc:format="image/gif"
+            dc:modified="{Date}2019-01-21T22:24:08.303-05:00"
+            jcr:lastModified="{Date}2019-02-14T06:32:46.276+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}900"
+            tiff:ImageWidth="{Long}900"
+            xmp:CreatorTool="Adobe Photoshop CC 2019 (Macintosh)"
+            xmpMM:DocumentID="xmp.did:1295C0FE079011E988188A484D30D932"
+            xmpMM:InstanceID="xmp.iid:1295C0FD079011E988188A484D30D932">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:1295C0FC079011E988188A484D30D932"
+                stRef:instanceID="xmp.iid:1295C0FB079011E988188A484D30D932"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
