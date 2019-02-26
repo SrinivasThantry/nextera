@@ -28,7 +28,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <showfullwidth/>
                             <worksheader
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
@@ -49,6 +48,7 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                                 fieldLabel="CTA Url"
                                 name="./ctaurl"/>
+                            <showfullwidth/>
                         </items>
                     </column>
                 </items>

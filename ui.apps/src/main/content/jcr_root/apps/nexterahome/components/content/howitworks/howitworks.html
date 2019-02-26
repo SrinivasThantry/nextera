@@ -30,9 +30,11 @@
 
         <div class="row">
           <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 center" data-sly-test="${properties.ctalabel}">
-            <a href="${properties.ctaurl}"><button class="btn btn-primary howitworksSpacing">
-              ${properties.ctalabel}
-            </button></a>
+            <form id="zip">
+        <input type="text" id="ziphowitworks" class="rectangle" name="zip" placeholder="Enter Zip Code">
+        <a class="white" href="${properties.ctaurl}.html"><button id="howitworkzip" class="btn btn-primary howitworksSpacing">${properties.ctalabel}</button></a>
+        </form>
+        
           </div>
       </div>
       <!-- END HOW IT WORKS -->
