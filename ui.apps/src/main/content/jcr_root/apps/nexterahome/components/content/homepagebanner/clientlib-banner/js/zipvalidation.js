@@ -6,7 +6,7 @@ $(document).ready(function(){
 
      var zipcode = $('#zip').val();
 
-     
+
 
        $.ajax({
 
@@ -20,19 +20,23 @@ $(document).ready(function(){
             if(responseData.validZipcode){
 
             	if(responseData.service=='nextEra'){
-         			 	window.open("https://model-nextera.assurant.com/home?s="+responseData.postCustomerData.successId+'&plan='+plan);
-            			event.preventDefault();
-            			location.reload();
+         			 	 event.preventDefault();
+                        window.location = "/content/nexterahome/en/homestrcture/serviceplans-illinois.html";
         		}else if(responseData.service=='FPL'){
 
             			event.preventDefault();
             			window.location = "/content/nexterahome/en/homestrcture/thank-you-fpl.html";
 
-        		}else{
+        		}else if(responseData.service=='texas'){
+                        event.preventDefault();
+                        window.location = "/content/nexterahome/en/homestrcture/serviceplans-texas.html";
+
+                    }else{
                         event.preventDefault();
                         window.location = "/content/nexterahome/en/homestrcture/thank-you.html";
 
                     }
+
 
             }else{
 
