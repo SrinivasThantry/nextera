@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-3">
         <div class="footerLogos">
-            <a data-sly-test="${properties.nextEraLogoCta}" href="${properties.nextEraLogoCta}" class="opacity">
-              <img data-sly-test="${properties.nextEraLogo}" src="${properties.nextEraLogo}">
+            <a href="${properties.nextEraLogoCta}" class="opacity">
+              <img src="${properties.nextEraLogo}">
           </a>
-              <a data-sly-test="${properties.fplLogoCta}" href="${properties.fplLogoCta}" target="_blank" class="opacity">
-              <img data-sly-test="${properties.fplLogo}" src="${properties.fplLogo}" class="fplLogo">
+              <a href="${properties.fplLogoCta}" target="_blank" class="opacity">
+              <img src="${properties.fplLogo}" class="fplLogo">
           </a>
           </div>
       </div>
@@ -25,13 +25,13 @@
         <div class="col-sm-12 col-md-12 col-lg-2">
           <div class="socialIcons">
 
-                <a data-sly-test="${properties.fburl}" href="${properties.fburl}" target="_blank">
+                <a href="${properties.fburl}" target="_blank">
                   <i class="fab fa-facebook-f white mr15"></i>
                 </a>
-                <a data-sly-test="${properties.instaurl}" href="${properties.instaurl}" target="_blank">
+                <a href="${properties.instaurl}" target="_blank">
                   <i class="fab fa-instagram white mr15"></i>
                 </a>
-                <a data-sly-test="${properties.twitterurl}" href="${properties.twitterurl}" target="_blank">
+                <a href="${properties.twitterurl}" target="_blank">
                   <i class="fab fa-twitter white"></i>
                 </a>
 
@@ -45,13 +45,13 @@
     </div>
     <div class="row">
       <div class="order-1 order-sm-1 order-md-1 order-lg-0 col-sm-12 col-md-12 col-lg-6">
-          <div  class="footerText">${properties.copyRight @context='html'}</div> 
+          <div class="footerText">${properties.copyRight @context='html'}</div> 
       </div>
       <div class="order-0 order-sm-0 order-md-0 order-lg-1 col-sm-12 col-md-12 col-lg-6">
-        <div data-sly-test="${logic.size == 'true'}" class="footerLinks" data-sly-use.logic="${'nexterahome.core.models.ServiceproviderCheck' @ child='bottomLinks'}">  
+        <div class="footerLinks">  
 			<div data-sly-use.topLinks="${resource.path}/bottomLinks">
         		<div data-sly-list="${topLinks.listChildren}">
-            		<a href="${item.pathbr}" class="footerLink2">${item.linkTitle}</a>
+            		<a target="_blank" href="${item.pathbr}" class="footerLink2">${item.linkTitle}</a>
         		</div>
 			</div>
         </div>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-27T15:16:07.598-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/nexterahome/templates/nextera-home"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Service Plans Illinois"
+        jcr:uuid="ac9ad4ac-aa11-49c6-b4e6-cae268f4d0ab"
+        sling:resourceType="nexterahome/components/structure/page"
+        navTitle="Service Plans"
+        pageTitle="Service Plans">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexterahome/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <enrollnow
+                jcr:lastModified="{Date}2019-02-27T15:16:07.588-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/enrollnow"
+                city="City"
+                citySecondary="City"
+                converedService="My covered service address is different from my mailing address."
+                email="Email"
+                emailSecondary="Email (optional)"
+                firstName="First Name"
+                firstNameSecondary="First Name"
+                formHeading="Please enter your informaton and we will get you to the right place."
+                formHeadingSecondary="Please enter the address you would like serviced."
+                lastName="Last Name"
+                lastNameSecondary="Last Name"
+                legalAgreementCopy="I agree to receive information updates and marketing offers by email."
+                mailingAddress="Mailing Address"
+                mailingAddressOptional="Mailing Address 2 (optional)"
+                mailingAddressOptionalSecondary="Service Address 2 (optional)"
+                mailingAddressSecondary="Service Address"
+                phonenumber="Phone Number"
+                phonenumberSecondary="Phone Number"
+                promocode="Promocode"
+                promocodeSecondary="Promocode"
+                reEnterEmail="Re-Enter Email"
+                state="State"
+                stateSecondary="State"
+                submit="Submit"
+                title="Enroll Now"
+                zipcode="ZIP Code"
+                zipcodeSecondary="ZIP Code"/>
+            <text
+                jcr:lastModified="{Date}2019-01-03T00:01:52.400-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/text"
+                text="&lt;p>This is a service plan page&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <serviceplanswrapper
+                jcr:created="{Date}2019-01-18T07:48:55.507+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-18T19:48:56.957Z"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/serviceplanswrapper"
+                disclaimer1text="&lt;font color=&quot;black&quot;>*As necessary, subject to the dollar limitations specified in your contract.&lt;/font>"
+                disclaimertext="Terms &amp; conditions apply. &lt;a target=&quot;_blank&quot; href=&quot;/content/dam/nexterahome/Pdf/PlanDetails.pdf&quot; &lt;font color=&quot;white&quot;>&lt;u>Learn More&lt;/font>&lt;/u>&lt;/a>"
+                enrollcta="ENROLL NOW "
+                enrollctaurl="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Appliances Plan"
+                enrollctaurlthree="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Home Plan"
+                enrollctaurltwo="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Systems Plan"
+                heading="Service plans"
+                housecallperyearheader="HOUSECALLS PER YEAR"
+                plandetailctaurl="/content/dam/nexterahome/Pdf/Sample Dec Page_Health Appliances.pdf"
+                plandetailctaurlthree="/content/dam/nexterahome/Pdf/Sample Dec Page_Health Home.pdf"
+                plandetailctaurltwo="/content/dam/nexterahome/Pdf/Sample Dec Page_Health Systems.pdf"
+                plandetails="Sample terms &amp; Conditions"
+                planheader="Healthy Appliances Plan"
+                planheaderthri="Healthy Home Plan"
+                planheadertwo="Healthy Systems Plan"
+                planimagepath="/content/dam/nexterahome/homeimages/healthyAppliances.svg"
+                planimagepaththri="/content/dam/nexterahome/homeimages/healthyHome.svg"
+                planimagepathtwo="/content/dam/nexterahome/homeimages/healthySystems.svg"
+                pricingheader="PRICING OPTIONS"
+                subheader="Choose the plan that fits your budget"
+                whatcoverheader="WHAT'S COVERED">
+                <priceOptions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$35/ month"
+                        featurename="Rate"
+                        showtooltip="no"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$125 per house call"
+                        featuredesctooltip="There is a $125 deductible for service, payable when you file a claim. To file a claim, search for your service plan and schedule service with your service plan provider. You will be informed at that time how the $125 deductible will be collected or applied to your claim."
+                        featurename="Deductible"
+                        showtooltip="yes"/>
+                </priceOptions>
+                <whatsCover jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featuredesctooltip="&lt;p>These major kitchen and laundry appliances are covered by this service plans up to $3,000 a year, unless otherwise stated&lt;/p>&#xd;&#xa;          &lt;ul>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Clothes dryer&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Clothes washing machine&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Dishwasher (Primary)&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Built-in microwave&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Kitchen refrigerator (Primary)&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Cooking range/oven/stovetop&lt;/li>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>In-sink garbage disposal (up to $500 a year)&lt;/li>&#xd;&#xa;          &lt;/ul>"
+                        featurenameone="All major kitchen &amp; laundry appliances"
+                        showtooltip="yes"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featuredesctooltip="These Major Mechanical Central Heating and Air Cooling (&quot;AC&quot;) system parts are covered by this service plan up to $5,000 a year:&#xd;&#xa;&#xd;&#xa;&lt;p>&lt;b>All components and parts of the primary Central Heating and Air Cooling system, for systems up to a 5-ton capacity, unless excluded in the service contract.&lt;/b> &lt;/p>&#xd;&#xa;"
+                        featurenameone="Major Central Heating and Air Cooling (&quot;AC&quot;) System"
+                        showtooltip="yes"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featuredesctooltip="These system parts are covered by this service plan:&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>Water heater system (up to $1,000 a year)&lt;/li>&#xd;&#xa;&#xd;&#xa;     &lt;li>Sump pump system (up to $500 a year)&lt;/li>&#xd;&#xa;    &lt;/ul>"
+                        featurenameone="Water heater &amp; sump pump system"
+                        showtooltip="yes"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featuredesctooltip="&lt;p>&lt;b>These interior electrical system parts are covered by these service plans up to $1,000 a year:&lt;/b>&lt;/p>&#xd;&#xa;          &lt;ul>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Components and parts of interior wiring, low voltage wiring, electrical panels, switches, outlets, and receptacles. All other items are considered not covered.&lt;/li>&#xd;&#xa;          &lt;/ul>&#xd;&#xa;        &lt;/div>"
+                        featurenameone="Interior electrical system parts"
+                        showtooltip="yes"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featuredesctooltip="&lt;p>&lt;b>These plumbing system parts are covered by this service plan up to $1,000 a year:&lt;/b>&lt;/p>&#xd;&#xa;          &lt;ul>&#xd;&#xa;            &lt;li class=&quot;modalListItem&quot;>Mechanized parts and components of hose bibs, angle stops, risers, shower/tub valves, faucets (replaced with like kind and quality), toilet bowls and tanks, wax ring seals, toilet mechanisms, water leaks and breaks, drain, waste and vent lines within the perimeter of the main foundation.&lt;/li>&#xd;&#xa;          &lt;/ul>"
+                        featurenameone="Interior plumbing system parts"
+                        showtooltip="yes"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featuredesctooltip="These systems and parts are covered by this service plan:&lt;br>&lt;br>&#xd;&#xa;    &lt;strong>Ceiling fans&lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>These ceiling fan parts are covered by this service plan up to $500 a year (located in the main dwelling of the home): mechanized parts or components on two (2) ceiling fans, including: ceiling fan motors and their associated controls (if replaced, builder grade will be allowed) and bearings.&lt;/li>&lt;/ul>&#xd;&#xa;    &#xd;&#xa;    &lt;strong>Garage door opener &lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;    &#xd;&#xa;&#xd;&#xa;     &lt;li>These garage door opener parts are covered by this service plan up to $500 a year: all components and parts, including motor, control board, limit switches, sensors, chains, belts, gears and trolley. &lt;/li>&lt;/ul>&#xd;&#xa;     &#xd;&#xa;     &lt;strong>Trash compactor&lt;/strong>&lt;ul class=&quot;green-bullet&quot;>&lt;li> These trash compactor parts are covered by this service plan up to $500 a year: all components and parts that affect the operation of the compactor. &lt;/li>&lt;/ul>"
+                        featurenameone="Extras "
+                        showtooltip="yes"/>
+                </whatsCover>
+                <housecall jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        disclaimer1text="&lt;font color=&quot;black&quot;>*As necessary, subject to the dollar limitations specified in your contract.&lt;/font>"
+                        featureavailable="yes"
+                        featuredesctooltip="    &lt;strong>Service call limits&lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>You can make as many house calls for service per year as necessary. Subject to the dollar limitations specified in your contract.&lt;/li>&lt;/ul>&#xd;&#xa;    &#xd;&#xa;    &lt;strong>Claims &lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;    &#xd;&#xa;&#xd;&#xa;     &lt;li>You must report all claims in advance of any repairs. For details on how to file a claim, refer to your service contract. &#xd;&#xa;&lt;/li>&lt;/ul>&#xd;&#xa;    "
+                        featurenameone="Service calls*"
+                        showtooltip="yes"/>
+                </housecall>
+                <priceOptionsTwo jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$50/ month"
+                        featurename="Rate"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$125 per house call"
+                        featurename="Deductible"/>
+                </priceOptionsTwo>
+                <whatsCoverTwo jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featurenameone="All major kitchen &amp; laundry appliances"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Major mechanical HVAC parts"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Water heater &amp; sump pump systems"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featurenameone="Electrical system parts"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featurenameone="Interior plumbing system parts"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="no"
+                        featurenameone="Extras"/>
+                </whatsCoverTwo>
+                <housecalltwo jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Service calls*"/>
+                </housecalltwo>
+                <priceOptionsthri jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$60/ month"
+                        featurename="Rate"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featuredesc="$125 per house call"
+                        featurename="Deductible"/>
+                </priceOptionsthri>
+                <whatsCoverthri jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="All major kitchen &amp; laundry appliances"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Major mechanical HVAC parts"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Water heater &amp; sump pump systems"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Electrical system parts"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Interior plumbing system parts"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Extras"/>
+                </whatsCoverthri>
+                <housecallthree jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        featureavailable="yes"
+                        featurenameone="Service calls*"/>
+                </housecallthree>
+            </serviceplanswrapper>
+        </par>
+        <footer
+            jcr:lastModified="{Date}2019-02-11T19:33:12.193Z"
+            jcr:lastModifiedBy="peakster1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <nexterahomeadvantage
+                jcr:created="{Date}2019-01-28T15:03:09.461Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-18T19:35:27.437Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexterahome/components/content/nexterahomeadvantage"
+                ctalabel="HAVE A QUESTION?"
+                ctaurl="/content/nexterahome/en/homestrcture/faq.html"
+                disclaimertext=" &lt;font color=&quot;black&quot;>Service plans are offered through NextEra Home and are administered and provided by Federal Warranty Service Corporation.&lt;/font>"
+                workdescription="Enroll in a plan, and put your worry to rest. Low monthly payments, no long-term contracts and the freedom to cancel anytime."
+                worksheader="The NextEra Home Advantage">
+                <iconTexts jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        icondescription="We help keep your home healthy."
+                        iconpath="/content/dam/nexterahome/homeimages/home.svg"
+                        icontitle="Home"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        icondescription="Appliance or system sick? &lt;br>Call&lt;/br> &lt;u> &lt;a href=&quot;tel:+18003157452&quot; id=&quot;home-page-phone&quot;>&lt;b>800-315-7452&lt;/b>&lt;/a>&lt;/u> today. "
+                        iconpath="/content/dam/nexterahome/homeimages/phone.svg"
+                        icontitle="Phone"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        icondescription="Technicians for quick repair and replacement."
+                        iconpath="/content/dam/nexterahome/homeimages/truck.svg"
+                        icontitle="Truck"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        icondescription="The work is handled so you can get back to your life."
+                        iconpath="/content/dam/nexterahome/homeimages/hammock.svg"
+                        icontitle="Hammock"/>
+                </iconTexts>
+            </nexterahomeadvantage>
+            <iparsys_fake_par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/iparsys/par"/>
+        </footer>
+    </jcr:content>
+</jcr:root>

@@ -565,6 +565,13 @@ h6 {
     line-height: 29px;
     margin-bottom: 35px;
 }
+.rectangle {
+	height: 60px;
+	width: 290px;
+	border-radius: 30.5px;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+}
 .heroCTA {
     color: #fff;	
     font-family: "Open Sans";	
@@ -946,7 +953,7 @@ ul.navbar-nav   {
     border-color: 1px solid #ccc !important;
 }
 .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(26, 25, 25, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 .navbar-light .navbar-text {
     color: #272727;
@@ -2654,6 +2661,9 @@ nav {
         background-color: #f9fcfd;
         padding: 135px 0 !important;
     }
+        ul.benefitsList li {
+    	text-indent: -3.0em;
+		}
     .buttonSpacing {
         margin-bottom: 200px;
         display: table;
@@ -2741,6 +2751,9 @@ nav {
         min-height: 200px;
         padding-top: 190px;
     }
+    ul.benefitsList li {
+    	text-indent: -3.0em;
+		}
     .buttonSpacing {
         margin-bottom: 210px;
         display: table;

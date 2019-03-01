@@ -2,18 +2,18 @@
 <div class="container">  
       <div class="row">    
 		<div class="col-sm-12 col-md-12 col-lg-12">
-			<div class="heading" data-sly-test="${properties.headerlabel}">${properties.headerlabel}</div>
-            <div class="subHeading center" data-sly-test="${properties.description}">${properties.description}</div>
+			<div class="heading">${properties.headerlabel}</div>
+            <div class="subHeading center">${properties.description}</div>
         </div>
       </div>
 
 
-<!-- FAQ SECTION ---------------------------------------------------------------------------->
+<!-- FAQ SECTION -->
 
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12" data-sly-use.logic="${'nexterahome.core.models.ServiceproviderCheck' @ child='faqAns'}">>
+    <div class="col-sm-12 col-md-12 col-lg-12">
 
-        <div data-sly-test="${logic.size == 'true'}" class="faq-wrap" data-sly-use.nexterafaqs="${resource.path}/faqAns"> 
+        <div class="faq-wrap" data-sly-use.nexterafaqs="${resource.path}/faqAns"> 
 		<div id="accordion" data-sly-list.faqwithans="${nexterafaqs.listChildren}">
       	<div class="question">
           <div class="title-wrap clearfix">
@@ -21,7 +21,7 @@
               <div class="accordion-icon"><img class="open-icon" src="/content/dam/nexterahome/homeimages/e-add.svg"><img class="close-icon" src="/content/dam/nexterahome/homeimages/e-delete.svg"></div>
           </div>
           <div class="accordion-content">
-            <p>${faqwithans.faqAnswer}</p>
+            <p>${faqwithans.faqAnswer @ context='html'}</p>
           </div>
 
         </div>

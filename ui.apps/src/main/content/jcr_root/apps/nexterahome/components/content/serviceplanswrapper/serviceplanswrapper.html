@@ -9,8 +9,8 @@
 
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
-          <h3 class="center" data-sly-test="${properties.heading}">${properties.heading}</h3>
-          <div class="subHeading center" data-sly-test="${properties.subheader}">${properties.subheader}</div>
+          <h3 class="center">${properties.heading}</h3>
+          <div class="subHeading center">${properties.subheader}</div>
       </div>
     </div>
     <div class="row">
@@ -50,22 +50,22 @@
 
           </div>
           <div class="col-sm-12 col-md-2 col-lg-2 border-left">
-            <div class="plan healthyAppliances" data-sly-test="${properties.planimagepath}">
+            <div class="plan healthyAppliances">
               <img src="${properties.planimagepath}">
             </div>
-            <h4 data-sly-test="${properties.planheader}">${properties.planheader}</h4>
+            <h4>${properties.planheader}</h4>
           </div>
             <div class="col-sm-12 col-md-2 col-lg-2 border-left">
-              <div class="plan" data-sly-test="${properties.planimagepathtwo}">
+              <div class="plan">
                 <img src="${properties.planimagepathtwo}">
               </div>
-              <h4 data-sly-test="${properties.planheadertwo}">${properties.planheadertwo}</h4>
+              <h4>${properties.planheadertwo}</h4>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-2 border-left">
-              <div class="plan" data-sly-test="${properties.planimagepaththri}">
+              <div class="plan">
                 <img src="${properties.planimagepaththri}">
               </div>
-              <h4 data-sly-test="${properties.planheaderthri}">${properties.planheaderthri}</h4>
+              <h4>${properties.planheaderthri}</h4>
             </div>
             <div class="d-sm-none d-md-block col-md-1 d-lg-block col-lg-1">
 
@@ -74,20 +74,16 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 servicePlanCallout">
 
-              <div class="servicePlan" data-sly-test="${properties.pricingheader}">
+              <div class="servicePlan">
 			${properties.pricingheader}
               </div>
 
           </div>
         </div>
-		<div data-sly-use.logictwo="${'nexterahome.core.models.ServiceproviderCheck' @ child='priceOptionsTwo'}"
-			 data-sly-use.logicthree="${'nexterahome.core.models.ServiceproviderCheck' @ child='priceOptionsthri'}"
-			 data-sly-use.logicone="${'nexterahome.core.models.ServiceproviderCheck' @ child='priceOptions'}">
-		</div>
-		<sly data-sly-test="${logictwo.size == 'true'}" data-sly-use.priceoptionstwo="${resource.path}/priceOptionsTwo"/>
-		<sly data-sly-test="${logicthree.size == 'true'}" data-sly-use.priceoptionsthree="${resource.path}/priceOptionsthri"/>
-        <sly data-sly-test="${logicone.size == 'true'}" data-sly-use.priceoptions="${resource.path}/priceOptions">
-        <div data-sly-test="${logicone.size == 'true'}" class="row" data-sly-list.planfeature="${priceoptions.listChildren}">
+		<sly data-sly-use.priceoptionstwo="${resource.path}/priceOptionsTwo"/>
+		<sly data-sly-use.priceoptionsthree="${resource.path}/priceOptionsthri"/>
+        <sly data-sly-use.priceoptions="${resource.path}/priceOptions">
+        <div class="row" data-sly-list.planfeature="${priceoptions.listChildren}">
           <div class="col-sm-12 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1 horizontalLine">
               <div class="flexServicePlanItem">    
               <div class="servicePlanItem">${planfeature.featurename}</div>
@@ -102,13 +98,13 @@
               <div class="planBenefits">${planfeature.featuredesc}</div>
             </div>
 
-			<sly data-sly-test="${logictwo.size == 'true'}"  data-sly-list.planfeaturetwo="${priceoptionstwo.listChildren}">
+			<sly data-sly-list.planfeaturetwo="${priceoptionstwo.listChildren}">
               <div data-sly-test="${planfeatureList.index == planfeaturetwoList.index}"  class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine" >
                 <div class="planBenefits">${planfeaturetwo.featuredesc} </div>
               </div>
 			  </sly>
 
-			  <sly data-sly-test="${logicthree.size == 'true'}"   data-sly-list.planfeaturethree="${priceoptionsthree.listChildren}">
+			  <sly   data-sly-list.planfeaturethree="${priceoptionsthree.listChildren}">
 			  <div data-sly-test="${planfeatureList.index == planfeaturethreeList.index}" class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine" >
                 <div class="planBenefits">${planfeaturethree.featuredesc} </div>
               </div>
@@ -121,21 +117,16 @@
 
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 servicePlanCallout">
-            <div class="servicePlan" data-sly-test="${properties.whatcoverheader}">
-              ${properties.whatcoverheader}
+            <div class="servicePlan">
+              ${properties.whatcoverheader} 
+              <div class="disclaimer">${properties.disclaimertext @ context='html'}</div>
             </div>  
           </div>
         </div>
-        <div data-sly-use.whatsone="${'nexterahome.core.models.ServiceproviderCheck' @ child='whatsCover'}"
-			 data-sly-use.whatstwo="${'nexterahome.core.models.ServiceproviderCheck' @ child='whatsCoverTwo'}"
-			 data-sly-use.whatsthree="${'nexterahome.core.models.ServiceproviderCheck' @ child='whatsCoverthri'}">
-		</div>
-		
-		<sly data-sly-test="${whatstwo.size == 'true'}"  data-sly-use.whatsCovertwo="${resource.path}/whatsCoverTwo"/>
-		<sly data-sly-test="${whatsthree.size == 'true'}"  data-sly-use.whatsCoverthree="${resource.path}/whatsCoverthri"/>
-        <sly data-sly-test="${whatsone.size == 'true'}"  data-sly-use.whatsCoverone="${resource.path}/whatsCover">
-        
-        <div data-sly-test="${whatsone.size == 'true'}" class="row" data-sly-list.whatcoverfeature="${whatsCoverone.listChildren}">
+		<sly data-sly-use.whatsCovertwo="${resource.path}/whatsCoverTwo"/>
+		<sly data-sly-use.whatsCoverthree="${resource.path}/whatsCoverthri"/>
+        <sly data-sly-use.whatsCoverone="${resource.path}/whatsCover">
+        <div class="row" data-sly-list.whatcoverfeature="${whatsCoverone.listChildren}">
           <div class="col-sm-12 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1 horizontalLine">
               <div class="flexServicePlanItem">    
                 <div class="servicePlanItem">${whatcoverfeature.featurenameone}</div>
@@ -151,14 +142,14 @@
                     <img src="/content/dam/nexterahome/homeimages/${whatcoverfeature.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
                   </div> 
             </div>
-			<sly data-sly-test="${whatstwo.size == 'true'}"  data-sly-list.whatcoverfeaturetwo="${whatsCovertwo.listChildren}">
+			<sly data-sly-list.whatcoverfeaturetwo="${whatsCovertwo.listChildren}">
               <div data-sly-test="${whatcoverfeatureList.index == whatcoverfeaturetwoList.index}" class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine">
                 <div class="checkIcon">
                     <img src="/content/dam/nexterahome/homeimages/${whatcoverfeaturetwo.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
                   </div> 
               </div>
 			  </sly>
-			  <sly data-sly-test="${whatsthree.size == 'true'}" data-sly-list.whatcoverfeaturehree="${whatsCoverthree.listChildren}">
+			  <sly data-sly-list.whatcoverfeaturehree="${whatsCoverthree.listChildren}">
               <div data-sly-test="${whatcoverfeatureList.index == whatcoverfeaturehreeList.index}" class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine">
                   <div class="checkIcon">
                       <img src="/content/dam/nexterahome/homeimages/${whatcoverfeaturehree.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
@@ -172,22 +163,15 @@
 		</sly>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 servicePlanCallout">
-              <div class="servicePlan" data-sly-test="${properties.housecallperyearheader}">
+              <div class="servicePlan">
                 ${properties.housecallperyearheader}
               </div>  
             </div>
         </div>
-        
-        <div data-sly-use.housecalltwo="${'nexterahome.core.models.ServiceproviderCheck' @ child='housecalltwo'}"
-			 data-sly-use.housecallthree="${'nexterahome.core.models.ServiceproviderCheck' @ child='housecallthree'}"
-			 data-sly-use.housecall="${'nexterahome.core.models.ServiceproviderCheck' @ child='housecall'}">
-		</div>
-		
-		
-		<sly data-sly-test="${housecalltwo.size == 'true'}" data-sly-use.housecalltwo="${resource.path}/housecalltwo"/>
-		<sly data-sly-test="${housecallthree.size == 'true'}" data-sly-use.housecallthree="${resource.path}/housecallthree"/>
-        <sly data-sly-test="${housecall.size == 'true'}" data-sly-use.housecallone="${resource.path}/housecall">
-        <div data-sly-test="${housecall.size == 'true'}" class="row" data-sly-list.housecallfeature="${housecallone.listChildren}">
+		<sly data-sly-test="${resource.path}/housecalltwo" data-sly-use.housecalltwo="${resource.path}/housecalltwo"/>
+		<sly data-sly-use.housecallthree="${resource.path}/housecallthree"/>
+        <sly data-sly-use.housecallone="${resource.path}/housecall">
+        <div class="row" data-sly-list.housecallfeature="${housecallone.listChildren}">
           <div class="col-sm-12 offset-sm-1 col-md-3 offset-md-1 col-lg-3 offset-lg-1 horizontalLine">
               <div class="flexServicePlanItem">    
                 <div class="servicePlanItem">${housecallfeature.featurenameone}</div>
@@ -197,20 +181,22 @@
                 </div>
 				</a>
               </div>
+                <div class="disclaimer2">${properties.disclaimer1text @ context='html'}</div>                
+			<div class="mb25"></div> 
           </div>
             <div class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine">
                 <div class="checkIcon">
                     <img src="/content/dam/nexterahome/homeimages/${housecallfeature.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
                   </div> 
             </div>
-			<sly data-sly-test="${housecalltwo.size == 'true'}" data-sly-list.housecallfeaturetwo="${housecalltwo.listChildren}">
+			<sly data-sly-list.housecallfeaturetwo="${housecalltwo.listChildren}">
               <div data-sly-test="${housecallfeatureList.index == housecallfeaturetwoList.index}" class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine">
                 <div class="checkIcon">
                     <img src="/content/dam/nexterahome/homeimages/${housecallfeaturetwo.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
                   </div> 
               </div>
 			  </sly>
-			  <sly data-sly-test="${housecallthree.size == 'true'}" data-sly-list.housecallfeaturethree="${housecallthree.listChildren}">
+			  <sly data-sly-list.housecallfeaturethree="${housecallthree.listChildren}">
               <div data-sly-test="${housecallfeatureList.index == housecallfeaturethreeList.index}" class="col-sm-12 col-md-2 col-lg-2 border-left horizontalLine">
                   <div class="checkIcon">
                       <img src="/content/dam/nexterahome/homeimages/${housecallfeaturethree.featureavailable == 'yes' ? 'checkIcon.svg' : 'xIcon.svg'}">
@@ -227,7 +213,7 @@
              &nbsp;
           </div>
           <div class="col-sm-12 col-md-2 col-lg-2">
-            <div class="center" data-sly-test="${properties.enrollcta}">
+            <div class="center">
               <a href="${properties.enrollctaurl}"><button class="btn btn-tertiary inlineBlock">
                   ${properties.enrollcta}
               </button></a>
@@ -235,7 +221,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-2 col-lg-2">
-            <div class="center" data-sly-test="${properties.enrollcta}">
+            <div class="center">
                 <a href="${properties.enrollctaurltwo}"><button class="btn btn-tertiary inlineBlock">
                     ${properties.enrollcta}
                 </button></a>
@@ -243,7 +229,7 @@
               </div>
           </div>
           <div class="col-sm-12 col-md-2 col-lg-2">
-            <div class="center" data-sly-test="${properties.enrollcta}">
+            <div class="center">
                 <a href="${properties.enrollctaurlthree}"><button class="btn btn-tertiary inlineBlock">
                     ${properties.enrollcta}
                 </button></a>
@@ -270,35 +256,35 @@
                   <div class="plan healthyAppliances">
                       <img src="${properties.planimagepath}">
                     </div>
-                    <h4 data-sly-test="${properties.planheader}">${properties.planheader}</h4>
+                    <h4>${properties.planheader}</h4>
               </div>
               <div class="d-sm-block d-md-block d-lg-none">
-                  <div class="servicePlanCallout" data-sly-test="${properties.pricingheader}">
+                  <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.pricingheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${logicone.size == 'true'}" data-sly-list.planfeature="${priceoptions.listChildren}">
+			  <sly data-sly-list.planfeature="${priceoptions.listChildren}">
               <div class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${planfeature.featuredesc}</div>
                 <div class="horizontalLine"></div>
               </div>
               </sly>
               <div class="d-sm-block d-md-block d-lg-none">
-                  <div class="servicePlanCallout" data-sly-test="${properties.whatcoverheader}">
+                  <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.whatcoverheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${whatsone.size == 'true'}" data-sly-list.whatcoverfeature="${whatsCoverone.listChildren}">
+			  <sly data-sly-list.whatcoverfeature="${whatsCoverone.listChildren}">
               <div data-sly-test="${whatcoverfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                   <div class="planBenefits">${whatcoverfeature.featurenameone}</div>
                 </div>
 				</sly>
               <div class="d-sm-block d-md-block d-lg-none">
-                  <div class="servicePlanCallout" data-sly-test="${properties.housecallperyearheader}">
+                  <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.housecallperyearheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${housecall.size == 'true'}" data-sly-list.housecallfeature="${housecallone.listChildren}">
+			  <sly data-sly-list.housecallfeature="${housecallone.listChildren}">
               <div data-sly-test="${housecallfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${housecallfeature.featurenameone}</div>
                 <div class="horizontalLine"></div>
@@ -306,7 +292,7 @@
               </div>
 			  </sly>
               <div class="d-sm-block d-md-block d-lg-none">
-                <div class="center" data-sly-test="${properties.enrollcta}">
+                <div class="center">
                   <a href="${properties.enrollctaurl}"><button class="btn btn-primary inlineBlock">
                       ${properties.enrollcta}
                   </button></a>
@@ -318,18 +304,18 @@
             <!-- END HEALTHY APPLIANCES mobile-->
             <!-- START HEALTHY SYSTEMS PLAN -->
              <div class="container whiteBkrd2">
-              <div class="d-sm-block d-md-block d-lg-none" data-sly-test="${properties.planheadertwo}">
+              <div class="d-sm-block d-md-block d-lg-none">
                   <div class="plan healthyAppliances">
                       <img src="${properties.planimagepathtwo}">
                     </div>
                     <h4>${properties.planheadertwo}</h4>
               </div>
               <div class="d-sm-block d-md-block d-lg-none">
-                  <div class="servicePlanCallout" data-sly-test="${properties.pricingheader}">
+                  <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.pricingheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${logictwo.size == 'true'}"  data-sly-list.planfeaturetwo="${priceoptionstwo.listChildren}">
+			  <sly data-sly-list.planfeaturetwo="${priceoptionstwo.listChildren}">
               <div class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${planfeaturetwo.featuredesc}</div>
                 <div class="horizontalLine"></div>
@@ -340,7 +326,7 @@
                       <div class="servicePlan">${properties.whatcoverheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${whatstwo.size == 'true'}"  data-sly-list.whatcoverfeature="${whatsCovertwo.listChildren}">
+			  <sly data-sly-list.whatcoverfeature="${whatsCovertwo.listChildren}">
               <div data-sly-test="${whatcoverfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                   <div class="planBenefits">${whatcoverfeature.featurenameone}</div>
                 </div>
@@ -350,7 +336,7 @@
                       <div class="servicePlan">${properties.housecallperyearheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${housecalltwo.size == 'true'}" data-sly-list.housecallfeature="${housecalltwo.listChildren}">
+			  <sly data-sly-list.housecallfeature="${housecalltwo.listChildren}">
               <div data-sly-test="${housecallfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${housecallfeature.featurenameone}</div>
                 <div class="horizontalLine"></div>
@@ -359,39 +345,39 @@
 			  </sly>
               <div class="d-sm-block d-md-block d-lg-none">
                 <div class="center">
-                  <a href="${properties.enrollctaurl}"><button class="btn btn-primary inlineBlock">
+                  <a href="${properties.enrollctaurltwo}"><button class="btn btn-primary inlineBlock">
                       ${properties.enrollcta}
                   </button></a>
-                 <a target="_blank" href="${properties.plandetailctaurl}" class="planDetails">${properties.plandetails}</a>
+                 <a target="_blank" href="${properties.plandetailctaurltwo}" class="planDetails">${properties.plandetails}</a>
                 </div>
               </div>
             </div>
               <!-- END HEALTHY SYSTEMS PLAN-->
                <!-- START HEALTHY HOME PLAN -->
              <div class="container whiteBkrd2">
-              <div class="d-sm-block d-md-block d-lg-none" data-sly-test="${properties.planheaderthri}">
+              <div class="d-sm-block d-md-block d-lg-none">
                   <div class="plan healthyAppliances">
                       <img src="${properties.planimagepaththri}">
                     </div>
                     <h4>${properties.planheaderthri}</h4>
               </div>
-              <div class="d-sm-block d-md-block d-lg-none" data-sly-test="${properties.pricingheader}">
+              <div class="d-sm-block d-md-block d-lg-none">
                   <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.pricingheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${logicthree.size == 'true'}" data-sly-list.planfeaturethree="${priceoptionsthree.listChildren}">
+			  <sly data-sly-list.planfeaturethree="${priceoptionsthree.listChildren}">
               <div class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${planfeaturethree.featuredesc}</div>
                 <div class="horizontalLine"></div>
               </div>
               </sly>
-              <div class="d-sm-block d-md-block d-lg-none" data-sly-test="${properties.whatcoverheader}">
+              <div class="d-sm-block d-md-block d-lg-none">
                   <div class="servicePlanCallout">
                       <div class="servicePlan">${properties.whatcoverheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${whatsthree.size == 'true'}"  data-sly-list.whatcoverfeature="${whatsCoverthree.listChildren}">
+			  <sly data-sly-list.whatcoverfeature="${whatsCoverthree.listChildren}">
               <div data-sly-test="${whatcoverfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                   <div class="planBenefits">${whatcoverfeature.featurenameone}</div>
                 </div>
@@ -401,7 +387,7 @@
                       <div class="servicePlan">${properties.housecallperyearheader}</div>
                   </div>
               </div>
-			  <sly data-sly-test="${housecallthree.size == 'true'}" data-sly-list.housecallfeature="${housecallthree.listChildren}">
+			  <sly data-sly-list.housecallfeature="${housecallthree.listChildren}">
               <div data-sly-test="${housecallfeature.featureavailable == 'yes'}" class="d-sm-block d-md-block d-lg-none">
                 <div class="planBenefits">${housecallfeature.featurenameone}</div>
                 <div class="horizontalLine"></div>
@@ -410,10 +396,10 @@
 			  </sly>
               <div class="d-sm-block d-md-block d-lg-none">
                 <div class="center">
-                  <a href="${properties.enrollctaurl}"><button class="btn btn-primary inlineBlock">
+                  <a href="${properties.enrollctaurlthree}"><button class="btn btn-primary inlineBlock">
                       ${properties.enrollcta}
                   </button></a>
-                 <a target="_blank" href="${properties.plandetailctaurl}" class="planDetails">${properties.plandetails}</a>
+                 <a target="_blank" href="${properties.plandetailctaurlthree}" class="planDetails">${properties.plandetails}</a>
                 </div>
               </div>
             </div>
@@ -424,7 +410,7 @@
 </div>
 </sly>
 <!--START MODAL for feature-->
-<sly data-sly-test="${logicone.size == 'true'}" data-sly-list.planfeaturemodal="${priceoptions.listChildren}">
+<sly data-sly-list.planfeaturemodal="${priceoptions.listChildren}">
 <div data-sly-test="${planfeaturemodal.showtooltip == 'yes'}" class="modal" id="planfeature_${planfeaturemodalList.index}" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -446,7 +432,7 @@
 <!--END MODAL feature-->
 </sly>
 
-<sly data-sly-test="${whatsone.size == 'true'}" data-sly-list.whatcoverfeaturemodal="${whatsCoverone.listChildren}">
+<sly data-sly-list.whatcoverfeaturemodal="${whatsCoverone.listChildren}">
 <div data-sly-test="${whatcoverfeaturemodal.showtooltip == 'yes'}" class="modal" id="whatcoverfeature_${whatcoverfeaturemodalList.index}" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -468,7 +454,7 @@
 <!--END MODAL feature-->
 </sly>
 
-<sly data-sly-test="${housecall.size == 'true'}" data-sly-list.housecallonefeaturemodal="${housecallone.listChildren}">
+<sly data-sly-list.housecallonefeaturemodal="${housecallone.listChildren}">
 <div data-sly-test="${housecallonefeaturemodal.showtooltip == 'yes'}" class="modal" id="housecallfeature_${housecallonefeaturemodalList.index}" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-12T14:50:48.546-05:00"
+        cq:lastModified="{Date}2019-02-28T09:36:56.297-05:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
         cq:lastReplicatedBy="peakster1"
@@ -63,8 +63,8 @@
                     text="&lt;h3>Healthy House.&lt;/h3>&#xd;&#xa;&lt;h3>Healthy Home.&lt;/h3>&#xd;&#xa;"
                     textIsRich="true"/>
                 <howitworksection
-                    jcr:lastModified="{Date}2019-02-11T19:13:49.416Z"
-                    jcr:lastModifiedBy="peakster1"
+                    jcr:lastModified="{Date}2019-02-28T09:36:56.289-05:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nexterahome/components/content/howitworks"
                     ctalabel="VIEW SERVICE PLANS"
@@ -120,14 +120,14 @@
                 </links>
             </homepagebanner>
             <advantage
-                jcr:lastModified="{Date}2019-02-12T14:47:53.861-05:00"
+                jcr:lastModified="{Date}2019-02-28T09:34:23.162-05:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/advantage"
                 disclaimertext="&lt;font color=&quot;black&quot;>*Coverages vary by plan. View &lt;a href=&quot;/content/nexterahome/en/homestrcture/serviceplans.html&quot;>&lt;u>service plans&lt;/u>&lt;/a> for options, details, and provider information.&lt;/font>"
                 homecareButtonText="READY TO ENROLL?"
                 homecareCTA="/content/nexterahome/en/homestrcture/serviceplans"
-                homecareDescription="Your home is full of complex mechanics and parts that need constant care and attention, just like you. Simple service plans for your major home systems and appliances so we are here if a surprise arises. There is no long term commitment because you can cancel at any time."
+                homecareDescription="Your home is full of complex mechanics and parts that need constant care and attention, just like you. If a surprise arises, we are here with simple service plans for your major. There is no long term commitment because you can cancel at any time."
                 homecareHeading="A plan for those who hate to plan"
                 homecareImagePath="/content/dam/nexterahome/homeimages/planAnimated.gif"
                 homeWarrantiesButtonText="VIEW SERVICE PLANS"
@@ -135,10 +135,10 @@
                 homewarrantiesDescription="A service plan offered through NextEra Home provides repairs and replacement of your major home appliances, HVAC, plumbing and more*."
                 homeWarrantiesHeading="The next era of home health has arrived"
                 homeWarrantiesImagePath="/content/dam/nexterahome/homeimages/homeWarrantiesAnimated.gif"
-                title="The NextEra home advantage"
+                title="The NextEra Home advantage"
                 totalhomecareButtonText="HAVE A QUESTION?"
                 totalhomecareCTA="/content/nexterahome/en/homestrcture/faq"
-                totalhomecareDescription="With a NextEra subscription, you will receive:"
+                totalhomecareDescription="With these plans, you will receive:"
                 totalhomecareHeading="Total home care"
                 totalhomecareImagePath="/content/dam/nexterahome/homeimages/totalHomeCareAnimated.gif">
                 <totalhomecareFeatures jcr:primaryType="nt:unstructured">
@@ -147,7 +147,7 @@
                         feature="House calls by expert technicians."/>
                     <item1
                         jcr:primaryType="nt:unstructured"
-                        feature="Schedule your service around the clock."/>
+                        feature="Service scheduling around the clock."/>
                     <item2
                         jcr:primaryType="nt:unstructured"
                         feature="Affordable monthly rates and a low deductible."/>
