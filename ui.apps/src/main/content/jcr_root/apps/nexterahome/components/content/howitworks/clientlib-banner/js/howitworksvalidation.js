@@ -37,8 +37,9 @@ $(document).ready(function(){
 
 
             }else{
-
-                alert(responseData.service);
+            	event.preventDefault();
+                window.location = "/content/nexterahome/en/homestrcture/thank-you.html";
+              //  alert(responseData.service);
             }
 
 
