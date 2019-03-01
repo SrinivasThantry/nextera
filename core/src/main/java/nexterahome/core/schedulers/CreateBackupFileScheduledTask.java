@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
 @Component(service = Runnable.class)
 public class CreateBackupFileScheduledTask implements Runnable {
 
-	@ObjectClassDefinition(name = "A scheduled task", description = "Backup CronJob for cron-job like task with properties")
+	@ObjectClassDefinition(name = "Back Up File Cron Job for nextera home", description = "Backup CronJob for cron-job like task with properties")
 	public static @interface Config {
 
 		@AttributeDefinition(name = "Cron-job expression")
@@ -92,6 +92,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 				while (iter.hasNext()) {
 					try {
 						Node childNode = (Node) iter.next();
+						if(!childNode.getName().equalsIgnoreCase("customerData")){
 						String firstName = childNode.hasProperty("FirstName")
 											? childNode.getProperty("FirstName").getString() : "";
 						String lastName = childNode.hasProperty("lastName")
@@ -144,6 +145,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 						jsonobj.put("promoCode", promoCode);
 						counter = counter + 1;
 						array.put(jsonobj);
+						}
 					} catch (Exception e) {
 						logger.error("ex itr nodes" + e);
 					}
