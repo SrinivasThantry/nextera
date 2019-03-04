@@ -58,23 +58,18 @@
 
                     <!-- ROW 4 -->
                         <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="input-block floating-field" data-sly-test="${properties.promocode}">
-                            <label>${properties.promocode}</label>
-                            <input required id="promocode" value="" type="text" maxlength="30" class="form-control">
-                            </div>
-                        </div>
-                          <div class="col-sm-12 col-md-4">
+
+                          <div class="col-sm-12 col-md-6">
 							<div class="form-group" data-sly-test="${properties.phonenumbertype}">
                       			<label>${properties.phonenumbertype}</label>
-                                   <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype" tabindex="7">
-                                        <option value="none">Please Select Type</option>
+                                   <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype">
+                                        <option value="none">Phone Type</option>
                                         <option>Home</option>
                                         <option>Mobile</option>
                                         </select>
                        				 </div>
                         </div>
-                        <div class="col-sm-12 col-md-4">
+                        <div class="col-sm-12 col-md-6">
                             <div class="input-block floating-field" data-sly-test="${properties.phonenumber}">
                             <label>${properties.phonenumber}</label>
                             <input required id="phonenumber" value="" type="text" maxlength="10" class="form-control">
@@ -175,6 +170,15 @@
                             <div class="error-label">Email does not match.</div>
                         </div>
                         </div>
+                        <!-- ROW 7 -->
+                        <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="input-block floating-field" data-sly-test="${properties.promocode}">
+                            <label>${properties.promocode}</label>
+                            <input required id="promocode" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        </div>
 
                     <!-- CHECKBOXES -->
                     <div class="row checkbox-group">
@@ -231,23 +235,17 @@
 
  						<!-- ROW 4 -->
                         <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="input-block floating-field" data-sly-test="${properties.promocodeSecondary}">
-                            <label>${properties.promocodeSecondary}</label>
-                            <input required id="promocodeSecondary" value="" type="text" maxlength="30" class="form-control">
-                            </div>
-                        </div>
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-6">
 							<div class="form-group" data-sly-test="${properties.phonenumbertypeSecondary}">
                       			<label>${properties.phonenumbertypeSecondary}</label>
                                    <select required class="form-control" id="phonenumbertypeSecondary" type="text" name="phonenumbertypeSecondary">
-                                       <option value="none">Please Select Type</option>
+                                       <option value="none">Phone Type</option>
                                         <option>Home</option>
                                         <option>Mobile</option>
                                         </select>
                        				 </div>
                         </div>
-                        <div class="col-sm-12 col-md-4">
+                        <div class="col-sm-12 col-md-6">
                             <div class="input-block floating-field" data-sly-test="${properties.phonenumberSecondary}">
                             <label>${properties.phonenumberSecondary}</label>
                             <input required id="phonenumberSecondary" value="" type="text" maxlength="10" class="form-control">
