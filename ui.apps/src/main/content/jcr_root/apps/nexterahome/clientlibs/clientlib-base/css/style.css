@@ -33,6 +33,11 @@
 /** END Google Fonts **/
 
 /** START BASE Classes **/
+.errorMessage
+{
+border:1px solid red;
+
+}
 a,
 a:hover {
     color: #007DB6 !important;

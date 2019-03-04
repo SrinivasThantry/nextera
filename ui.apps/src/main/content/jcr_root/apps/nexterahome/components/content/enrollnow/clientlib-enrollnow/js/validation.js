@@ -22,6 +22,33 @@ $(document).ready(function(){
     });
 
    $('#reEnterEmail').parent().siblings('.error-label').hide();
+
+    $('#phonenumbertype').blur(function(){
+        var phonenumbertype = $('#phonenumbertype').val();
+        if(phonenumbertype=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#phonenumbertype').addClass('error');
+
+			//enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumbertype').removeClass('error');
+        }
+    })
+
+
+    $('#MailingAddressState').blur(function(){
+    var state = $('#MailingAddressState').val();
+        if(state=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#MailingAddressState').addClass('error');
+
+			//enteredAllMandatoryFields = false;
+        }else{
+			$('#MailingAddressState').removeClass('error');
+        }
+    })
+
+
     $('#submit').click(function(event){
 
 
@@ -29,6 +56,8 @@ $(document).ready(function(){
 
          var zipcode = $('#form1Zipcode').val();
          var firstName = $('#firstName').val();
+
+
 		 var lastName = $('#lastName').val();
       	 var promocode = $('#promocode').val();
          var phonenumbertype = $('#phonenumbertype').val();
@@ -77,7 +106,7 @@ $(document).ready(function(){
         }else{
 			$('#mailingAddress').removeClass('error');
         }
-        if(phonenumbertype.length==0){
+        if(phonenumbertype=="none"){
 			$('#phonenumbertype').addClass('error');
 			enteredAllMandatoryFields = false;
         }else{
@@ -101,8 +130,10 @@ $(document).ready(function(){
         }else{
 			$('#city').removeClass('error');
         }
-		if(state.length==0){
+		if(state=="none"){
+          //  document.getElementById("stateVal").style.display="block";
 			$('#MailingAddressState').addClass('error');
+
 			enteredAllMandatoryFields = false;
         }else{
 			$('#MailingAddressState').removeClass('error');
@@ -148,7 +179,7 @@ $(document).ready(function(){
 				}else{
 					$('#mailingAddressSecondary').removeClass('error');
        			}
-       			 if(phonenumbertypeSecondary.length==0){
+       			 if(phonenumbertypeSecondary=="none"){
 					$('#phonenumbertypeSecondary').addClass('error');
 					enteredAllMandatoryFields = false;
       		    }else{
@@ -172,12 +203,14 @@ $(document).ready(function(){
 				}else{
 					$('#citySecondary').removeClass('error');
         		}
-				if(stateSecondary.length==0){
-					$('#stateSecondary').addClass('error');
-					enteredAllMandatoryFields = false;
-				}else{
-					$('#stateSecondary').removeClass('error');
-        		}
+				if(stateSecondary=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#stateSecondary').addClass('error');
+
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#stateSecondary').removeClass('error');
+        }
 				/*if(emailSecondary.length==0){
 					$('#emailSecondary').parent().addClass('error');
 					enteredAllMandatoryFields = false;

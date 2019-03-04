@@ -55,7 +55,8 @@
                         </div>
                         </div>
 
- 						<!-- ROW 4 -->
+
+                    <!-- ROW 4 -->
                         <div class="row">
                         <div class="col-sm-12 col-md-4">
                             <div class="input-block floating-field" data-sly-test="${properties.promocode}">
@@ -67,7 +68,7 @@
 							<div class="form-group" data-sly-test="${properties.phonenumbertype}">
                       			<label>${properties.phonenumbertype}</label>
                                    <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype" tabindex="7">
-                                       <option>       </option>
+                                        <option value="none">Please Select Type</option>
                                         <option>Home</option>
                                         <option>Mobile</option>
                                         </select>
@@ -86,7 +87,7 @@
                         <div class="col-sm-12 col-md-4">
                             <div class="input-block floating-field" data-sly-test="${properties.zipcode}">
                             <label>${properties.zipcode}</label>
-                            <input required id="form1Zipcode" value="" type="text" maxlength="5" class="form-control">
+                            <input required id="form1Zipcode" value="" type="text" maxlength="15" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4">
@@ -98,7 +99,8 @@
                         <div class="col-sm-12 col-md-4">
 							<div class="form-group" data-sly-test="${properties.state}">
                       			<label>${properties.state}</label>
-                                    <select required class="form-control" id="MailingAddressState" type="text" name="MailingAddress[State]" tabindex="7">
+                                    <select required class="form-control" id="MailingAddressState" type="text" name="MailingAddress[State]" >
+                                        <option value="none">Please Select State</option>
                                         <option>AL</option>
                                         <option>AK</option>
                                         <option>AZ</option>
@@ -149,9 +151,12 @@
                                         <option>WV</option>
                                         <option>WI</option>
                                         <option>WY</option>
-                                  </select>                         
+                                  </select> 
+                                  <div id="stateVal" style="display: none;" class="errorMessage"></div>
                     			</div>
+
                         	</div>
+
                        	</div>
 
                         <!-- ROW 6 -->
@@ -235,8 +240,8 @@
                             <div class="col-sm-12 col-md-4">
 							<div class="form-group" data-sly-test="${properties.phonenumbertypeSecondary}">
                       			<label>${properties.phonenumbertypeSecondary}</label>
-                                   <select required class="form-control" id="phonenumbertypeSecondary" type="text" name="phonenumbertypeSecondary" tabindex="7">
-                                       <option>     </option>
+                                   <select required class="form-control" id="phonenumbertypeSecondary" type="text" name="phonenumbertypeSecondary">
+                                       <option value="none">Please Select Type</option>
                                         <option>Home</option>
                                         <option>Mobile</option>
                                         </select>
@@ -266,7 +271,8 @@
                             <div class="col-sm-12 col-md-4">
 								<div class="form-group" data-sly-test="${properties.stateSecondary}">
                       				<label>${properties.stateSecondary}</label>
-                                    	<select required class="form-control" id="stateSecondary" type="text" name="CoverageAddress[State]" tabindex="18">
+                                    	<select required class="form-control" id="stateSecondary" type="text" name="stateSecondary" >
+                                        <option value="none">Please Select State</option>
                                             <option>AL</option>
                                             <option>AK</option>
                                             <option>AZ</option>
