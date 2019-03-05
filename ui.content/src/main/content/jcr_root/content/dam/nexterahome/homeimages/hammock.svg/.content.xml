@@ -2,24 +2,24 @@
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="b7cea9d3-ea67-490f-8b67-2d74f642668c">
+    jcr:uuid="2ff99dae-4a4b-44fc-8ee3-f0d8d7849bd5">
     <jcr:content
         cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
         cq:lastReplicatedBy="peakster1"
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/hammock.svg"
-        jcr:lastModified="{Date}2019-02-14T06:34:02.893+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:25.043-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:46.141+05:30"
+            dam:extracted="{Date}2019-03-05T09:31:17.425-05:00"
             dam:sha1="339c7445d7c3fe2c2bfa2b6f6f12e70c8166ca1a"
             dam:size="{Long}3205"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:39.994Z"
-            jcr:lastModified="{Date}2019-02-14T06:34:02.892+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:25.043-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

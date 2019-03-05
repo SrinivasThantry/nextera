@@ -2,24 +2,24 @@
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="8fcd7695-001c-46f8-94d3-1704d60f3ddc">
+    jcr:uuid="86584a8f-7be8-45ef-b7d4-d1f39a65e7b1">
     <jcr:content
         cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
         cq:lastReplicatedBy="peakster1"
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/truck.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:50.551+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:20.906-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:40.992+05:30"
+            dam:extracted="{Date}2019-03-05T09:31:15.744-05:00"
             dam:sha1="fc9ad973df5395b78431501937ef187afb1af3ab"
             dam:size="{Long}1214"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:38.892Z"
-            jcr:lastModified="{Date}2019-02-14T06:33:50.551+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:20.906-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

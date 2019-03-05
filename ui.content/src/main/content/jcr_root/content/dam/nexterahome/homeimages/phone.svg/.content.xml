@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/phone.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:49.660+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:20.789-05:00"
         jcr:lastModifiedBy="peakster3"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:49.365+05:30"
+            dam:extracted="{Date}2019-03-05T09:31:20.548-05:00"
             dam:sha1="ab989f97bf47fcc03ce4e067ffdbf0aa190e6dbd"
             dam:size="{Long}1183"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:38.568Z"
-            jcr:lastModified="{Date}2019-02-14T06:33:46.363+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:17.375-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

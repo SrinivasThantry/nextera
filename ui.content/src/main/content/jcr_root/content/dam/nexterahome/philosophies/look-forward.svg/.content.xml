@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/philosophies/look-forward.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:59.249+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:24.223-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:58.617+05:30"
-            dam:sha1="5c2b53ec0f7ff3f1842b5df86adc7b481a702dd1"
-            dam:size="{Long}1622"
+            dam:extracted="{Date}2019-03-05T09:31:23.777-05:00"
+            dam:sha1="bffc77fcc0d8c69e47bd754825ddee905c19618a"
+            dam:size="{Long}1640"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-20T15:52:01.369-05:00"
-            jcr:lastModified="{Date}2019-02-14T06:33:48.354+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:18.748-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

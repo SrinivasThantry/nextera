@@ -6,16 +6,16 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/e-delete.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:55.761+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:22.379-05:00"
         jcr:lastModifiedBy="peakster3"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:55.638+05:30"
+            dam:extracted="{Date}2019-03-05T09:31:22.272-05:00"
             dam:sha1="b7defb8c7ded3ba36a07e5c0839977497a6cebe6"
             dam:size="{Long}285"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:38.081Z"
-            jcr:lastModified="{Date}2019-02-14T06:33:40.733+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:15.570-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

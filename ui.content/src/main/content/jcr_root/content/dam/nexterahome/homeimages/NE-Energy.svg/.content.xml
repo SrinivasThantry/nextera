@@ -2,21 +2,18 @@
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="bffd6172-6052-477d-aa4c-bb7219a75203">
+    jcr:uuid="22cf1a31-f5b7-46cd-a3cd-9362e8d77e26">
     <jcr:content
         dam:assetState="processed"
-        dam:relativePath="nexterahome/homeimages/chevronDarkRight.svg"
-        jcr:lastModified="{Date}2019-03-05T09:31:24.985-05:00"
-        jcr:lastModifiedBy="peakster3"
+        dam:relativePath="nexterahome/homeimages/NE-Energy.svg"
+        jcr:lastModified="{Date}2019-03-05T12:00:27.313-05:00"
+        jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:24.740-05:00"
-            dam:sha1="7bb7e0d28071fbe8d370a24c29e6fa2d681cead8"
-            dam:size="{Long}326"
+            dam:extracted="{Date}2019-03-05T12:00:27.065-05:00"
+            dam:sha1="2dca3c64583cc98b8d5a3a7792624f39ceb311d7"
+            dam:size="{Long}11679"
             dc:format="image/svg+xml"
-            dc:modified="{Date}2019-01-18T05:43:39.521Z"
-            jcr:lastModified="{Date}2019-03-05T09:31:24.561-05:00"
-            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/fplHomeLogoBW.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:58.579+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:23.739-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:50.584+05:30"
-            dam:sha1="b6a7f2d395a06eeef9873e42f49ebd118feb0eb7"
-            dam:size="{Long}2252"
+            dam:extracted="{Date}2019-03-05T09:31:21.204-05:00"
+            dam:sha1="c1c462dc54b1e1366636796b5dc1b6834228271b"
+            dam:size="{Long}2255"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-02-02T01:23:47.300-05:00"
-            jcr:lastModified="{Date}2019-02-14T06:33:58.578+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:23.739-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
