@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-04T13:52:18.508-05:00"
+        cq:lastModified="{Date}2019-03-05T09:39:03.668-05:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-02-08T15:06:45.408Z"
         cq:lastReplicatedBy="peakster1"
@@ -73,7 +73,7 @@
             <serviceplanswrapper
                 jcr:created="{Date}2019-01-18T07:48:55.507+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-02-28T10:05:06.922-05:00"
+                jcr:lastModified="{Date}2019-03-05T09:39:03.614-05:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
@@ -102,7 +102,7 @@
                 <priceOptions jcr:primaryType="nt:unstructured">
                     <item0
                         jcr:primaryType="nt:unstructured"
-                        featuredesc="$35/ mont"
+                        featuredesc="$35/month"
                         featurename="Rate"
                         showtooltip="no"/>
                     <item1
