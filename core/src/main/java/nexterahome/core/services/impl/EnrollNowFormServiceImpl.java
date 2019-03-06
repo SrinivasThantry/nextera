@@ -37,7 +37,6 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
 	@org.osgi.service.component.annotations.Reference
 	private ResourceResolverFactory resolverFactory;
 
-	private ResourceResolver resourceResolver;
 	
 	@Reference
     private QueryBuilder builder;

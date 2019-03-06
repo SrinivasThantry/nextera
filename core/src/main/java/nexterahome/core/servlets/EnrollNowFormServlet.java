@@ -238,7 +238,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			prodSelectionJson.addProperty("PromoCode", PromoCode);
 			useobj.setPromoCode(PromoCode);
 			jsonArray.add(prodSelectionJson);
-			log.error("::jsonArray:"+jsonArray);
+			log.error("::jsnArray:"+jsonArray);
 			customerDataJson.add("ProductSelection", jsonArray);
 			requestJson = gson.toJson(customerDataJson);
 			log.error("::requestJson final:"+requestJson);
