@@ -1,92 +1,88 @@
 <!-- START HERO -->
-<div class="heroBkrd"
-	style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrdTopRight.svg'); background-repeat: no-repeat !important; background-position: top right;">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12">
-				<div class="heading" data-sly-test="${properties.title}">${properties.title}</div>
-				<div class="subHeading center" data-sly-test="${properties.subtitle}">${properties.subtitle}</div>
-			</div>
-		</div>
+<div class="heroBkrd" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrdTopRight.svg'); background-repeat: no-repeat !important; background-position: top right;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+<div class="heading">${properties.title}</div>
+            <div class="subHeading center">${properties.subtitle}</div>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <!-- START HOW IT WORKS -->
+        <div class="container whiteBkrd">
+          <div class="row">
+            <div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+              <h1>${properties.heading}</h1>
+              <div class="greenBar2"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <div class="approach">${properties.serviceTitle}</div>
+<div class="howitWorksText left">${properties.serviceDescription @ context='html'}
+<div class="planDetails">${properties.plandetails}</div>
+                </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <div class="philosophyIMG">
+<img src="${properties.imagePath}">
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="responsiveRow">&nbsp;</div>
+            </div>
+          </div>
+          <div>
+          <div class="row">
+            <div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 philosophyBKRD">
+              <div class="row">
 
 
-		<div class="row">
-			<div class="col-md-12 col-lg-12">
-				<!-- START HOW IT WORKS -->
-				<div class="container whiteBkrd">
-					<div class="row">
-						<div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1" data-sly-test="${properties.heading}">
-							<h1>${properties.heading}</h1>
-							<div class="greenBar2"></div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
-							<div class="row">
-								<div class="col-sm-12 col-md-12 col-lg-6">
-									<div class="approach" data-sly-test="${properties.serviceTitle}">${properties.serviceTitle}</div>
-									<div class="howitWorksText left">${properties.serviceDescription @ context='html'}
-										<div class="planDetails" data-sly-test="${properties.plandetails}">${properties.plandetails}</div>
-									</div>
-								</div>
-								<div class="col-sm-12 col-md-12 col-lg-6">
-									<div class="philosophyIMG" data-sly-test="${properties.imagePath}">
-										<img src="${properties.imagePath}">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 col-md-12 col-lg-12">
-							<div class="responsiveRow">&nbsp;</div>
-						</div>
-					</div>
-					<div>
-						<div class="row">
-							<div
-								class="col-sm-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 philosophyBKRD">
-								<div class="row" data-sly-use.model="${'nexterahome.core.models.ServiceproviderCheck' @ child='iconTexts'}">
+    <div data-sly-use.philosophies="${resource.path}/philosophies" data-sly-unwrap>
+            <div data-sly-list="${philosophies.listChildren}" data-sly-unwrap>
+
+				<div class="col-sm-12 col-md-12 col-lg-4 ${itemList.index!=0? 'verticalLine': ''}">
+                  <div class="center">
+				<img src="${item.philosophyImage @ context='html'}" alt="${item.philosophyHeader}" />
+                  </div>
+                    <div class="philosophyHeading">${item.philosophyHeader}</div>
+                    <div class="philosophyBody">${item.philosophyDescription}</div>
+                </div>
 
 
-									<div data-sly-test="${model.size == 'true'}" data-sly-use.philosophies="${resource.path}/philosophies"
-										data-sly-unwrap>
-										<div data-sly-list="${philosophies.listChildren}"
-											data-sly-unwrap>
-
-											<div
-												class="col-sm-12 col-md-12 col-lg-4 ${itemList.index!=0? 'verticalLine': ''}">
-												<div class="center">
-													<img src="${item.philosophyImage @ context='html'}"
-														alt="${item.philosophyHeader}" />
-												</div>
-												<div class="philosophyHeading">${item.philosophyHeader}</div>
-												<div class="philosophyBody">${item.philosophyDescription}</div>
-											</div>
-
-
-										</div>
-									</div>
-
-
-
-
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END HOW IT WORKS -->
-			</div>
-		</div>
+        </div>
 	</div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- END HOW IT WORKS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END HERO -->
+  <div class="advantageBkrd">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+    </div>
+  </div>
 </div>
-<!-- END HERO -->
-<div class="advantageBkrd">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12"></div>
-		</div>
-	</div>
 </div>

@@ -3,10 +3,10 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/nextera-fav"
-        cq:lastModified="{Date}2019-02-11T19:49:56.192Z"
+        cq:lastModified="{Date}2019-02-18T16:57:55.726Z"
         cq:lastModifiedBy="peakster1"
-        cq:lastReplicated="{Date}2019-02-05T18:40:17.980Z"
-        cq:lastReplicatedBy="admin"
+        cq:lastReplicated="{Date}2019-02-18T16:58:10.830Z"
+        cq:lastReplicatedBy="peakster1"
         cq:lastReplicationAction="Activate"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
@@ -105,7 +105,7 @@
                 cq:lastReplicated="{Date}2019-01-24T03:22:48.625Z"
                 cq:lastReplicatedBy="peakster4"
                 cq:lastReplicationAction="Activate"
-                jcr:lastModified="{Date}2019-02-11T19:49:56.174Z"
+                jcr:lastModified="{Date}2019-02-18T16:57:55.707Z"
                 jcr:lastModifiedBy="peakster1"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
@@ -115,7 +115,7 @@
                 fplLogo="/content/dam/nexterahome/homeimages/fplHomeLogoBW.svg"
                 fplLogoCta="http://www.fples.com/"
                 instaurl="https://www.instagram.com/nexterahome/"
-                nextEraLogo="/content/dam/nexterahome/homeimages/nexterahomeLogoBW.svg"
+                nextEraLogo="/content/dam/nexterahome/homeimages/NE-Energy.png"
                 nextEraLogoCta="/content/nexterahome/en/homestrcture/home.html"
                 showSocials="yes"
                 textIsRich="true"
@@ -173,11 +173,16 @@
         </image>
     </jcr:content>
     <home/>
-    <serviceplans/>
-    <faq/>
     <ourphilosophy/>
     <thank-you-fpl/>
     <thank-you/>
     <enrollnow/>
     <sitemap/>
+    <serviceplansdemo/>
+    <serviceplans/>
+    <faq/>
+    <serviceplans-illinois/>
+    <serviceplans-texas/>
+    <faq-illinois/>
+    <faq-texas/>
 </jcr:root>

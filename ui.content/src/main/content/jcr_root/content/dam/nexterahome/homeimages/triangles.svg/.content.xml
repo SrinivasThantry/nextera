@@ -6,16 +6,16 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/triangles.svg"
-        jcr:lastModified="{Date}2019-02-14T06:34:15.561+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:27.695-05:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:45.400+05:30"
-            dam:sha1="f8cac4da280f2d9ede3f6e84c7e2e4e94f463ce9"
-            dam:size="{Long}687"
+            dam:extracted="{Date}2019-03-05T09:31:17.187-05:00"
+            dam:sha1="da0941e9dc605bf46e6447b03164725f3b561bf9"
+            dam:size="{Long}703"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:42.953Z"
-            jcr:lastModified="{Date}2019-02-14T06:34:15.561+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:27.694-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

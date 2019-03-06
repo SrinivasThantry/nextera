@@ -6,16 +6,16 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/hamburger.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:47.654+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:18.634-05:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:28.580+05:30"
-            dam:sha1="30fc00bfae752b07c347f7de0c363271d2aa7d94"
-            dam:size="{Long}5193"
+            dam:extracted="{Date}2019-03-05T09:31:15.323-05:00"
+            dam:sha1="ae7e6d74473310938f9128e96ca437e23b557751"
+            dam:size="{Long}5196"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-21T22:24:14.720-05:00"
-            jcr:lastModified="{Date}2019-02-14T06:33:47.653+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:18.633-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

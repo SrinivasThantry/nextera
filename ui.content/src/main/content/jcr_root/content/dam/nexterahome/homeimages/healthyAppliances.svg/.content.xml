@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/healthyAppliances.svg"
-        jcr:lastModified="{Date}2019-02-14T06:33:45.747+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:17.347-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:41.767+05:30"
-            dam:sha1="2e58ac484dadf23edc4e226eea41523593c7d945"
-            dam:size="{Long}18622"
+            dam:extracted="{Date}2019-03-05T09:31:16.593-05:00"
+            dam:sha1="8611a8f46f30422c780d34b9e21799a17b01d286"
+            dam:size="{Long}18687"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:38.516Z"
-            jcr:lastModified="{Date}2019-02-14T06:33:45.746+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:17.347-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

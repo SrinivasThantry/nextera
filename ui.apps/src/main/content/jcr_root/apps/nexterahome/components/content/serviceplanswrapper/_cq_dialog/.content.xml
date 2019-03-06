@@ -93,13 +93,13 @@
                                                     fieldDescription="Fature Description Section"
                                                     fieldLabel="Feature Description"
                                                     name="./featuredesc"/>
-                                                <showtooltip/>
                                                 <featuredesctooltip
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                     fieldDescription="Feature Description Tooltip "
                                                     fieldLabel="Feature Description Tooltip"
                                                     name="./featuredesctooltip"/>
+                                                <showtooltip/>
                                             </items>
                                         </column>
                                     </items>
@@ -135,14 +135,14 @@
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     fieldLabel="Feature Name"
                                                     name="./featurenameone"/>
-                                                <featureavailable/>
-                                                <showtooltip/>
                                                 <featuredesctooltip
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                     fieldDescription="Feature Description Tooltip "
                                                     fieldLabel="Feature Description Tooltip"
                                                     name="./featuredesctooltip"/>
+                                                <featureavailable/>
+                                                <showtooltip/>
                                             </items>
                                         </column>
                                     </items>
@@ -178,14 +178,14 @@
                                                     fieldDescription="Disclaimer Text"
                                                     fieldLabel="Disclaimer Text"
                                                     name="./disclaimer1text"/>
-                                                <featureavailable/>
-                                                <showtooltip/>
                                                 <featuredesctooltip
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                     fieldDescription="Feature Description Tooltip "
                                                     fieldLabel="Feature Description Tooltip"
                                                     name="./featuredesctooltip"/>
+                                                <featureavailable/>
+                                                <showtooltip/>
                                             </items>
                                         </column>
                                     </items>

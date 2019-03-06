@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/healthyHome.svg"
-        jcr:lastModified="{Date}2019-02-14T06:34:21.298+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:33.181-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:21.893+05:30"
-            dam:sha1="19d5c7e56203ef3ceba0d80a10ccf8e061468ee9"
-            dam:size="{Long}9908"
+            dam:extracted="{Date}2019-03-05T09:31:14.208-05:00"
+            dam:sha1="f18f3e3680d2cd6d8a20407ce75f06c03eb8f9e0"
+            dam:size="{Long}9960"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-18T05:43:43.117Z"
-            jcr:lastModified="{Date}2019-02-14T06:34:21.298+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:33.180-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

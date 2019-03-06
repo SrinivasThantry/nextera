@@ -9,15 +9,15 @@
  <sly data-sly-test="${wcmmode.disabled}" data-sly-resource="${'logo' @ resourceType='nexterahome/components/structure/logo'}"></sly>
     <button id="changeToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <div id="navbar-hamburger" class="navbar-toggler-icon">
-              	<i class="fas fa-bars fa-lg"></i>
+             
               </div>
               <div id="navbar-close" class="hidden">
                   <i class="fas fa-times brandIcon"></i>
                 </div>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" data-sly-use.logic="${'nexterahome.core.models.ServiceproviderCheck' @ child='navLinks'}">
-    			<ul data-sly-test="${logic.size == 'true'}" class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
               <sly data-sly-list.navlink="${nexterahome.listChildren}">
                 <li class="nav-item ${currentPage.path == navlink.pathurl ? 'active' : ''}">
                     <a class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}" href="${navlink.pathurl}.html">${navlink.linkTitle}</a>

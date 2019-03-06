@@ -63,7 +63,7 @@ public class ExcelServlet extends SlingAllMethodsServlet {
     
     private static final String NEXTERA_EXCEL_FILE_PAHT = "/content/dam/nextEra/nextEra-validzipcodes.xlsx/jcr:content/renditions/original";
     private static final String FPL_EXCEL_FILE_PAHT = "/content/dam/FPL/fpl-validzipcodes.xlsx/jcr:content/renditions/original";
-    private static final String TEXAS_EXCEL_FILE_PAHT = "/content/dam/texas/TXTargetMarketZipCodes_021419.xlsx/jcr:content/renditions/original";
+    private static final String TEXAS_EXCEL_FILE_PAHT = "/content/dam/texas/texas-validzipcode.xlsx/jcr:content/renditions/original";
     
     private static Logger log = LoggerFactory.getLogger(ExcelServlet.class);
     private Session session;

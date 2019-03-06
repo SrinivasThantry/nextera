@@ -9,17 +9,17 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/philosophies/ambitious.svg"
-        jcr:lastModified="{Date}2019-02-14T06:34:13.513+05:30"
+        jcr:lastModified="{Date}2019-03-05T09:31:25.510-05:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-02-14T06:33:41.401+05:30"
-            dam:sha1="68c3cb73cdd8b37d2839fe61042417956ae5709c"
-            dam:size="{Long}2626"
+            dam:extracted="{Date}2019-03-05T09:31:16.033-05:00"
+            dam:sha1="76807e3bf2b6371391429a616990e7e136a3768c"
+            dam:size="{Long}2648"
             dc:format="image/svg+xml"
             dc:modified="{Date}2019-01-20T15:52:01.500-05:00"
-            jcr:lastModified="{Date}2019-02-14T06:34:13.513+05:30"
+            jcr:lastModified="{Date}2019-03-05T09:31:25.510-05:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

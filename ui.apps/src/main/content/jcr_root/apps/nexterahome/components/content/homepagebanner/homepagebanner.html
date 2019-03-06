@@ -27,7 +27,7 @@
         <div class="heroBody">${properties.description @ context='html'}</div>
         <div class="heroCTA">${properties.ctadescription @ context='html'}</div>
         <form id="zipfinder">
-        <input type="text" id="zip" class="rectangle" name="zip" placeholder="Enter Zip Code">
+        <input type="text" id="zip" class="rectangle" name="zip" maxlength="5" placeholder="Enter Zip Code">
         <a class="white" href="${properties.ctaurl}.html"><button id="zipsubmit" class="btn btn-secondary">${properties.ctalabel}</button></a>
         </form>
         <!-- <div class="marginBottom"></div> -->
