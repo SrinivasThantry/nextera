@@ -20,7 +20,7 @@
     			<ul class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
               <sly data-sly-list.navlink="${nexterahome.listChildren}">
                 <li class="nav-item ${currentPage.path == navlink.pathurl ? 'active' : ''}">
-                    <a class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}" href="${navlink.pathurl}.html">${navlink.linkTitle}</a>
+                   <a class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}" href="${navlink.pathurl}.html" data-toggle="modal" data-target="#zipcodeGate">${navlink.linkTitle}</a>
                 </li>
                 </sly>
                 <div class="hideLGMD">
@@ -63,3 +63,50 @@
   </div>
 </div>
 <!-- END NAVBAR -->
+    <!--START ZIP CODE GATE MODAL-->
+<div class="modal" id="zipcodeGate" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Service Plans</div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                      <p class="bodyZipCode">Enter your ZIP code so we can find plans in your area</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                      <input class="inputZipCode" id="zipCode" placeholder="Enter Zip Code"/>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                      <a href="" data-target="">
+                        <button class="btn btn-secondary w100">Find Plans</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="modal-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <button type="button" class="btn btn-primary w100 modalBTN" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>        
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+<!--END ZIP CODE GATE MODAL-->
