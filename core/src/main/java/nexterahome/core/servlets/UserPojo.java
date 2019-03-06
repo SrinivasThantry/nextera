@@ -19,8 +19,26 @@ public class UserPojo {
 	private long deductible;
 	private String promoCode;
 	private String payload;
+	private String phonenumbertype;
+	private String phonenumber;
 	
 	
+
+	public String getPhonenumbertype() {
+		return phonenumbertype;
+	}
+
+	public void setPhonenumbertype(String phonenumbertype) {
+		this.phonenumbertype = phonenumbertype;
+	}
+
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
 
 	public String getPayload() {
 		return payload;

@@ -123,6 +123,8 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 					nexteracustNode.setProperty("marketingProgramId", useobj.getMarketingProgramId());
 					nexteracustNode.setProperty("deductible", useobj.getDeductible());
 					nexteracustNode.setProperty("promoCode", useobj.getPromoCode());
+					nexteracustNode.setProperty("phonenumber", useobj.getPhonenumber());
+					nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
 					nexteracustNode.save();
 					session.save();
 				  	session.logout();
@@ -190,7 +192,9 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		String PlanName = request.getParameter("PlanName");
 		String MarketingProgramId = request.getParameter("MarketingProgramId");
 		String Deductible = request.getParameter("Deductible");
-		String PromoCode = request.getParameter("PromoCode");
+		String PromoCode = request.getParameter("promocode");
+		String phonenumbertype = request.getParameter("phonenumbertype");
+		String phonenumber = request.getParameter("phonenumber");
 		
 		try {
 			JsonObject customerDataJson = new JsonObject();
@@ -202,6 +206,14 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			useobj.setFirstName(FirstName);
 			customerDataJson.addProperty("LastName", LastName);
 			useobj.setLastName(LastName);
+			
+			customerDataJson.addProperty("phonenumber", phonenumber);
+			useobj.setPhonenumber(phonenumber);
+			
+			customerDataJson.addProperty("phonenumbertype", phonenumbertype);
+			useobj.setPhonenumbertype(phonenumbertype);
+			
+			
 			customerDataJson.addProperty("EmailAddress", EmailAddress);
 			useobj.setEmail(EmailAddress);
 			customerDataJson.addProperty("ConfirmEmailAddress", ConfirmEmailAddress);
@@ -235,13 +247,15 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			useobj.setMarketingProgramId(Long.parseLong(MarketingProgramId));
 			prodSelectionJson.addProperty("Deductible", Integer.parseInt(Deductible));
 			useobj.setDeductible(Long.parseLong(Deductible));
+			
 			prodSelectionJson.addProperty("PromoCode", PromoCode);
 			useobj.setPromoCode(PromoCode);
+			
+			
+			
 			jsonArray.add(prodSelectionJson);
-			log.error("::jsnArray:"+jsonArray);
 			customerDataJson.add("ProductSelection", jsonArray);
 			requestJson = gson.toJson(customerDataJson);
-			log.error("::requestJson final:"+requestJson);
 			useobj.setPayload(requestJson);
 		} catch (Exception e) {
 			e.printStackTrace();

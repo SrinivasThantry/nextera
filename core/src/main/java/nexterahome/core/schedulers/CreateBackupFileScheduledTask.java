@@ -125,11 +125,18 @@ public class CreateBackupFileScheduledTask implements Runnable {
 								? childNode.getProperty("deductible").getValue().getLong() + "" : "";
 						String promoCode = childNode.hasProperty("promoCode")
 								? childNode.getProperty("promoCode").getString() : "";
+								
+						String phonenumber = childNode.hasProperty("phonenumber")
+										? childNode.getProperty("phonenumber").getString() : "";
 
+						String phonenumbertype = childNode.hasProperty("phonenumbertype")
+												? childNode.getProperty("phonenumbertype").getString() : "";
 						JsonObject jsonobj = new JsonObject();
 
 						jsonobj.addProperty("firstName", firstName);
 						jsonobj.addProperty("lastName", lastName);
+						jsonobj.addProperty("phonenumber", phonenumber);
+						jsonobj.addProperty("phonenumbertype", phonenumbertype);
 						jsonobj.addProperty("id", id);
 						jsonobj.addProperty("email", email);
 						jsonobj.addProperty("marketingOptIn", marketingOptIn);

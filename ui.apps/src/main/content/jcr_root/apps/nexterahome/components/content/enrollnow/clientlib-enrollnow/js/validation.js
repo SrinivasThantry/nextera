@@ -17,7 +17,38 @@ $(document).ready(function(){
 		$(this).val($(this).val().replace(/[^0-9]/g,''));
     });
 
+    $("#phonenumber").on('input',function(e){
+		$(this).val($(this).val().replace(/[^0-9]/g,''));
+    });
+
    $('#reEnterEmail').parent().siblings('.error-label').hide();
+
+    $('#phonenumbertype').blur(function(){
+        var phonenumbertype = $('#phonenumbertype').val();
+        if(phonenumbertype=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#phonenumbertype').addClass('error');
+
+			//enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumbertype').removeClass('error');
+        }
+    })
+
+
+    $('#MailingAddressState').blur(function(){
+    var state = $('#MailingAddressState').val();
+        if(state=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#MailingAddressState').addClass('error');
+
+			//enteredAllMandatoryFields = false;
+        }else{
+			$('#MailingAddressState').removeClass('error');
+        }
+    })
+
+
     $('#submit').click(function(event){
 
 
@@ -28,6 +59,9 @@ $(document).ready(function(){
 
 
 		 var lastName = $('#lastName').val();
+      	 var promocode = $('#promocode').val();
+         var phonenumbertype = $('#phonenumbertype').val();
+		 var phonenumber = $('#phonenumber').val();
 		 var mailingAddress = $('#mailingAddress').val();
 		 var mailingAddressOptional = $('#mailingAddressOptional').val();
 		 var form1Zipcode = $('#form1Zipcode').val();
@@ -40,6 +74,9 @@ $(document).ready(function(){
 		 var serviceAddressSct = $('#serviceAddressSct').val();
 		 var firstNameSecondary = $('#firstNameSecondary').val();
 		 var lastNameSecondary = $('#lastNameSecondary').val();
+         var promocodeSecondary = $('#promocodeSecondary').val();
+         var phonenumbertypeSecondary = $('#phonenumbertypeSecondary').val();
+		 var phonenumberSecondary = $('#phonenumberSecondary').val();
 		 var mailingAddressSecondary = $('#mailingAddressSecondary').val();
 		 var mailingAddressOptionalSecondary = $('#mailingAddressOptionalSecondary').val();
 		 var form2Zipcode = $('#form2Zipcode').val();
@@ -69,6 +106,18 @@ $(document).ready(function(){
         }else{
 			$('#mailingAddress').removeClass('error');
         }
+        if(phonenumbertype=="none"){
+			$('#phonenumbertype').addClass('error');
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumbertype').removeClass('error');
+        }
+		if(phonenumber.length==0){
+			$('#phonenumber').addClass('error');
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumber').removeClass('error');
+        }
 		if(form1Zipcode.length==0 || form1Zipcode.length<5){
 			$('#form1Zipcode').addClass('error');
 			enteredAllMandatoryFields = false;
@@ -81,8 +130,10 @@ $(document).ready(function(){
         }else{
 			$('#city').removeClass('error');
         }
-		if(state.length==0){
+		if(state=="none"){
+          //  document.getElementById("stateVal").style.display="block";
 			$('#MailingAddressState').addClass('error');
+
 			enteredAllMandatoryFields = false;
         }else{
 			$('#MailingAddressState').removeClass('error');
@@ -128,6 +179,18 @@ $(document).ready(function(){
 				}else{
 					$('#mailingAddressSecondary').removeClass('error');
        			}
+       			 if(phonenumbertypeSecondary=="none"){
+					$('#phonenumbertypeSecondary').addClass('error');
+					enteredAllMandatoryFields = false;
+      		    }else{
+					$('#phonenumbertypeSecondary').removeClass('error');
+        	   }
+				if(phonenumberSecondary.length==0){
+					$('#phonenumberSecondary').addClass('error');
+					enteredAllMandatoryFields = false;
+        	   }else{
+					$('#phonenumberSecondary').removeClass('error');
+       		   }
 				if(form2Zipcode.length==0 || form2Zipcode.length<5){
 					$('#form2Zipcode').addClass('error');
 					enteredAllMandatoryFields = false;
@@ -140,12 +203,14 @@ $(document).ready(function(){
 				}else{
 					$('#citySecondary').removeClass('error');
         		}
-				if(stateSecondary.length==0){
-					$('#stateSecondary').addClass('error');
-					enteredAllMandatoryFields = false;
-				}else{
-					$('#stateSecondary').removeClass('error');
-        		}
+				if(stateSecondary=="none"){
+          //  document.getElementById("stateVal").style.display="block";
+			$('#stateSecondary').addClass('error');
+
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#stateSecondary').removeClass('error');
+        }
 				/*if(emailSecondary.length==0){
 					$('#emailSecondary').parent().addClass('error');
 					enteredAllMandatoryFields = false;
@@ -162,15 +227,15 @@ $(document).ready(function(){
         var Deductible="";
         if(plan=="Healthy%20Appliances%20Plan"){
             PlanName="HealthyAppliances";
-            MarketingProgramId="8561";
+            MarketingProgramId="8602";
             Deductible="125";
         }else if(plan=='Healthy%20Systems%20Plan'){
             PlanName="HealthySystems";
-            MarketingProgramId="8564";
+            MarketingProgramId="8605";
             Deductible="125";
         }else if(plan=="Healthy%20Home%20Plan"){
             PlanName="HealthyHome";
-            MarketingProgramId="8558";
+            MarketingProgramId="8599";
             Deductible="125";
         }
 	var IsMailingAddressSameasCoverageAddress = !serviceAddressChk;
@@ -178,6 +243,9 @@ $(document).ready(function(){
          if(serviceAddressChk){
 			firstName = firstNameSecondary;
             lastName = lastNameSecondary;
+			promocode = promocodeSecondary;
+            phonenumbertype = phonenumbertypeSecondary;
+            phonenumber = phonenumberSecondary;
             mailingAddress = mailingAddressSecondary;
             mailingAddressOptional = mailingAddressOptionalSecondary;
 			form1Zipcode = form2Zipcode;
@@ -185,13 +253,13 @@ $(document).ready(function(){
             state = stateSecondary;
            // email = emailSecondary;
         }
-
-      $.ajax({
+         
+     $.ajax({
 
             type: 'POST', 
 			url:'/bin/enrollnowformsubmit',
             async: false,
-            data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&ConfirmEmailAddress='+ reEnterEmail +'&MarketingOptIn=true'+'&AddressLine1='+ mailingAddress +'&AddressLine2='+ mailingAddressOptional + '&ZipCode='+ form1Zipcode + '&City='+ city + '&State='+ state + '&IsMailingAddressSameasCoverageAddress='+ IsMailingAddressSameasCoverageAddress +'&PlanName='+ PlanName +'&MarketingProgramId='+ MarketingProgramId +'&Deductible='+ Deductible +'&CustomerIdentifier=121354',
+            data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&ConfirmEmailAddress='+ reEnterEmail +'&MarketingOptIn=true'+'&AddressLine1='+ mailingAddress +'&AddressLine2='+ mailingAddressOptional + '&ZipCode='+ form1Zipcode + '&City='+ city + '&State='+ state + '&IsMailingAddressSameasCoverageAddress='+ IsMailingAddressSameasCoverageAddress +'&PlanName='+ PlanName +'&MarketingProgramId='+ MarketingProgramId +'&Deductible='+ Deductible + '&promocode='+ promocode +'&phonenumbertype='+ phonenumbertype +'&phonenumber='+ phonenumber+'&CustomerIdentifier=121354',
             success: function(responseData){
 			console.log(JSON.stringify(responseData.postCustomerData));
 			var obj = JSON.parse(responseData.postCustomerData);
