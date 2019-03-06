@@ -13,10 +13,6 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
-import org.json.JSONArray;
-import org.json.JSONObject;
-//import org.apache.sling.commons.json.JSONException;
-//import org.apache.sling.commons.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -26,6 +22,10 @@ import org.slf4j.LoggerFactory;
 import com.day.cq.search.PredicateGroup;
 import com.day.cq.search.Query;
 import com.day.cq.search.QueryBuilder;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import nexterahome.core.services.EnrollNowFormService;
 
@@ -101,8 +101,9 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
 		            log.info("NextEraFPLZipcodeValidationServlet: getAccess_token "+getRequest.getResponseBodyAsString());
 		            token = getRequest.getResponseBodyAsString();
 		            try {
-						JSONObject tokenJson = new JSONObject(token);
-						token = tokenJson.getString("access_token");
+		            	JsonParser parser = new JsonParser();
+		    			JsonObject tokenJson = parser.parse(token).getAsJsonObject();
+						token = tokenJson.get("access_token").getAsString();
 					} catch (Exception e) {
 						log.info("NextEraFPLZipcodeValidationServlet: getAccess_token Error:"+e.getMessage());
 					}
@@ -118,8 +119,9 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
     }
 	
 	@Override
-	public JSONObject postCustomerData(String token, String payload) {
-		org.json.JSONObject obj = new JSONObject();
+	public JsonObject postCustomerData(String token, String payload) {
+		JsonObject obj = new JsonObject();
+		Gson gson = new Gson();
     	HttpClient client = new HttpClient();
     	PostMethod postRequest = new PostMethod("https://api-atl.assurant.com/mpos-customer/api/v1/customers");
     	postRequest.addRequestHeader("Content-Type", "application/json");
@@ -130,20 +132,21 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
     		postRequest.setRequestEntity(new StringRequestEntity(payload, "application/json", "UTF-8"));
     		try {
 				int status = client.executeMethod(postRequest);
+				log.error("::int startus::"+status);
 				if (status == 200) {
 					String resobj = postRequest.getResponseBodyAsString();
+					JsonObject succobj = new JsonParser().parse(resobj).getAsJsonObject();
 					log.info("resobj: "+resobj);
-					org.json.JSONObject succobj = new JSONObject(resobj);
 					log.info("succobj: "+succobj);
 					if(succobj.has("Success")){
-					 obj.put("successId", succobj.get("Success"));
-					 obj.put("message", "Success");
-					 obj.put("status", 200);
+					 obj.addProperty("successId", succobj.get("Success").getAsString());
+					 obj.addProperty("message", "Success");
+					 obj.addProperty("status", 200);
 		            log.info("NextEraFPLZipcodeValidationServlet: response in 200 "+obj);
 					}
 				}else {
 					String resobj = postRequest.getResponseBodyAsString();	
-					log.info("resobj: "+resobj);
+					log.info("resoerrbj: "+resobj);
 					/*JSONObject objerror = new JSONObject(resobj);
 					log.info("objerror: "+objerror);
 					 if(objerror.has("error")){
@@ -155,20 +158,20 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
 						 obj.put("message", ob.get("userMessage"));
 						 obj.put("status", ob.get("status"));
 					 }*/
-					 obj.put("message", "Sorry, there is an internal  error");
-					 obj.put("status", 500);
+					 obj.addProperty("message", "Sorry, there is an internal  error");
+					 obj.addProperty("status", 500);
 					log.info("NextEraFPLZipcodeValidationServlet error response: "+obj);
 				}
 			} catch (IOException e) {
 				log.info("NextEraFPLZipcodeValidationServlet : postCustomerData:"+e.getMessage());
-				 obj.put("message", "Sorry, there is an internal  error");
-				 obj.put("status", 500);
+				 obj.addProperty("message", "Sorry, there is an internal  error");
+				 obj.addProperty("status", 500);
 			}
 			//postRequest.setRequestEntity(new StringRequestEntity(dataJsonString, "text/xml", "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
 			log.info("NextEraFPLZipcodeValidationServlet : postCustomerData:"+e.getMessage());
-			 obj.put("message", "Sorry, there is an internal  error");
-			 obj.put("status", 500);
+			 obj.addProperty("message", "Sorry, there is an internal  error");
+			 obj.addProperty("status", 500);
 		}finally {
 			postRequest.releaseConnection();
 		}

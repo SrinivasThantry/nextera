@@ -1,38 +1,34 @@
 package nexterahome.core.servlets;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 
-import javax.jcr.Binary;
 import javax.jcr.Node;
 import javax.jcr.Session;
-import javax.jcr.ValueFactory;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 
-import org.apache.jackrabbit.oak.commons.json.JsonObject;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import nexterahome.core.services.EnrollNowFormService;
 
@@ -78,12 +74,14 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 	protected void doPost(final SlingHttpServletRequest req, final SlingHttpServletResponse resp)
 			throws ServletException, IOException {
 		try {
-
+			Gson gson = new Gson();
+			
 			UserPojo useobj = new UserPojo();
 			useobj = getRequestJson(req, useobj);
 			String tokenString = enrollNowService.getAccess_token();
-			String payload = validateInputCheck(useobj.getPayload());
-			JSONObject postCustomerData = enrollNowService.postCustomerData(tokenString, payload);
+			String payload = validateInaddPropertyCheck(useobj.getPayload());
+			log.error(":: payload::"+payload);
+			JsonObject postCustomerData = enrollNowService.postCustomerData(tokenString, payload);
 			String zipcode = getZipcode(payload);
 			String service = enrollNowService.getService(zipcode, req.getResourceResolver());
 
@@ -140,16 +138,17 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			}
 			resp.setContentType("application/json");
 			resp.setCharacterEncoding("UTF-8");
-			JSONObject resobj = new JSONObject();
-			resobj.put("postCustomerData", postCustomerData);
-			resobj.put("service", service);
+			JsonObject  resobj = new JsonObject();
+			
+			resobj.addProperty("postCustomerData", gson.toJson(postCustomerData));
+			resobj.addProperty("service", service);
 			log.error("Final res ::" + resobj);
-			resp.getWriter().write(resobj.toString());
+			resp.getWriter().write(gson.toJson(resobj));
 		} catch (Exception e) {
 			log.error("exception while calling service::" + e);
-			JSONObject resobj = new JSONObject();
-			resobj.put("postCustomerData", "error");
-			resobj.put("service", "error");
+			JsonObject resobj = new JsonObject();
+			resobj.addProperty("postCustomerData", "error");
+			resobj.addProperty("service", "error");
 			log.error("Final res ::" + resobj);
 			resp.getWriter().write(resobj.toString());
 		}
@@ -158,9 +157,15 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 	public static String getZipcode(String payload) {
 		String zipcode = "";
 		try {
-			JSONObject payloadJson = new JSONObject(payload);
-			JSONObject coverageAddressJson = payloadJson.getJSONObject("CoverageAddress");
-			zipcode = coverageAddressJson.getString("ZipCode");
+			Gson gson = new Gson();
+			log.error("getZipcode res ::" );
+			JsonElement jelem = gson.fromJson(payload, JsonElement.class);
+			JsonObject payloadJson = jelem.getAsJsonObject();
+			log.error("payloadJson res ::"+payloadJson );
+			JsonObject coverageAddressJson = (JsonObject) payloadJson.get("CoverageAddress");
+			log.error("coverageAddressJson res ::"+coverageAddressJson );
+			zipcode = coverageAddressJson.get("ZipCode").getAsString();
+			log.error("zipcode res ::"+zipcode );
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -170,7 +175,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 
 	public static UserPojo getRequestJson(SlingHttpServletRequest request, UserPojo useobj) throws IOException {
 		String requestJson = "";
-
+		Gson gson = new Gson();
 		String CustomerIdentifier = request.getParameter("CustomerIdentifier");
 		String FirstName = request.getParameter("FirstName");
 		String LastName = request.getParameter("LastName");
@@ -186,51 +191,57 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		String MarketingProgramId = request.getParameter("MarketingProgramId");
 		String Deductible = request.getParameter("Deductible");
 		String PromoCode = request.getParameter("PromoCode");
-		log.error(":::"+request.getParameterMap().toString());
+		
 		try {
-			JSONObject customerDataJson = new JSONObject();
+			JsonObject customerDataJson = new JsonObject();
+			log.error(":::"+customerDataJson);
 			long id = getCustomerIdentifier();
-			customerDataJson.put("CustomerIdentifier", id);
+			customerDataJson.addProperty("CustomerIdentifier", id);
 			useobj.setCustomerIdentifier(id);
-			customerDataJson.put("FirstName", FirstName);
+			customerDataJson.addProperty("FirstName", FirstName);
 			useobj.setFirstName(FirstName);
-			customerDataJson.put("LastName", LastName);
+			customerDataJson.addProperty("LastName", LastName);
 			useobj.setLastName(LastName);
-			customerDataJson.put("EmailAddress", EmailAddress);
+			customerDataJson.addProperty("EmailAddress", EmailAddress);
 			useobj.setEmail(EmailAddress);
-			customerDataJson.put("ConfirmEmailAddress", ConfirmEmailAddress);
-			customerDataJson.put("MarketingOptIn", true);
+			customerDataJson.addProperty("ConfirmEmailAddress", ConfirmEmailAddress);
+			customerDataJson.addProperty("MarketingOptIn", true);
 			useobj.setMarketingOptIn(true);
 
-			JSONObject coverageAddressJson = new JSONObject();
-			coverageAddressJson.put("AddressLine1", AddressLine1);
+			JsonObject coverageAddressJson = new JsonObject();
+			coverageAddressJson.addProperty("AddressLine1", AddressLine1);
 			useobj.setAddressLine1(AddressLine1);
-			coverageAddressJson.put("AddressLine2", AddressLine2);
+			coverageAddressJson.addProperty("AddressLine2", AddressLine2);
 			useobj.setAddressLine2(AddressLine2);
-			coverageAddressJson.put("ZipCode", ZipCode);
+			coverageAddressJson.addProperty("ZipCode", ZipCode);
 			useobj.setZip(ZipCode);
-			coverageAddressJson.put("City", City);
+			coverageAddressJson.addProperty("City", City);
 			useobj.setCity(City);
-			coverageAddressJson.put("State", State);
+			coverageAddressJson.addProperty("State", State);
 			useobj.setState(State);
-			customerDataJson.put("CoverageAddress", coverageAddressJson);
-			customerDataJson.put("MailingAddress", "");
-			customerDataJson.put("IsMailingAddressSameasCoverageAddress",
+		
+			String temp = gson.toJson(coverageAddressJson);
+			log.error("temp"+temp);
+			customerDataJson.add("CoverageAddress", coverageAddressJson);
+			customerDataJson.addProperty("MailingAddress", "");
+			customerDataJson.addProperty("IsMailingAddressSameasCoverageAddress",
 					Boolean.parseBoolean(IsMailingAddressSameasCoverageAddress));
 			useobj.setMailingAddressSameasCoverageAddress(Boolean.parseBoolean(IsMailingAddressSameasCoverageAddress));
-			JSONArray jsonArray = new JSONArray();
-			JSONObject prodSelectionJson = new JSONObject();
-			prodSelectionJson.put("PlanName", PlanName);
+			JsonArray jsonArray = new JsonArray();
+			JsonObject prodSelectionJson = new JsonObject();
+			prodSelectionJson.addProperty("PlanName", PlanName);
 			useobj.setPlanName(PlanName);
-			prodSelectionJson.put("MarketingProgramId", Integer.parseInt(MarketingProgramId));
+			prodSelectionJson.addProperty("MarketingProgramId", Integer.parseInt(MarketingProgramId));
 			useobj.setMarketingProgramId(Long.parseLong(MarketingProgramId));
-			prodSelectionJson.put("Deductible", Integer.parseInt(Deductible));
+			prodSelectionJson.addProperty("Deductible", Integer.parseInt(Deductible));
 			useobj.setDeductible(Long.parseLong(Deductible));
-			prodSelectionJson.put("PromoCode", PromoCode);
+			prodSelectionJson.addProperty("PromoCode", PromoCode);
 			useobj.setPromoCode(PromoCode);
-			jsonArray.put(prodSelectionJson);
-			customerDataJson.put("ProductSelection", jsonArray);
-			requestJson = customerDataJson.toString();
+			jsonArray.add(prodSelectionJson);
+			log.error("::jsonArray:"+jsonArray);
+			customerDataJson.add("ProductSelection", jsonArray);
+			requestJson = gson.toJson(customerDataJson);
+			log.error("::requestJson final:"+requestJson);
 			useobj.setPayload(requestJson);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -240,7 +251,10 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		return useobj;
 
 	}
-
+	private String getNullAsEmptyString(JsonElement jsonElement) {
+        return jsonElement.isJsonNull() ? "" : jsonElement.getAsString();
+    }
+	
 	private static long getCustomerIdentifier() {
 		long custId = 0;
 
@@ -254,7 +268,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		return custId;
 	}
 
-	private static String validateInputCheck(String value) {
+	private static String validateInaddPropertyCheck(String value) {
 		if (value != null) {
 
 			value = value.replaceAll("\0", "");

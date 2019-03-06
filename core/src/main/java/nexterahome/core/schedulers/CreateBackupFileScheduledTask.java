@@ -29,8 +29,6 @@ import javax.jcr.ValueFactory;
 
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -39,6 +37,9 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 /**
  * A simple demo for cron-job like tasks that get executed regularly. It also
@@ -83,10 +84,10 @@ public class CreateBackupFileScheduledTask implements Runnable {
 			Node nexteraNode = session.getNode("/content/usergenerated/nextera");
 
 			logger.error("excel start saved");
-			JSONObject obj = new JSONObject();
+			JsonObject obj = new JsonObject();
 			int counter = 1;
 			if (nexteraNode.hasNodes()) {
-				JSONArray array = new JSONArray();
+				JsonArray array = new JsonArray();
 
 				javax.jcr.NodeIterator iter = nexteraNode.getNodes();
 				while (iter.hasNext()) {
@@ -125,32 +126,32 @@ public class CreateBackupFileScheduledTask implements Runnable {
 						String promoCode = childNode.hasProperty("promoCode")
 								? childNode.getProperty("promoCode").getString() : "";
 
-						JSONObject jsonobj = new JSONObject();
+						JsonObject jsonobj = new JsonObject();
 
-						jsonobj.put("firstName", firstName);
-						jsonobj.put("lastName", lastName);
-						jsonobj.put("id", id);
-						jsonobj.put("email", email);
-						jsonobj.put("marketingOptIn", marketingOptIn);
-						jsonobj.put("addressLine1", addressLine1);
-						jsonobj.put("addressLine2", addressLine2);
-						jsonobj.put("zip", zip);
-						jsonobj.put("state", state);
-						jsonobj.put("city", city);
-						jsonobj.put("coverageAddress", coverageAddress);
-						jsonobj.put("isMailingAddressSameasCoverageAddress", isMailingAddressSameasCoverageAddress);
-						jsonobj.put("planName", planName);
-						jsonobj.put("marketId", marketId);
-						jsonobj.put("deductiblestr", deductiblestr);
-						jsonobj.put("promoCode", promoCode);
+						jsonobj.addProperty("firstName", firstName);
+						jsonobj.addProperty("lastName", lastName);
+						jsonobj.addProperty("id", id);
+						jsonobj.addProperty("email", email);
+						jsonobj.addProperty("marketingOptIn", marketingOptIn);
+						jsonobj.addProperty("addressLine1", addressLine1);
+						jsonobj.addProperty("addressLine2", addressLine2);
+						jsonobj.addProperty("zip", zip);
+						jsonobj.addProperty("state", state);
+						jsonobj.addProperty("city", city);
+						jsonobj.addProperty("coverageAddress", coverageAddress);
+						jsonobj.addProperty("isMailingAddressSameasCoverageAddress", isMailingAddressSameasCoverageAddress);
+						jsonobj.addProperty("planName", planName);
+						jsonobj.addProperty("marketId", marketId);
+						jsonobj.addProperty("deductiblestr", deductiblestr);
+						jsonobj.addProperty("promoCode", promoCode);
 						counter = counter + 1;
-						array.put(jsonobj);
+						array.add(jsonobj);
 						}
 					} catch (Exception e) {
 						logger.error("ex itr nodes" + e);
 					}
 
-					obj.put("data", array);
+					obj.add("data", array);
 				}
 			}
 

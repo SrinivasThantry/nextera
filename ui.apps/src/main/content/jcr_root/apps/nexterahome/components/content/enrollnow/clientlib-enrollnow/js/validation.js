@@ -194,11 +194,11 @@ $(document).ready(function(){
             data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&ConfirmEmailAddress='+ reEnterEmail +'&MarketingOptIn=true'+'&AddressLine1='+ mailingAddress +'&AddressLine2='+ mailingAddressOptional + '&ZipCode='+ form1Zipcode + '&City='+ city + '&State='+ state + '&IsMailingAddressSameasCoverageAddress='+ IsMailingAddressSameasCoverageAddress +'&PlanName='+ PlanName +'&MarketingProgramId='+ MarketingProgramId +'&Deductible='+ Deductible +'&CustomerIdentifier=121354',
             success: function(responseData){
 			console.log(JSON.stringify(responseData.postCustomerData));
-
-            if(responseData.postCustomerData.message == 'Success'){
+			var obj = JSON.parse(responseData.postCustomerData);
+            if(obj.message == 'Success'){
 
             	if(responseData.service=='nextEra'){
-         			 	window.open("https://model-nextera.assurant.com/home?s="+responseData.postCustomerData.successId+'&plan='+plan);
+         			 	window.open("https://model-nextera.assurant.com/home?s="+obj.successId+'&plan='+plan);
             			event.preventDefault();
             			location.reload();
         		}else if(responseData.service=='FPL'){
@@ -213,8 +213,8 @@ $(document).ready(function(){
                     }
 
             }else{
-                console.log(responseData.postCustomerData.message);
-                alert(responseData.postCustomerData.message);
+                console.log(obj.message);
+                alert(obj.message);
             }
 
 
