@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-05T12:00:38.298-05:00"
-        cq:lastModifiedBy="admin"
+        cq:lastModified="{Date}2019-01-22T16:12:48.622Z"
+        cq:lastModifiedBy="peakster3"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
@@ -22,12 +22,12 @@
             <thankyou
                 jcr:created="{Date}2019-01-14T00:33:03.404+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-05T12:00:38.295-05:00"
-                jcr:lastModifiedBy="admin"
+                jcr:lastModified="{Date}2019-01-22T16:12:48.620Z"
+                jcr:lastModifiedBy="peakster3"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/thankyou"
                 ctalabel="VISIT FPL HOME"
-                ctaurl="http://www.fplhome.com/"
+                ctaurl="http://www.fples.com/"
                 description="It’s awesome that you’re interested in a sustainable, happy home. However, you live in an area serviced by a different company, called FPL Home."
                 headerlabel="Thank you !"/>
         </par>
