@@ -137,6 +137,28 @@
                                                             value="yes"/>
                                                     </items>
                                                 </opennewtab>
+                                                <popup
+                                                    cq:lastReplicated="{Date}2019-01-24T03:22:32.477Z"
+                                                    cq:lastReplicatedBy="peakster4"
+                                                    cq:lastReplicationAction="Activate"
+                                                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    defaultValue="no"
+                                                    fieldLabel="pop up"
+                                                    name="./popup"
+                                                    value="no">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <no
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="No"
+                                                            value="no"/>
+                                                        <yes
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Yes"
+                                                            value="yes"/>
+                                                    </items>
+                                                </popup>
                                             </items>
                                         </column>
                                     </items>

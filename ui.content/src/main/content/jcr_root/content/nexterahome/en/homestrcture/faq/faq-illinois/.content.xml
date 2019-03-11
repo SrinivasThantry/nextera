@@ -2,17 +2,20 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T14:50:45.202-05:00"
+        cq:lastModified="{Date}2019-02-18T19:56:02.676Z"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-02-08T15:17:39.785Z"
+        cq:lastReplicatedBy="peakster1"
+        cq:lastReplicationAction="Activate"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="FAQ Texas"
-        jcr:uuid="7daff546-fa21-4559-853f-ec3188260eb5"
+        jcr:title="FAQ illinois"
+        jcr:uuid="a597e1f8-e4d4-4bec-970b-0e8d9f3753f9"
         sling:resourceType="nexterahome/components/structure/page"
-        navTitle="FAQ"
-        pageTitle="FAQ">
+        navTitle="FAQ illinois"
+        pageTitle="FAQ illinois">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexterahome/components/structure/logo"/>

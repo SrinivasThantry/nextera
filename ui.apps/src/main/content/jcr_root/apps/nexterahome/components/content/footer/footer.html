@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-3">
         <div class="footerLogos">
-            <a href="${properties.nextEraLogoCta}" target="_blank" class="opacity">
+            <a href="${properties.nextEraLogoCta}" class="opacity">
               <img src="${properties.nextEraLogo}">
           </a>
               <a href="${properties.fplLogoCta}" target="_blank" class="opacity">
@@ -15,8 +15,21 @@
       <div class="d-none d-sm-none d-md-none d-lg-block col-lg-7">
         <div class="footerLinkContainer">
 	<div data-sly-use.topLinks="${resource.path}/topLinks">
-        <div data-sly-list="${topLinks.listChildren}">
-            <a href="${item.pathbr}" target="${item.openInNewTab=='yes'? '_blank':''}" class="footerLink">${item.linkTitle}</a>
+        <!--<div data-sly-list="${topLinks.listChildren}">
+            <a href="${item.pathbr}" target="${item.openInNewTab=='yes'? '_blank':''}" data-toggle="${navlink.popup=='yes'? 'modal':''}" data-target="${navlink.popup=='yes'? '#zipcodeGate':''}" class="footerLink">${item.linkTitle}</a>
+        </div>-->
+        <div id="footerfaq">
+            <a href="/content/nexterahome/en/homestrcture/home.html" class="footerLink">HOME</a>
+        
+            <a href="/content/nexterahome/en/homestrcture/serviceplans.html" class="footerLink" data-toggle="modal" data-target="#zipcodeGate">SERVICE PLANS</a>
+        
+            <a href="/content/nexterahome/en/homestrcture/faq.html" class="footerLink">FAQ</a>
+        
+            <a href="/content/nexterahome/en/homestrcture/ourphilosophy.html" class="footerLink">OUR PHILOSOPHY</a>
+        
+            <a href="https://nextera.assurantcustomerportal.com" target="_blank" class="footerLink">LOGIN</a>
+        
+            <a href="/content/nexterahome/en/homestrcture/serviceplans.html" class="footerLink" data-toggle="modal" data-target="#zipcodeGate">FIND A PLAN</a>
         </div>
 	</div>
 
@@ -61,3 +74,52 @@
   </div>
 </div>
 <!-- End FOOTER -->
+
+<!--START ZIP CODE GATE MODAL-->
+<div class="modal" id="zipcodeGate" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Service Plans</div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                      <p class="bodyZipCode">Enter your ZIP code so we can find plans in your area</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                      <input class="inputZipCode" id="zipCode" placeholder="Enter Zip Code"/>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                      <a href="" data-target="">
+                        <button class="btn btn-secondary w100">Find Plans</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="modal-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <button type="button" class="btn btn-primary w100 modalBTN" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>        
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+<!--END ZIP CODE GATE MODAL-->
+

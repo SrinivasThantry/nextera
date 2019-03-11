@@ -3,8 +3,8 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/nextera-fav"
-        cq:lastModified="{Date}2019-03-05T22:24:54.332-05:00"
-        cq:lastModifiedBy="admin"
+        cq:lastModified="{Date}2019-02-18T16:57:55.726Z"
+        cq:lastModifiedBy="peakster1"
         cq:lastReplicated="{Date}2019-02-18T16:58:10.830Z"
         cq:lastReplicatedBy="peakster1"
         cq:lastReplicationAction="Activate"
@@ -82,19 +82,23 @@
                     <item0
                         jcr:primaryType="nt:unstructured"
                         linkTitle="Home"
-                        pathurl="/content/nexterahome/en/homestrcture/home"/>
+                        pathurl="/content/nexterahome/en/homestrcture/home"
+                        popup="no"/>
                     <item1
                         jcr:primaryType="nt:unstructured"
                         linkTitle="Service Plans"
-                        pathurl="/content/nexterahome/en/homestrcture/serviceplans"/>
+                        pathurl="/content/nexterahome/en/homestrcture/serviceplans"
+                        popup="yes"/>
                     <item2
                         jcr:primaryType="nt:unstructured"
                         linkTitle="FAQ"
-                        pathurl="/content/nexterahome/en/homestrcture/faq"/>
+                        pathurl="/content/nexterahome/en/homestrcture/faq"
+                        popup="yes"/>
                     <item3
                         jcr:primaryType="nt:unstructured"
                         linkTitle="Our Philosophy"
-                        pathurl="/content/nexterahome/en/homestrcture/ourphilosophy"/>
+                        pathurl="/content/nexterahome/en/homestrcture/ourphilosophy"
+                        popup="no"/>
                 </navLinks>
             </headernavigation>
         </header>
@@ -105,18 +109,18 @@
                 cq:lastReplicated="{Date}2019-01-24T03:22:48.625Z"
                 cq:lastReplicatedBy="peakster4"
                 cq:lastReplicationAction="Activate"
-                jcr:lastModified="{Date}2019-03-05T22:24:54.288-05:00"
-                jcr:lastModifiedBy="admin"
+                jcr:lastModified="{Date}2019-02-18T16:57:55.707Z"
+                jcr:lastModifiedBy="peakster1"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/footer"
                 copyRight="&amp;copy;2018-2019 NextEra Home. All rights reserved"
                 fburl="https://www.facebook.com/nexterahome/"
                 fplLogo="/content/dam/nexterahome/homeimages/fplHomeLogoBW.svg"
-                fplLogoCta="http://www.fplhome.com/"
+                fplLogoCta="http://www.fples.com/"
                 instaurl="https://www.instagram.com/nexterahome/"
-                nextEraLogo="/content/dam/nexterahome/homeimages/NE-Energy.svg"
-                nextEraLogoCta="http://nexteraenergy.com/"
+                nextEraLogo="/content/dam/nexterahome/homeimages/NE-Energy.png"
+                nextEraLogoCta="/content/nexterahome/en/homestrcture/home.html"
                 showSocials="yes"
                 textIsRich="true"
                 twitterurl="https://twitter.com/nexterahome">
@@ -125,32 +129,38 @@
                         jcr:primaryType="nt:unstructured"
                         linkTitle="HOME"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/home.html"/>
+                        pathbr="/content/nexterahome/en/homestrcture/home.html"
+                        popup="no"/>
                     <item1
                         jcr:primaryType="nt:unstructured"
                         linkTitle="SERVICE PLANS"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/serviceplans.html"/>
+                        pathbr="/content/nexterahome/en/homestrcture/serviceplans.html"
+                        popup="yes"/>
                     <item2
                         jcr:primaryType="nt:unstructured"
                         linkTitle="FAQ"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/faq.html"/>
+                        pathbr="/content/nexterahome/en/homestrcture/faq.html"
+                        popup="yes"/>
                     <item3
                         jcr:primaryType="nt:unstructured"
                         linkTitle="OUR PHILOSOPHY"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/ourphilosophy.html"/>
+                        pathbr="/content/nexterahome/en/homestrcture/ourphilosophy.html"
+                        popup="no"/>
                     <item4
                         jcr:primaryType="nt:unstructured"
                         linkTitle="LOGIN"
                         openInNewTab="yes"
-                        pathbr="https://nextera.assurantcustomerportal.com"/>
+                        pathbr="https://nextera.assurantcustomerportal.com"
+                        popup="no"/>
                     <item5
                         jcr:primaryType="nt:unstructured"
                         linkTitle="FIND A PLAN"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/serviceplans.html"/>
+                        pathbr="/content/nexterahome/en/homestrcture/serviceplans.html"
+                        popup="yes"/>
                 </topLinks>
                 <bottomLinks jcr:primaryType="nt:unstructured">
                     <item0
@@ -173,16 +183,11 @@
         </image>
     </jcr:content>
     <home/>
+    <serviceplans/>
+    <faq/>
     <ourphilosophy/>
     <thank-you-fpl/>
     <thank-you/>
     <enrollnow/>
     <sitemap/>
-    <serviceplansdemo/>
-    <serviceplans/>
-    <faq/>
-    <serviceplans-illinois/>
-    <serviceplans-texas/>
-    <faq-illinois/>
-    <faq-texas/>
 </jcr:root>

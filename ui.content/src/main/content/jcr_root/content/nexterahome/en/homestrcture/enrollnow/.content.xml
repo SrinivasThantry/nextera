@@ -9,7 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Enroll now"
-        jcr:uuid="eeec7ae0-429a-4dbb-ade8-8dbedc976c9c"
+        jcr:uuid="8066802b-eddc-4c4f-ab3f-be768f37ac30"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="Enroll now"
         pageTitle="Enroll now">

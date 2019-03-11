@@ -11,11 +11,11 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="FAQ"
-        jcr:uuid="56d10007-4b65-4e51-b0d9-1b1f3c694bcc"
+        jcr:title="FAQ Texas"
+        jcr:uuid="aae213a8-5fbb-41ee-8ff3-8716e32fc6a6"
         sling:resourceType="nexterahome/components/structure/page"
-        navTitle="FAQ"
-        pageTitle="FAQ">
+        navTitle="FAQ Texas"
+        pageTitle="FAQ Texas">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexterahome/components/structure/logo"/>
@@ -90,6 +90,4 @@
             </faq>
         </par>
     </jcr:content>
-    <faq-illinois/>
-    <faq-texas/>
 </jcr:root>

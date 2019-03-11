@@ -24,7 +24,8 @@
     			<ul class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
               <sly data-sly-list.navlink="${nexterahome.listChildren}">
                 <li class="nav-item ${currentPage.path == navlink.pathurl ? 'active' : ''}">
-                   <a href="#load_links" class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}">${navlink.linkTitle}</a>
+                  <div id="anchorlist"> <a id="${navlink.linkTitle}" href="#" class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}">${navlink.linkTitle}</a>
+                  </div>
                 </li>
                 </sly>
                 <div class="hideLGMD">
@@ -56,7 +57,7 @@
               <div class="frHideSM">
                   <a target=_blank class="nav-link inlineBlock" href="${properties.loginurl}">Login</a>
                   <div class="btnSpacing">
-                   <a href="${properties.findplanurl}"><button class="btn btn-primary inlineBlock">
+                   <a href="${properties.findplanurl}" data-toggle="modal" data-target="#zipcodeGate"><button class="btn btn-primary inlineBlock">
                         Find a Plan
                     </button></a>
                   </div>

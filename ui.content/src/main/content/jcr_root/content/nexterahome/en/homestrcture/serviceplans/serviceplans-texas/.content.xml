@@ -2,17 +2,20 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T15:16:07.598-05:00"
+        cq:lastModified="{Date}2019-02-18T19:48:56.997Z"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2019-02-08T15:06:45.408Z"
+        cq:lastReplicatedBy="peakster1"
+        cq:lastReplicationAction="Activate"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Service Plans Illinois"
-        jcr:uuid="ac9ad4ac-aa11-49c6-b4e6-cae268f4d0ab"
+        jcr:title="Service Texas"
+        jcr:uuid="641800b5-8a6c-4dad-991d-2b535ba9ffd2"
         sling:resourceType="nexterahome/components/structure/page"
-        navTitle="Service Plans"
-        pageTitle="Service Plans">
+        navTitle="Service Texas"
+        pageTitle="Service Texas">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexterahome/components/structure/logo"/>
@@ -26,7 +29,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
             <enrollnow
-                jcr:lastModified="{Date}2019-02-27T15:16:07.588-05:00"
+                jcr:lastModified="{Date}2019-02-05T21:15:10.118Z"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
@@ -47,10 +50,6 @@
                 mailingAddressOptional="Mailing Address 2 (optional)"
                 mailingAddressOptionalSecondary="Service Address 2 (optional)"
                 mailingAddressSecondary="Service Address"
-                phonenumber="Phone Number"
-                phonenumberSecondary="Phone Number"
-                promocode="Promocode"
-                promocodeSecondary="Promocode"
                 reEnterEmail="Re-Enter Email"
                 state="State"
                 stateSecondary="State"
@@ -76,9 +75,9 @@
                 disclaimer1text="&lt;font color=&quot;black&quot;>*As necessary, subject to the dollar limitations specified in your contract.&lt;/font>"
                 disclaimertext="Terms &amp; conditions apply. &lt;a target=&quot;_blank&quot; href=&quot;/content/dam/nexterahome/Pdf/PlanDetails.pdf&quot; &lt;font color=&quot;white&quot;>&lt;u>Learn More&lt;/font>&lt;/u>&lt;/a>"
                 enrollcta="ENROLL NOW "
-                enrollctaurl="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Appliances Plan"
-                enrollctaurlthree="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Home Plan"
-                enrollctaurltwo="/content/nexterahome/en/homestrcture/serviceplans-illinois.html?plan=Healthy Systems Plan"
+                enrollctaurl="/content/nexterahome/en/homestrcture/serviceplans.html?plan=Healthy Appliances Plan"
+                enrollctaurlthree="/content/nexterahome/en/homestrcture/serviceplans.html?plan=Healthy Home Plan"
+                enrollctaurltwo="/content/nexterahome/en/homestrcture/serviceplans.html?plan=Healthy Systems Plan"
                 heading="Service plans"
                 housecallperyearheader="HOUSECALLS PER YEAR"
                 plandetailctaurl="/content/dam/nexterahome/Pdf/Sample Dec Page_Health Appliances.pdf"

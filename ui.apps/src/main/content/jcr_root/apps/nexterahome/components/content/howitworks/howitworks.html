@@ -1,4 +1,6 @@
-
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    <sly data-sly-call="${clientlib.js @ categories='nexterahome.headernav'}" />
+    
         <!-- START HOW IT WORKS -->
       <div class="container whiteBkrd">
         <div class="row">
@@ -30,10 +32,7 @@
 
         <div class="row">
           <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 center">
-           <form id="zip">
-        <input type="text" id="ziphowitworks" class="rectangle" name="zip" maxlength="5" placeholder="Enter Zip Code">
-        <a class="white" href="${properties.ctaurl}.html"><button id="howitworkzip" class="btn btn-primary howitworksSpacing">${properties.ctalabel}</button></a>
-        </form>
+        <a class="white" href="${properties.ctaurl}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="howitworkzip" class="btn btn-primary howitworksSpacing">${properties.ctalabel}</button></a>
           </div>
       </div>
       <!-- END HOW IT WORKS -->
@@ -75,3 +74,51 @@
           </div>
       </div>
       <!-- END HOW IT WORKS -->
+      
+      <!--START ZIP CODE GATE MODAL-->
+<div class="modal" id="zipcodeGate" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Service Plans</div>
+          <button id="closeid" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="formzipcodeGate">
+          <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                      <p class="bodyZipCode">Enter your ZIP code so we can find plans in your area</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                      <input class="inputZipCode" id="zipCode" placeholder="Enter Zip Code"/>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                      <a href="" data-target="">
+                        <button type="submit" id="formzipcodesubmit" class="btn btn-secondary w100">Find Plans</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="modal-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <button id="closeidbtn" type="button" class="btn btn-primary w100 modalBTN" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>        
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+<!--END ZIP CODE GATE MODAL-->

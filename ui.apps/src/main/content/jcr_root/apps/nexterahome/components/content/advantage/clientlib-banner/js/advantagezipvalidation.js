@@ -13,7 +13,7 @@ $(document).ready(function(){
 
      
 
-       $.ajax({
+      /* $.ajax({
 
             type: 'GET', 
 			url:'/bin/zipcodevalidation',
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
             }
 
-        });
+        });*/
 
  });
 });
