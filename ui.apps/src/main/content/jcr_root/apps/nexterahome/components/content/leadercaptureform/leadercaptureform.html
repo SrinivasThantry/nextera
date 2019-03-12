@@ -1,0 +1,54 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    <sly data-sly-call="${clientlib.js @ categories='nexterahome.leadercaptureform'}" />  
+<div class="hero-bg">
+    <div class="triangle-wrap">
+    <img src="images/triangles.svg">
+  </div>
+  <h1>${properties.titleh1}</h1>
+  <h4>${properties.titlel}</h4>
+</div>
+<div class="enroll-now">
+<section class="contact-wrapl"> 
+                    <form class="material-form clearfix">
+                        <div class="enrollText" data-sly-test="${properties.formHeading}">${properties.formHeading}</div>
+                        <!-- ROW 1 -->
+                        <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="First Name">
+                            <label>First Name</label>
+                            <input required="" id="firstName" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="Last Name">
+                            <label>Last Name</label>
+                            <input required="" id="lastName" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+
+                    <!-- ROW 2 -->
+                        <div class="row">
+                       <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="ZIP Code">
+                            <label>ZIP Code</label>
+                            <input required="" id="form1Zipcode" value="" type="text" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                          <div class="col-sm-12 col-md-6">
+                            <div class="input-block floating-field" data-sly-test="Email">
+                            <label>Email</label>
+                            <input required="" id="email" value="" type="email" maxlength="30" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+
+						<a id="submitRedirect" href="" data-sly-test="Submit">
+                        	<button type="button" id="submit" class="btn btn-primary float-right">
+                            	Submit
+                        	</button>
+                        </a>
+                    </form>
+                    </section>
+                    </div>
