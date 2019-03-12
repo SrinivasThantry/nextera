@@ -13,7 +13,9 @@
       <div class="col-sm-12 col-md-12 col-lg-5">
         <h2 class="h2Spacing"  data-sly-test="${properties.homeWarrantiesHeading}">${properties.homeWarrantiesHeading}</h2>
         <div class="bodyText spacingBodyText" data-sly-test="${properties.homewarrantiesDescription}">${properties.homewarrantiesDescription}</div>
-        <div class="disclaimer">${properties.disclaimertext @ context='html'}</div>
+        <div class="disclaimer"><font color="black">*Coverages vary by plan. View <a href="/content/nexterahome/en/homestrcture/serviceplans.html" data-toggle="modal" data-target="#zipcodeGate"><u>service plans</u></a> for options, details, and provider information.</font></div>
+
+        <!-- <div class="disclaimer" data-toggle="modal" data-target="#zipcodeGate">${properties.disclaimertext @ context='html'}</div> -->
         <div class="mb25"></div> 
 
         <div class="hideSMMD" data-sly-test="${properties.homewarrantiesCTA}">
