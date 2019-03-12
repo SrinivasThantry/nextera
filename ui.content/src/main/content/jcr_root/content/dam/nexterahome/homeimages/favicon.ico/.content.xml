@@ -6,11 +6,11 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/favicon.ico"
-        jcr:lastModified="{Date}2019-03-05T09:31:24.946-05:00"
-        jcr:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2019-03-12T09:53:47.180-04:00"
+        jcr:lastModifiedBy="peakster3"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:18.674-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:46.712-04:00"
             dam:sha1="97401b7af90628c6fbccd0a558fee9d27d94cea5"
             dam:size="{Long}1150"
             dc:format="image/x-icon"

@@ -2,20 +2,20 @@
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="adc5cd28-7844-421c-b4c5-ab097e8eb338">
+    jcr:uuid="5ed310b2-6ce2-48b8-8ea6-477b4add025d">
     <jcr:content
         cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
         cq:lastReplicatedBy="peakster1"
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/heroAnimation.gif"
-        jcr:lastModified="{Date}2019-03-05T09:31:17.316-05:00"
+        jcr:lastModified="{Date}2019-03-12T09:53:36.700-04:00"
         jcr:lastModifiedBy="peakster3"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}8"
-            dam:extracted="{Date}2019-03-05T09:31:16.090-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:33.998-04:00"
             dam:Fileformat="GIF"
             dam:MIMEtype="image/gif"
             dam:Numberofimages="{Long}1"

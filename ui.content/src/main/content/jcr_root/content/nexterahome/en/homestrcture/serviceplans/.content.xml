@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Service Plans"
-        jcr:uuid="e0538e35-dc0c-42b1-99a7-9bad1f304e04"
+        jcr:uuid="69f8d2cf-deaa-4389-a9a2-076b67e7f57a"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="Service Plans"
         pageTitle="Service Plans">

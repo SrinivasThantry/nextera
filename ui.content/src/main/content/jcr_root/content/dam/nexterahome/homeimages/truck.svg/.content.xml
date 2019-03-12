@@ -9,12 +9,12 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/truck.svg"
-        jcr:lastModified="{Date}2019-03-05T09:31:20.906-05:00"
-        jcr:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2019-03-12T09:53:37.044-04:00"
+        jcr:lastModifiedBy="peakster3"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:15.744-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:36.902-04:00"
             dam:sha1="fc9ad973df5395b78431501937ef187afb1af3ab"
             dam:size="{Long}1214"
             dc:format="image/svg+xml"

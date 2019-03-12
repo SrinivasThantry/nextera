@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ"
-        jcr:uuid="56d10007-4b65-4e51-b0d9-1b1f3c694bcc"
+        jcr:uuid="e868d6ef-fdae-4d7e-ad07-b8abf03195c0"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ"
         pageTitle="FAQ">

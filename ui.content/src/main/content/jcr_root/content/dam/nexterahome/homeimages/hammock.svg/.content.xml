@@ -9,12 +9,12 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/hammock.svg"
-        jcr:lastModified="{Date}2019-03-05T09:31:25.043-05:00"
-        jcr:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2019-03-12T09:53:46.232-04:00"
+        jcr:lastModifiedBy="peakster3"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:17.425-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:46.050-04:00"
             dam:sha1="339c7445d7c3fe2c2bfa2b6f6f12e70c8166ca1a"
             dam:size="{Long}3205"
             dc:format="image/svg+xml"

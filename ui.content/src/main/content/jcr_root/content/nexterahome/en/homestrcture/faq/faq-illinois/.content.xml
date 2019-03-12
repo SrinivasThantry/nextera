@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ illinois"
-        jcr:uuid="a597e1f8-e4d4-4bec-970b-0e8d9f3753f9"
+        jcr:uuid="0cd17601-2f34-4927-bcd1-53cd1fe52b6f"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ illinois"
         pageTitle="FAQ illinois">

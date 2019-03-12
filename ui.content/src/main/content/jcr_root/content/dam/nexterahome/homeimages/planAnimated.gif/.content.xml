@@ -2,20 +2,16 @@
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="671d23ad-8fdf-40ee-aaff-3caf3ad9fce4">
+    jcr:uuid="344b575a-4e97-4830-adc2-b6a239570ee0">
     <jcr:content
-        cq:lastReplicated="{Date}2019-02-08T15:05:26.481Z"
-        cq:lastReplicatedBy="peakster1"
-        cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/planAnimated.gif"
-        jcr:lastModified="{Date}2019-03-05T09:31:23.670-05:00"
-        jcr:lastModifiedBy="peakster3"
-        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:lastModified="{Date}2019-03-12T12:09:22.416-04:00"
+        jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:Bitsperpixel="{Long}7"
-            dam:extracted="{Date}2019-03-05T09:31:22.111-05:00"
+            dam:Bitsperpixel="{Long}4"
+            dam:extracted="{Date}2019-03-12T12:09:21.340-04:00"
             dam:Fileformat="GIF"
             dam:MIMEtype="image/gif"
             dam:Numberofimages="{Long}1"
@@ -25,23 +21,20 @@
             dam:Physicalwidthindpi="{Long}72"
             dam:Physicalwidthininches="{Decimal}12.5"
             dam:Progressive="no"
-            dam:sha1="4edad938ede80997f2b04242e2606cf95f9d74f7"
-            dam:size="{Long}2105569"
+            dam:sha1="d65819c6d849b59b267c6e3c31e2d87a635e9130"
+            dam:size="{Long}971428"
             dc:format="image/gif"
-            dc:modified="{Date}2019-01-21T22:24:15.553-05:00"
-            jcr:lastModified="{Date}2019-03-05T09:31:20.864-05:00"
-            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}900"
             tiff:ImageWidth="{Long}900"
             xmp:CreatorTool="Adobe Photoshop CC 2019 (Macintosh)"
-            xmpMM:DocumentID="xmp.did:1570B3A3079111E988188A484D30D932"
-            xmpMM:InstanceID="xmp.iid:1570B3A2079111E988188A484D30D932">
+            xmpMM:DocumentID="xmp.did:B0F0265112CC11E9A2AE97D3374DAD79"
+            xmpMM:InstanceID="xmp.iid:B0F0265012CC11E9A2AE97D3374DAD79">
             <xmpMM:DerivedFrom
                 jcr:primaryType="nt:unstructured"
-                stRef:documentID="xmp.did:1295C100079011E988188A484D30D932"
-                stRef:instanceID="xmp.iid:1295C0FF079011E988188A484D30D932"
+                stRef:documentID="xmp.did:609BE00012CB11E9A2AE97D3374DAD79"
+                stRef:instanceID="xmp.iid:609BDFFF12CB11E9A2AE97D3374DAD79"
                 xmpNodeType="xmpStruct"/>
         </metadata>
         <related jcr:primaryType="nt:unstructured"/>

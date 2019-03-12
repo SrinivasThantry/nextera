@@ -6,11 +6,11 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/chevronDarkRight.svg"
-        jcr:lastModified="{Date}2019-03-05T09:31:24.985-05:00"
+        jcr:lastModified="{Date}2019-03-12T09:53:34.314-04:00"
         jcr:lastModifiedBy="peakster3"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:24.740-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:34.218-04:00"
             dam:sha1="7bb7e0d28071fbe8d370a24c29e6fa2d681cead8"
             dam:size="{Long}326"
             dc:format="image/svg+xml"

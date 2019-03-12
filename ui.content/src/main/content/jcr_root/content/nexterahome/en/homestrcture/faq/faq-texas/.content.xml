@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ Texas"
-        jcr:uuid="aae213a8-5fbb-41ee-8ff3-8716e32fc6a6"
+        jcr:uuid="c9edcc71-8299-4ce5-a672-d4029ab391bd"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ Texas"
         pageTitle="FAQ Texas">

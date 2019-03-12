@@ -9,12 +9,12 @@
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
         dam:relativePath="nexterahome/homeimages/healthyAppliances.svg"
-        jcr:lastModified="{Date}2019-03-05T09:31:17.347-05:00"
-        jcr:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2019-03-12T09:53:38.976-04:00"
+        jcr:lastModifiedBy="peakster3"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2019-03-05T09:31:16.593-05:00"
+            dam:extracted="{Date}2019-03-12T09:53:38.876-04:00"
             dam:sha1="8611a8f46f30422c780d34b9e21799a17b01d286"
             dam:size="{Long}18687"
             dc:format="image/svg+xml"
