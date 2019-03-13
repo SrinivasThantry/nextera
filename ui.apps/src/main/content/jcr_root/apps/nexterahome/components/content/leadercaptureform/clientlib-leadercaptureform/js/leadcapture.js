@@ -95,18 +95,20 @@ $(document).ready(function(){
         }else{
 			$('#email').removeClass('error');
         }
-
+		
+		if(!enteredAllMandatoryFields)
+			return false;
 
      $.ajax({
 
-            type: 'GET', 
-			url:'/bin/zipcodevalidation',
+            type: 'POST', 
+			url:'/bin/leadcapture',
             async: false,
-            data: 'zipcode='+ zipcode,
+            data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&zipCode='+ zipcode,
             success: function(responseData){
-			console.log(JSON.stringify(responseData.validZipcode));
+			console.log(JSON.stringify(responseData.service));
 
-            if(responseData.validZipcode){
+            if(responseData.service != 'No Service available'){
 
             	if(responseData.service=='nextEra'){
          			 	 event.preventDefault();
@@ -129,7 +131,7 @@ $(document).ready(function(){
 
             }else{
 
-                //alert(responseData.service);
+                alert(responseData.service);
             }
 
 

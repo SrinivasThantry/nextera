@@ -2,5 +2,6 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/nexterahome"/>
     <filter root="/content/nexterahome"/>
+      <filter root="/content/usergenerated/nextera"/>
     <filter root="/content/dam/nexterahome"/>
 </workspaceFilter>

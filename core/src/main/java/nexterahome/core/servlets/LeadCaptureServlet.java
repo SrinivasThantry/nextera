@@ -39,8 +39,8 @@ import nexterahome.core.services.EnrollNowFormService;
  * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
 @Component(service = Servlet.class, property = { Constants.SERVICE_DESCRIPTION + "=Nexter Enroll Now FormServlet",
-		"sling.servlet.methods=" + HttpConstants.METHOD_POST, "sling.servlet.paths=/bin/enrollnowformsubmit" })
-public class EnrollNowFormServlet extends SlingAllMethodsServlet {
+		"sling.servlet.methods=" + HttpConstants.METHOD_POST, "sling.servlet.paths=/bin/leadcapture" })
+public class LeadCaptureServlet extends SlingAllMethodsServlet {
 
 	@Reference
 	private ResourceResolverFactory resolverFactory;
@@ -67,7 +67,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 	@Reference
 	private EnrollNowFormService enrollNowService;
 
-	private static Logger log = LoggerFactory.getLogger(EnrollNowFormServlet.class);
+	private static Logger log = LoggerFactory.getLogger(LeadCaptureServlet.class);
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -78,14 +78,11 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			
 			UserPojo useobj = new UserPojo();
 			useobj = getRequestJson(req, useobj);
-			String tokenString = enrollNowService.getAccess_token();
 			String payload = validateInaddPropertyCheck(useobj.getPayload());
 			log.error(":: payload::"+payload);
-			JsonObject postCustomerData = enrollNowService.postCustomerData(tokenString, payload);
-			String zipcode = getZipcode(payload);
-			String service = enrollNowService.getService(zipcode, req.getResourceResolver());
-			log.error(postCustomerData.get("message").getAsString()+":: postCustomerData::"+postCustomerData);
-			if (postCustomerData.get("message").getAsString().equalsIgnoreCase("Success")){
+			String service = enrollNowService.getService(useobj.getZip(), req.getResourceResolver());
+
+			if (true) {
 				// save to node
 				try {
 
@@ -99,32 +96,17 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 					log.error("rr::" + rr);
 					Session session = rr.adaptTo(Session.class);
 					log.error("session::" + session);
-					Node nexteraNode = session.getNode("/content/usergenerated/nextera");
+					Node leadcaptureNode = session.getNode("/content/usergenerated/nextera/leadcapture");
 					
-					log.error("nexteraNode::" + nexteraNode);
+					log.error("leadcaptureNode::" + leadcaptureNode);
 				//	Node nexteraNode = res.adaptTo(Node.class);
 					
-					Node nexteracustNode = nexteraNode.addNode(useobj.getCustomerIdentifier() + "-nextera");
+					Node nexteracustNode = leadcaptureNode.addNode(useobj.getCustomerIdentifier() + "-leadcapture");
 					log.error("nexteracustNode::" + nexteracustNode.getPath());
 					nexteracustNode.setProperty("FirstName", useobj.getFirstName());
 					nexteracustNode.setProperty("lastName", useobj.getLastName());
-					nexteracustNode.setProperty("customerIdentifier", useobj.getCustomerIdentifier());
 					nexteracustNode.setProperty("email", useobj.getEmail());
-					nexteracustNode.setProperty("marketingOptIn", useobj.getMarketingOptIn() + "");
-					nexteracustNode.setProperty("addressLine1", useobj.getAddressLine1());
-					nexteracustNode.setProperty("addressLine2", useobj.getAddressLine2());
 					nexteracustNode.setProperty("zip", useobj.getZip());
-					nexteracustNode.setProperty("state", useobj.getState());
-					nexteracustNode.setProperty("city", useobj.getCity());
-					nexteracustNode.setProperty("coverageAddress", useobj.getCoverageAddress());
-					nexteracustNode.setProperty("isMailingAddressSameasCoverageAddress",
-							useobj.getIsMailingAddressSameasCoverageAddress() + "");
-					nexteracustNode.setProperty("planName", useobj.getPlanName());
-					nexteracustNode.setProperty("marketingProgramId", useobj.getMarketingProgramId());
-					nexteracustNode.setProperty("deductible", useobj.getDeductible());
-					nexteracustNode.setProperty("promoCode", useobj.getPromoCode());
-					nexteracustNode.setProperty("phonenumber", useobj.getPhonenumber());
-					nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
 					nexteracustNode.save();
 					session.save();
 				  	session.logout();
@@ -142,117 +124,39 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			resp.setCharacterEncoding("UTF-8");
 			JsonObject  resobj = new JsonObject();
 			
-			resobj.addProperty("postCustomerData", gson.toJson(postCustomerData));
 			resobj.addProperty("service", service);
 			log.error("Final res ::" + resobj);
 			resp.getWriter().write(gson.toJson(resobj));
 		} catch (Exception e) {
 			log.error("exception while calling service::" + e);
-			JsonObject resobj = new JsonObject();
-			resobj.addProperty("postCustomerData", "error");
-			resobj.addProperty("service", "error");
-			log.error("Final res ::" + resobj);
-			resp.getWriter().write(resobj.toString());
 		}
 	}
 
-	public static String getZipcode(String payload) {
-		String zipcode = "";
-		try {
-			Gson gson = new Gson();
-			JsonElement jelem = gson.fromJson(payload, JsonElement.class);
-			JsonObject payloadJson = jelem.getAsJsonObject();
-			JsonObject coverageAddressJson = (JsonObject) payloadJson.get("CoverageAddress");
-			zipcode = coverageAddressJson.get("ZipCode").getAsString();
-			log.error("zipcode res ::"+zipcode );
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return zipcode;
-	}
-
+	
 	public static UserPojo getRequestJson(SlingHttpServletRequest request, UserPojo useobj) throws IOException {
 		String requestJson = "";
 		Gson gson = new Gson();
-		String CustomerIdentifier = request.getParameter("CustomerIdentifier");
 		String FirstName = request.getParameter("FirstName");
 		String LastName = request.getParameter("LastName");
-		String ConfirmEmailAddress = request.getParameter("ConfirmEmailAddress");
 		String EmailAddress = request.getParameter("EmailAddress");
-		String AddressLine1 = request.getParameter("AddressLine1");
-		String AddressLine2 = request.getParameter("AddressLine2");
-		String ZipCode = request.getParameter("ZipCode");
-		String State = request.getParameter("State");
-		String City = request.getParameter("City");
-		String IsMailingAddressSameasCoverageAddress = request.getParameter("IsMailingAddressSameasCoverageAddress");
-		String PlanName = request.getParameter("PlanName");
-		String MarketingProgramId = request.getParameter("MarketingProgramId");
-		String Deductible = request.getParameter("Deductible");
-		String PromoCode = request.getParameter("promocode");
-		String phonenumbertype = request.getParameter("phonenumbertype");
-		String phonenumber = request.getParameter("phonenumber");
+		String ZipCode = request.getParameter("zipCode");
 		
 		try {
 			JsonObject customerDataJson = new JsonObject();
-			log.error(":::"+customerDataJson);
 			long id = getCustomerIdentifier();
 			customerDataJson.addProperty("CustomerIdentifier", id);
 			useobj.setCustomerIdentifier(id);
+			
 			customerDataJson.addProperty("FirstName", FirstName);
 			useobj.setFirstName(FirstName);
 			customerDataJson.addProperty("LastName", LastName);
 			useobj.setLastName(LastName);
-			
-			customerDataJson.addProperty("phonenumber", phonenumber);
-			useobj.setPhonenumber(phonenumber);
-			
-			customerDataJson.addProperty("phonenumbertype", phonenumbertype);
-			useobj.setPhonenumbertype(phonenumbertype);
-			
-			
 			customerDataJson.addProperty("EmailAddress", EmailAddress);
 			useobj.setEmail(EmailAddress);
-			customerDataJson.addProperty("ConfirmEmailAddress", ConfirmEmailAddress);
-			customerDataJson.addProperty("MarketingOptIn", true);
-			useobj.setMarketingOptIn(true);
-
-			JsonObject coverageAddressJson = new JsonObject();
-			coverageAddressJson.addProperty("AddressLine1", AddressLine1);
-			useobj.setAddressLine1(AddressLine1);
-			coverageAddressJson.addProperty("AddressLine2", AddressLine2);
-			useobj.setAddressLine2(AddressLine2);
-			coverageAddressJson.addProperty("ZipCode", ZipCode);
+			customerDataJson.addProperty("ZipCode", ZipCode);
 			useobj.setZip(ZipCode);
-			coverageAddressJson.addProperty("City", City);
-			useobj.setCity(City);
-			coverageAddressJson.addProperty("State", State);
-			useobj.setState(State);
-		
-			String temp = gson.toJson(coverageAddressJson);
-			log.error("temp"+temp);
-			customerDataJson.add("CoverageAddress", coverageAddressJson);
-			customerDataJson.addProperty("MailingAddress", "");
-			customerDataJson.addProperty("IsMailingAddressSameasCoverageAddress",
-					Boolean.parseBoolean(IsMailingAddressSameasCoverageAddress));
-			useobj.setMailingAddressSameasCoverageAddress(Boolean.parseBoolean(IsMailingAddressSameasCoverageAddress));
-			JsonArray jsonArray = new JsonArray();
-			JsonObject prodSelectionJson = new JsonObject();
-			prodSelectionJson.addProperty("PlanName", PlanName);
-			useobj.setPlanName(PlanName);
-			prodSelectionJson.addProperty("MarketingProgramId", Integer.parseInt(MarketingProgramId));
-			useobj.setMarketingProgramId(Long.parseLong(MarketingProgramId));
-			prodSelectionJson.addProperty("Deductible", Integer.parseInt(Deductible));
-			useobj.setDeductible(Long.parseLong(Deductible));
-			
-			prodSelectionJson.addProperty("PromoCode", PromoCode);
-			useobj.setPromoCode(PromoCode);
-			
-			
-			
-			jsonArray.add(prodSelectionJson);
-			customerDataJson.add("ProductSelection", jsonArray);
 			requestJson = gson.toJson(customerDataJson);
+			log.error(":::"+customerDataJson);
 			useobj.setPayload(requestJson);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -262,9 +166,6 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		return useobj;
 
 	}
-	private String getNullAsEmptyString(JsonElement jsonElement) {
-        return jsonElement.isJsonNull() ? "" : jsonElement.getAsString();
-    }
 	
 	private static long getCustomerIdentifier() {
 		long custId = 0;
@@ -279,6 +180,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		return custId;
 	}
 
+	
 	private static String validateInaddPropertyCheck(String value) {
 		if (value != null) {
 

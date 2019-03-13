@@ -88,77 +88,105 @@ public class CreateBackupFileScheduledTask implements Runnable {
 			int counter = 1;
 			if (nexteraNode.hasNodes()) {
 				JsonArray array = new JsonArray();
+				JsonArray array2 = new JsonArray();
 
 				javax.jcr.NodeIterator iter = nexteraNode.getNodes();
 				while (iter.hasNext()) {
 					try {
 						Node childNode = (Node) iter.next();
-						if(!childNode.getName().equalsIgnoreCase("customerData")){
-						String firstName = childNode.hasProperty("FirstName")
-											? childNode.getProperty("FirstName").getString() : "";
-						String lastName = childNode.hasProperty("lastName")
-											? childNode.getProperty("lastName").getString() : "";
-						String id = childNode.hasProperty("customerIdentifier")
-											? childNode.getProperty("customerIdentifier").getValue().getLong() + "" : "";
-						String email = childNode.hasProperty("email") ? childNode.getProperty("email").getString() : "";
-						String marketingOptIn = childNode.hasProperty("marketingOptIn")
-											? childNode.getProperty("marketingOptIn").getValue().getBoolean() + "" : "";
-						String addressLine1 = childNode.hasProperty("addressLine1")
-											? childNode.getProperty("addressLine1").getString() : "";
-						String addressLine2 = childNode.hasProperty("addressLine2")
-											? childNode.getProperty("addressLine2").getString() : "";
-						String zip = childNode.hasProperty("zip") ? childNode.getProperty("zip").getString() : "";
-						String state = childNode.hasProperty("state") ? childNode.getProperty("state").getString() : "";
-						String city = childNode.hasProperty("city") ? childNode.getProperty("city").getString() : "";
-						String coverageAddress = childNode.hasProperty("coverageAddress")
-											? childNode.getProperty("coverageAddress").getString() : "";
-						String isMailingAddressSameasCoverageAddress = childNode
-											.hasProperty("isMailingAddressSameasCoverageAddress")
-										? childNode.getProperty("isMailingAddressSameasCoverageAddress").getString()
-												+ ""
+						if (!childNode.getName().equalsIgnoreCase("customerData")) {
+
+							String firstName = childNode.hasProperty("FirstName")
+									? childNode.getProperty("FirstName").getString() : "";
+							String lastName = childNode.hasProperty("lastName")
+									? childNode.getProperty("lastName").getString() : "";
+							String zip = childNode.hasProperty("zip") ? childNode.getProperty("zip").getString() : "";
+							String email = childNode.hasProperty("email") ? childNode.getProperty("email").getString()
+									: "";
+							JsonObject jsonobj = new JsonObject();
+							if (!childNode.getName().equalsIgnoreCase("leadcapture")) {
+
+								String id = childNode.hasProperty("customerIdentifier")
+										? childNode.getProperty("customerIdentifier").getValue().getLong() + "" : "";
+
+								String marketingOptIn = childNode.hasProperty("marketingOptIn")
+										? childNode.getProperty("marketingOptIn").getValue().getBoolean() + "" : "";
+								String addressLine1 = childNode.hasProperty("addressLine1")
+										? childNode.getProperty("addressLine1").getString() : "";
+								String addressLine2 = childNode.hasProperty("addressLine2")
+										? childNode.getProperty("addressLine2").getString() : "";
+
+								String state = childNode.hasProperty("state")
+										? childNode.getProperty("state").getString() : "";
+								String city = childNode.hasProperty("city") ? childNode.getProperty("city").getString()
 										: "";
-						String planName = childNode.hasProperty("planName")
-								? childNode.getProperty("planName").getString() : "";
-						String marketId = childNode.hasProperty("marketingProgramId")
-								? childNode.getProperty("marketingProgramId").getValue().getLong() + "" : "";
-						String deductiblestr = childNode.hasProperty("deductible")
-								? childNode.getProperty("deductible").getValue().getLong() + "" : "";
-						String promoCode = childNode.hasProperty("promoCode")
-								? childNode.getProperty("promoCode").getString() : "";
-								
-						String phonenumber = childNode.hasProperty("phonenumber")
+								String coverageAddress = childNode.hasProperty("coverageAddress")
+										? childNode.getProperty("coverageAddress").getString() : "";
+								String isMailingAddressSameasCoverageAddress = childNode
+										.hasProperty("isMailingAddressSameasCoverageAddress")
+												? childNode.getProperty("isMailingAddressSameasCoverageAddress")
+														.getString() + ""
+												: "";
+								String planName = childNode.hasProperty("planName")
+										? childNode.getProperty("planName").getString() : "";
+								String marketId = childNode.hasProperty("marketingProgramId")
+										? childNode.getProperty("marketingProgramId").getValue().getLong() + "" : "";
+								String deductiblestr = childNode.hasProperty("deductible")
+										? childNode.getProperty("deductible").getValue().getLong() + "" : "";
+								String promoCode = childNode.hasProperty("promoCode")
+										? childNode.getProperty("promoCode").getString() : "";
+
+								String phonenumber = childNode.hasProperty("phonenumber")
 										? childNode.getProperty("phonenumber").getString() : "";
 
-						String phonenumbertype = childNode.hasProperty("phonenumbertype")
-												? childNode.getProperty("phonenumbertype").getString() : "";
-						JsonObject jsonobj = new JsonObject();
+								String phonenumbertype = childNode.hasProperty("phonenumbertype")
+										? childNode.getProperty("phonenumbertype").getString() : "";
 
-						jsonobj.addProperty("firstName", firstName);
-						jsonobj.addProperty("lastName", lastName);
-						jsonobj.addProperty("phonenumber", phonenumber);
-						jsonobj.addProperty("phonenumbertype", phonenumbertype);
-						jsonobj.addProperty("id", id);
-						jsonobj.addProperty("email", email);
-						jsonobj.addProperty("marketingOptIn", marketingOptIn);
-						jsonobj.addProperty("addressLine1", addressLine1);
-						jsonobj.addProperty("addressLine2", addressLine2);
-						jsonobj.addProperty("zip", zip);
-						jsonobj.addProperty("state", state);
-						jsonobj.addProperty("city", city);
-						jsonobj.addProperty("coverageAddress", coverageAddress);
-						jsonobj.addProperty("isMailingAddressSameasCoverageAddress", isMailingAddressSameasCoverageAddress);
-						jsonobj.addProperty("planName", planName);
-						jsonobj.addProperty("marketId", marketId);
-						jsonobj.addProperty("deductiblestr", deductiblestr);
-						jsonobj.addProperty("promoCode", promoCode);
-						counter = counter + 1;
-						array.add(jsonobj);
+								// ---------------------------------------------
+								jsonobj.addProperty("firstName", firstName);
+								jsonobj.addProperty("lastName", lastName);
+
+								jsonobj.addProperty("email", email);
+
+								jsonobj.addProperty("zip", zip);
+
+								counter = counter + 1;
+
+								jsonobj.addProperty("phonenumber", phonenumber);
+								jsonobj.addProperty("phonenumbertype", phonenumbertype);
+								jsonobj.addProperty("marketingOptIn", marketingOptIn);
+								jsonobj.addProperty("addressLine1", addressLine1);
+								jsonobj.addProperty("addressLine2", addressLine2);
+								jsonobj.addProperty("coverageAddress", coverageAddress);
+								jsonobj.addProperty("isMailingAddressSameasCoverageAddress",
+										isMailingAddressSameasCoverageAddress);
+								jsonobj.addProperty("planName", planName);
+								jsonobj.addProperty("marketId", marketId);
+								jsonobj.addProperty("deductiblestr", deductiblestr);
+								jsonobj.addProperty("promoCode", promoCode);
+								jsonobj.addProperty("id", id);
+								jsonobj.addProperty("state", state);
+								jsonobj.addProperty("city", city);
+								array.add(jsonobj);
+							}else{
+
+							jsonobj.addProperty("firstName", firstName);
+							jsonobj.addProperty("lastName", lastName);
+
+							jsonobj.addProperty("email", email);
+
+							jsonobj.addProperty("zip", zip);
+
+							counter = counter + 1;
+							array2.add(jsonobj);
+							}
 						}
 					} catch (Exception e) {
 						logger.error("ex itr nodes" + e);
 					}
 
 					obj.add("data", array);
+					obj.add("custermerdata", array2);
 				}
 			}
 
