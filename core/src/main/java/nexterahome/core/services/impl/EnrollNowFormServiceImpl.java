@@ -50,9 +50,12 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
 		if(zipcode!="") {
 			Boolean validZipcode = validZipcode(zipcode,service,resourceResolver);
 	        if(!validZipcode) {//nextEra - false
-	        	service = "FPL";
+	        	service = "texas";
 	        	validZipcode = validZipcode(zipcode,service, resourceResolver);
 	        	if(!validZipcode) {
+	        		service = "FPL";
+	        		validZipcode = validZipcode(zipcode,service, resourceResolver);
+	        		if(!validZipcode) 
 	        		service = "No Service available";
 	        	}
 	        }

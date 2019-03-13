@@ -160,12 +160,9 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 		String zipcode = "";
 		try {
 			Gson gson = new Gson();
-			log.error("getZipcode res ::" );
 			JsonElement jelem = gson.fromJson(payload, JsonElement.class);
 			JsonObject payloadJson = jelem.getAsJsonObject();
-			log.error("payloadJson res ::"+payloadJson );
 			JsonObject coverageAddressJson = (JsonObject) payloadJson.get("CoverageAddress");
-			log.error("coverageAddressJson res ::"+coverageAddressJson );
 			zipcode = coverageAddressJson.get("ZipCode").getAsString();
 			log.error("zipcode res ::"+zipcode );
 		} catch (Exception e) {

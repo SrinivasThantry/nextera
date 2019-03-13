@@ -39,14 +39,27 @@ $(document).ready(function() {
     
     
     function zipvalidate(event) {
-
+    	
+    	 var text = event.currentTarget.innerText;
+    	 if (text === 'HOME' || text === 'OUR PHILOSOPHY') {
+    		 
+    	 }else{
+    		 event.preventDefault(); 
+    	 
+         pagename = text;
+         if(text === 'HAVE A QUESTION?' || text === 'FAQ')
+     		pagename = 'FAQ';
+         
         $('#zipCode').val("");
-        var text = event.currentTarget.innerText;
-        console.dir("test" + event);
-        pagename = text;
-        //HAVE A QUESTION?
+        console.log(checkStorage('zipcodeobj', 1)+"::::::::");
+        if(checkStorage('zipcodeobj', 9)){
+        	var obj = JSON.parse(sessionStorage.getItem('zipcodeobj'));
+        	console.log(obj.zipcode);
+        	submitzip(event,obj.zipcode);
+        }else{
+        	sessionStorage.removeItem('zipcodeobj');
+        	sessionStorage.clear();
         if (text === 'FAQ' || text === 'SERVICE PLANS' || text === 'FIND A PLAN' || text === 'HAVE A QUESTION?') {
-            //event.currentTarget.className = "nav-item active";
         	if(text === 'HAVE A QUESTION?' || text === 'FAQ')
         		pagename = 'FAQ';
             $('#zipcodeGate').addClass('show');
@@ -58,31 +71,77 @@ $(document).ready(function() {
             $("#zipcodeGate").removeAttr("style");
             $("#zipcodeGate").attr("style", "display: none;");
             $("#zipcodeGate").removeClass('show');
-            if (text === 'HOME') {
-
-                event.preventDefault();
-                window.location = "/content/nexterahome/en/homestrcture/home.html";
-
-            } else if (text === 'OUR PHILOSOPHY') {
-                event.preventDefault();
-                window.location = "/content/nexterahome/en/homestrcture/ourphilosophy.html";
-
-
-            }
+           
 
         }
+    }
         return;
+    	 }
     }
 
-
+    
+    
+    function compareDates(date1, date2, time) {
+        time = time ? time : 'm';
+        var dateStart     = new Date(date1),
+            dateEnd       = date2 != '' ? new Date(date2) : new Date(),
+            one_min       = 1000 * 60,
+            one_hour      = one_min * 60,
+            one_day       = one_hour * 24,
+            date1_ms      = dateStart.getTime(),
+            date2_ms      = dateEnd.getTime(),
+            difference_ms = date2_ms - date1_ms;
+        if (time === 'd') {
+          return Math.floor(difference_ms / one_day);
+        } else if (time === 'h') {
+          return Math.floor(difference_ms / one_hour);
+        }
+        return Math.floor(difference_ms / one_min);
+      }
+    
+    
+    function checkStorage (key, m) {
+        m = m ? m : 10;
+    	var item = JSON.parse(sessionStorage.getItem('zipcodeobj'));
+        if (item === undefined || item === null) {
+          return false;
+        }
+        if (item.zipcode === '') {
+            return false;
+          }
+        if(item === null)
+        	return false;
+        if (compareDates(item.created, new Date().toISOString(), 'm') > m) {
+          return false;
+        }
+        return true;
+      };
+    
 
     $('#formzipcodesubmit').click(function(event) {
-        var zipcode = $('#zipCode').val();
+    	
+    	submitzip(event, undefined);
+    });
+    
+    function submitzip(event,zip){
+    	var zipcode = "";
+    	if(zip === undefined){    	
+    		zipcode = $('#zipCode').val();
+    		var newStorage = {};
+            newStorage.created = new Date().toISOString();
+            newStorage.zipcode = zipcode;        
+            sessionStorage.setItem('zipcodeobj', JSON.stringify(newStorage));
+    	}
+    	else
+    		zipcode = zip;
+       
+        
        
         if (zipcode.length == 0){
         	alert('Please Enter a Zip Code');
         	  return false;
         }
+        
         
         
 
@@ -153,5 +212,6 @@ $(document).ready(function() {
 
         });
 
-    });
+    
+    }
 });

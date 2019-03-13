@@ -269,6 +269,12 @@ $(document).ready(function(){
          			 	window.open("https://model-nextera.assurant.com/home?s="+obj.successId+'&plan='+plan);
             			event.preventDefault();
             			location.reload();
+        		}else if(responseData.service=='texas'){
+        			
+        			window.open("https://model-nextera.assurant.com/home?s="+obj.successId+'&plan='+plan);
+        			event.preventDefault();
+        			location.reload();
+
         		}else if(responseData.service=='FPL'){
 
             			event.preventDefault();

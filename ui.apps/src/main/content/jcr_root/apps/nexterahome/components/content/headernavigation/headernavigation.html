@@ -24,7 +24,7 @@
     			<ul class="navbar-nav mr-auto" data-sly-use.nexterahome="${resource.path}/navLinks">
               <sly data-sly-list.navlink="${nexterahome.listChildren}">
                 <li class="nav-item ${currentPage.path == navlink.pathurl ? 'active' : ''}">
-                  <div id="anchorlist"> <a id="${navlink.linkTitle}" href="#" class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}">${navlink.linkTitle}</a>
+                  <div id="anchorlist"> <a  href="${navlink.pathurl}.html" class="nav-link ${currentPage.path == navlink.pathurl ? 'active' : ''}">${navlink.linkTitle}</a>
                   </div>
                 </li>
                 </sly>
