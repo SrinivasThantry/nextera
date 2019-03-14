@@ -226,6 +226,13 @@ body {
     background-color: #fff;
     padding: 25px;
   }
+/*leader*/
+ .contact-wrapl {
+    width: 815px;
+    margin: auto;
+
+  }
+/*leader*/
 .control {
     display: block;
     position: relative;
@@ -451,6 +458,18 @@ a.footerLink2:last-of-type:after {
     height: auto !important;
     max-height: 125% !important;
 }
+/*leader capture form*/
+ .enroll-now {
+        background: transparent;
+        margin-top: -540px;
+        margin-bottom: 100px;
+    }
+.contact-wrapl {
+  padding: 15px;
+}
+
+
+/*leader capture form*/
 .fr {
     float: right !important;
 }
@@ -1458,15 +1477,13 @@ span.navbar-toggler-icon {
 button.btn.btn-primary.inlineBlock.w80 {
     width: 80% !important;
 }
-.w100 {
-	width: 100% !important;
-    }
-.white {
-    color: #fff !important;
-}
 .w100, .w100:active, .w100:hover, .w100:visited {
     width: 100% !important;
 }
+.white {
+    color: #fff !important;
+}
+
 .whiteBkrd  {
     background-color: #fff;
     padding-top: 80px;

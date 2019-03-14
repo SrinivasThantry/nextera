@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+$('.disclaimer a').attr('data-toggle', 'modal').attr('data-target', '#zipcodeGate');
     console.log(":::::::::::::::::::::::");
  $('#zipsubmit').click(function(event){
 

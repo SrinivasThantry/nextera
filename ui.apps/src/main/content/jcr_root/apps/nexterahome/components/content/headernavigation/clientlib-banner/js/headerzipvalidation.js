@@ -194,7 +194,7 @@ $(document).ready(function() {
                     } else {
                         event.preventDefault();
                         pagename="";
-                        window.location = "/content/nexterahome/en/homestrcture/thank-you.html";
+                        window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
 
                     }
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
                 } else {
                     event.preventDefault();
                     pagename="";
-                    window.location = "/content/nexterahome/en/homestrcture/thank-you.html";
+                    window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
 
                     // alert(responseData.service);
                 }

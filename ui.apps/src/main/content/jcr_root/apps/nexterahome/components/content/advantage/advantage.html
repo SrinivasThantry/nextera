@@ -13,11 +13,14 @@
       <div class="col-sm-12 col-md-12 col-lg-5">
         <h2 class="h2Spacing"  data-sly-test="${properties.homeWarrantiesHeading}">${properties.homeWarrantiesHeading}</h2>
         <div class="bodyText spacingBodyText" data-sly-test="${properties.homewarrantiesDescription}">${properties.homewarrantiesDescription}</div>
-        <div class="disclaimer">${properties.disclaimertext @ context='html'}</div>
+       <div class="disclaimer">${properties.disclaimertext @ context='html'}</div> 
+
         <div class="mb25"></div> 
 
         <div class="hideSMMD" data-sly-test="${properties.homewarrantiesCTA}">
+		<form id="zip">
         <a class="white" href="${properties.homewarrantiesCTA}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="advantagezip" class="btn btn-primary">${properties.homeWarrantiesButtonText}</button></a>
+        </form>
        </div>
       </div>
       <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
@@ -66,8 +69,11 @@
 			<img src="${properties.totalhomecareImagePath}" class="animations"/>
           </div>
           <div class="btnSpacingLeft">
-			<div class="responsiveCenter" data-sly-test="${properties.totalhomecareCTA}" id="advantagezipqry">
-        <a class="white" href="${properties.totalhomecareCTA}.html"><button id="advantagezip" class="btn btn-primary mt25">${properties.totalhomecareButtonText}</button></a>
+			<div class="responsiveCenter" data-sly-test="${properties.totalhomecareCTA}">
+			 <form id="zip">
+
+            <a class="white" href="${properties.totalhomecareCTA}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="advantagezip" class="btn btn-primary mt25" >${properties.totalhomecareButtonText}</button></a>
+        </form>
 
 			</div>
           </div>
@@ -84,7 +90,9 @@
         <div class="bodyText spacingBodyText" data-sly-test="${properties.homecareDescription}">${properties.homecareDescription}</div>
 
         <div class="hideSMMD" data-sly-test="${properties.homecareCTA}">
+            <form id="zip">
         <a class="white" href="${properties.homecareCTA}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="advantagezip" class="btn btn-primary">${properties.homecareButtonText}</button></a>
+        </form>
        </div>
       </div>
       <div class="d-none d-sm-none d-md-none d-lg-block col-lg-1"></div>
@@ -109,50 +117,3 @@
 </div>
 <!--END Total Home Care-->
 <!-- END NEXTERA ADVANTAGE -->
- <!--START ZIP CODE GATE MODAL-->
-<div class="modal" id="zipcodeGate" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title">Service Plans</div>
-          <button id="closeid" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form id="formzipcodeGate">
-          <div class="modal-body">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                      <p class="bodyZipCode">Enter your ZIP code so we can find plans in your area</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-6">
-                      <input class="inputZipCode" id="zipCode" placeholder="Enter Zip Code"/>
-                    </div>
-                    <div class="col-sm-6 col-md-6">
-                      <a href="" data-target="">
-                        <button type="submit" id="formzipcodesubmit" class="btn btn-secondary w100">Find Plans</button>
-                      </a>
-                  </div>
-                </div>
-              </div>
-              
-          </div>
-          <div class="modal-footer">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <button id="closeidbtn" type="button" class="btn btn-primary w100 modalBTN" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>        
-          </div>
-      </form>
-      </div>
-    </div>
-  </div>
-<!--END ZIP CODE GATE MODAL-->

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-18T19:48:56.997Z"
+        cq:lastModified="{Date}2019-03-14T10:28:21.623-04:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-02-08T15:06:45.408Z"
         cq:lastReplicatedBy="peakster1"
@@ -29,7 +29,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
             <enrollnow
-                jcr:lastModified="{Date}2019-02-05T21:15:10.118Z"
+                jcr:lastModified="{Date}2019-03-14T10:28:21.586-04:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
@@ -50,6 +50,12 @@
                 mailingAddressOptional="Mailing Address 2 (optional)"
                 mailingAddressOptionalSecondary="Service Address 2 (optional)"
                 mailingAddressSecondary="Service Address"
+                phonenumber="Phone Number"
+                phonenumberSecondary="Phone Number"
+                phonenumbertype="Phone Number Type"
+                phonenumbertypeSecondary="Phone Number Type"
+                promocode="Promocode (optional)"
+                promocodeSecondary="Promocode (optional)"
                 reEnterEmail="Re-Enter Email"
                 state="State"
                 stateSecondary="State"

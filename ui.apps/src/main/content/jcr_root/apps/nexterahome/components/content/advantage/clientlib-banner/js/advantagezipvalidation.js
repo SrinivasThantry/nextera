@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+$('.disclaimer a').attr('data-toggle', 'modal').attr('data-target', '#zipcodeGate');
     $("#zipadvantage").on('input',function(e){
 		$(this).val($(this).val().replace(/[^0-9]/g,''));
     });
