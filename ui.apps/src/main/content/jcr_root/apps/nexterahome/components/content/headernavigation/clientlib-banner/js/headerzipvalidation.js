@@ -176,7 +176,7 @@ $(document).ready(function() {
 
                         event.preventDefault();
                         pagename="";
-                        window.location = "/content/nexterahome/en/homestrcture/thank-you-fpl.html";
+                        window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
 
                     } else if (responseData.service == 'texas') {
 
