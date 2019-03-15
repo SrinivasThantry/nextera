@@ -31,8 +31,8 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 center">
-        <a class="white" href="${properties.ctaurl}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="howitworkzip" class="btn btn-primary howitworksSpacing">${properties.ctalabel}</button></a>
+          <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 center" id="footerfaq">
+        <a class="white" href="${properties.ctaurl}.html"><button id="howitworkzip" class="btn btn-primary howitworksSpacing">${properties.ctalabel}</button></a>
           </div>
       </div>
       <!-- END HOW IT WORKS -->
@@ -117,6 +117,43 @@
               </div>
             </div>        
           </div>
+      </form>
+      </div>
+    </div>
+  </div>
+<!--END ZIP CODE GATE MODAL-->
+   <!--START ZIP CODE GATE MODAL-->
+<div class="modal" id="zipcodeGate" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Service Plans</div>
+          <button id="closeid" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="formzipcodeGate">
+          <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                      <p class="bodyZipCode">Enter your ZIP code so we can find plans in your area</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                      <input class="inputZipCode" id="zipCode" placeholder="Enter Zip Code"/>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                      <a href="" data-target="">
+                        <button type="submit" id="formzipcodesubmit" class="btn btn-secondary w100">Find Plans</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+
       </form>
       </div>
     </div>

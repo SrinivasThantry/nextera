@@ -1,6 +1,4 @@
 
-  <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
-    <sly data-sly-call="${clientlib.js @ categories='nexterahome.banner'}" /> 
 
 <div class="heroBkrd" style="background-image: url('/content/dam/nexterahome/homeimages/heroBkrd.svg'); background-repeat: no-repeat !important; background-position: top center;">
   <div class="container">
@@ -25,12 +23,12 @@
         </div>
         <div class="heroBody">${properties.description @ context='html'}</div>
         <div class="heroCTA">${properties.ctadescription @ context='html'}</div>
-        <form id="zipfinder">
-        <a class="white" href="${properties.ctaurl}.html" data-toggle="modal" data-target="#zipcodeGate"><button id="zipsubmit" class="btn btn-secondary">${properties.ctalabel}</button></a>
-        </form>
+        <div id="footerfaq">
+        <a class="white" href="${properties.ctaurl}.html"><button id="zipsubmit" class="btn btn-secondary">${properties.ctalabel}</button></a>
+        </div>
         <!-- <div class="marginBottom"></div> -->
          <div class="mb25"></div> 
-     <div class="disclaimer">${properties.disclaimertext @ context='html'}</div>
+     <div class="disclaimer" id="footerfaq">${properties.disclaimertext @ context='html'}</div>
 
       </div>
 

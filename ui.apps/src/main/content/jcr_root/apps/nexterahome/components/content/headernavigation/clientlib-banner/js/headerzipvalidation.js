@@ -31,9 +31,16 @@ $(document).ready(function() {
 
     });
     $('#footerfaq a').click(function(evt) {
-
+    	 var text = event.currentTarget.innerText;
+    	 
+    	 if (text === 'HOME' || text === 'OUR PHILOSOPHY' || text === 'LOGIN') {
+    		 return;
+    	 }else{
+    		 console.log("entered here");
         evt.preventDefault();
         zipvalidate(evt);
+    	 }
+    	 
 
     });
     
@@ -41,9 +48,10 @@ $(document).ready(function() {
     function zipvalidate(event) {
     	
     	 var text = event.currentTarget.innerText;
+    	 
     	 if (text === 'HOME' || text === 'OUR PHILOSOPHY') {
-    		 
     	 }else{
+    		 console.log("entered here111");
     		 event.preventDefault(); 
     	 
          pagename = text;
@@ -51,15 +59,14 @@ $(document).ready(function() {
      		pagename = 'FAQ';
          
         $('#zipCode').val("");
-        console.log(checkStorage('zipcodeobj', 1)+"::::::::");
-        if(checkStorage('zipcodeobj', 9)){
+        if(checkStorage('zipcodeobj', 10)){
         	var obj = JSON.parse(sessionStorage.getItem('zipcodeobj'));
         	console.log(obj.zipcode);
         	submitzip(event,obj.zipcode);
         }else{
         	sessionStorage.removeItem('zipcodeobj');
         	sessionStorage.clear();
-        if (text === 'FAQ' || text === 'SERVICE PLANS' || text === 'FIND A PLAN' || text === 'HAVE A QUESTION?') {
+        if (text === 'FAQ' || text === 'SERVICE PLANS' || text === 'FIND A PLAN' || text === 'HAVE A QUESTION?' || text === "service plans" || text === "VIEW SERVICE PLANS" || text === "READY TO ENROLL?") {
         	if(text === 'HAVE A QUESTION?' || text === 'FAQ')
         		pagename = 'FAQ';
             $('#zipcodeGate').addClass('show');
@@ -101,7 +108,7 @@ $(document).ready(function() {
     
     
     function checkStorage (key, m) {
-        m = m ? m : 10;
+        m = m ? m : 20;
     	var item = JSON.parse(sessionStorage.getItem('zipcodeobj'));
         if (item === undefined || item === null) {
           return false;
@@ -124,6 +131,7 @@ $(document).ready(function() {
     });
     
     function submitzip(event,zip){
+    	
     	var zipcode = "";
     	if(zip === undefined){    	
     		zipcode = $('#zipCode').val();
