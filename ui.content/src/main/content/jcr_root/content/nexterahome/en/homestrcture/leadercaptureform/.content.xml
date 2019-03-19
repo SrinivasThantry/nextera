@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-11T08:19:50.978+05:30"
+        cq:lastModified="{Date}2019-03-17T00:03:45.571-04:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/nexterahome/templates/page-content"
         jcr:primaryType="cq:PageContent"
@@ -30,7 +30,7 @@
             <leadercaptureform
                 jcr:created="{Date}2019-03-09T10:47:36.313+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-11T08:19:50.972+05:30"
+                jcr:lastModified="{Date}2019-03-17T00:03:45.562-04:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/leadercaptureform"
@@ -38,6 +38,8 @@
                 firstName="First Name"
                 formHeading="Please enter your informaton and we will get you to the right place."
                 lastName="Last Name"
+                legalAgreementCopy="I agree to receive information updates and marketing offers by email."
+                mailingAddress="LeadCaptureForm Checkbox"
                 submit="Submit"
                 titleh1="Sorry!"
                 titlel="We’re not in your town yet"

@@ -184,6 +184,7 @@ body {
 .btnSpacing {
     display: inline-block;
     margin-left: 15px;
+
 }
 .btnSpacingLeft {
     margin-left: 35px;
@@ -469,7 +470,27 @@ a.footerLink2:last-of-type:after {
 }
 
 
-/*leader capture form*/
+.triangle-wrapp {
+    width: 327px;
+    position: absolute;
+    right: 0px;
+
+} 
+    .material-formm {
+    padding: 90px 105px;
+    background-color: #fff;
+    font-family: 'Open Sans';
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.07);
+    position: relative;
+
+  }
+
+.checkbox-groupg {
+    margin-top: 0px;
+}
+
+
+/*leadercapture form*/
 .fr {
     float: right !important;
 }
@@ -1552,6 +1573,7 @@ button.btn.btn-primary.inlineBlock.w80 {
         margin-left: 0 !important;
         margin-top: 15px;
         visibility: visible;
+
     }
     .btnSpacingLeft {
         margin-left: 0;
@@ -1884,6 +1906,7 @@ ul.benefitsList li {
         display: inline-block;
         margin-left: 0 !important;
         margin-top: 15px;
+
     }
     .btnSpacingLeft {
         margin-left: 0;
@@ -2053,6 +2076,7 @@ ul.benefitsList li {
 }
 .btnSpacing {
     margin-left: 5px;
+
 }
 .btnSpacingLeft {
     margin-left: 0;
@@ -2320,6 +2344,7 @@ nav {
     }
     .btnSpacing {
         margin-left: 0 !important;
+
     }
     .btnSpacingLeft {
         margin-left: 0 !important;
@@ -2497,6 +2522,7 @@ nav {
         display: inline-block;
         margin-left: 0;
         margin-top: 15px;
+    
     }
     .buttonSpacing {
         margin-bottom: 100px;

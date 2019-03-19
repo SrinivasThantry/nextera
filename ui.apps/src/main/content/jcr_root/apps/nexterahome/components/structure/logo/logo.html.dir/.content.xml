@@ -5,7 +5,7 @@
         cq:lastReplicated="{Date}2019-03-18T18:18:33.891Z"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        jcr:lastModifiedBy="Administrator"
+        jcr:lastModifiedBy="Chris Levy"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="nt:resource"/>
 </jcr:root>

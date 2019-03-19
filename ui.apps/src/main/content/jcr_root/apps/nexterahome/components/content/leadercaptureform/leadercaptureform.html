@@ -1,16 +1,15 @@
-
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
     <sly data-sly-call="${clientlib.js @ categories='nexterahome.leadercaptureform'}" />  
-<div class="hero-bg">
-    <div class="triangle-wrap">
-    <img src="images/triangles.svg">
+<div class="hero-bg" style="margin: 20px 0;">
+    <div class="triangle-wrapp">
+   <img src="/content/dam/nexterahome/homeimages/triangles.svg">
   </div>
   <h1>${properties.titleh1}</h1>
   <h4>${properties.titlel}</h4>
 </div>
 <div class="enroll-now">
 <section class="contact-wrapl"> 
-                    <form class="material-form clearfix">
+                    <form class="material-formm clearfix">
                         <div class="enrollText" data-sly-test="${properties.formHeading}">${properties.formHeading}</div>
                         <!-- ROW 1 -->
                         <div class="row">
@@ -44,11 +43,24 @@
                         </div>
                         </div>
 
-						<a id="submitRedirect" href="" data-sly-test="Submit">
-                        	<button type="button" id="submit" class="btn btn-primary float-right">
+                       <div class="row checkbox-groupg">
+                        <div class="col-md-12">
+                        <label data-sly-test="${properties.legalAgreementCopy}" class="control control-checkbox" id="legalAgreementCopy">${properties.legalAgreementCopy}
+
+                                <input required="" type="checkbox"  id="myCheck"  name="checkbox" value="check">
+                                <div class="control-indicator"></div>	
+                        </label></div>
+                    </div>
+
+
+
+
+                        	<button type="button" id="submit" onclick="check()" style="margin-left: 250px; margin-top: 30px;" class="btn btn-primary float-right">
                             	Submit
                         	</button>
-                        </a>
+
+
+
                     </form>
                     </section>
                     </div>

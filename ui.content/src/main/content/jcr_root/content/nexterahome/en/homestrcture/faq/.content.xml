@@ -2,10 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-18T19:56:02.676Z"
-        cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2019-02-08T15:17:39.785Z"
-        cq:lastReplicatedBy="peakster1"
+        cq:lastModified="{Date}2019-03-15T18:31:50.854Z"
+        cq:lastModifiedBy="peakster4"
+        cq:lastReplicated="{Date}2019-03-15T18:32:21.662Z"
+        cq:lastReplicatedBy="peakster4"
         cq:lastReplicationAction="Activate"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
@@ -38,8 +38,8 @@
             <faq
                 jcr:created="{Date}2019-01-14T00:59:03.662+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-02-18T19:56:02.663Z"
-                jcr:lastModifiedBy="admin"
+                jcr:lastModified="{Date}2019-03-15T18:31:50.844Z"
+                jcr:lastModifiedBy="peakster4"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/faq"
                 description="We are here to make things easy"
@@ -47,7 +47,7 @@
                 <faqAns jcr:primaryType="nt:unstructured">
                     <item0
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="You can conveniently schedule service for your covered home product right here. Start by searching for your service plan. This will guide you through a few simple steps to get your service scheduled with your service plan provider. "
+                        faqAnswer="You can conveniently schedule service for your covered home product &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>right here. &lt;/a> Start by searching for your service plan. This will guide you through a few simple steps to get your service scheduled with your service plan provider. "
                         faqTitle="How can I schedule service for a product covered under my service plan?"
                         openimagepath="/content/dam/nexterahome/homeimages/e-add.svg"/>
                     <item1
@@ -68,7 +68,7 @@
                         faqTitle="How can I change my service appointment?"/>
                     <item5
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="Your service plan provides coverage within one single-family residence for the cost of parts and labor on covered components that fail due to normal wear and tear. Certain conditions and components such as inadequate maintenance and cosmetic parts, are not covered. See your service plan terms and conditions for full coverage details. Still have questions? Sign in to the  &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal&lt;/a>  to view service plan coverages."
+                        faqAnswer="Your service plan provides coverage within one single-family residence for the cost of parts and labor on covered components that fail due to normal wear and tear. Certain conditions and components such as inadequate maintenance and cosmetic parts are not covered. See your service plan terms and conditions for full coverage details. Still have questions? Sign in to the  &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal&lt;/a>  to view service plan coverages."
                         faqTitle="What is covered under my service plan?"/>
                     <item6
                         jcr:primaryType="nt:unstructured"

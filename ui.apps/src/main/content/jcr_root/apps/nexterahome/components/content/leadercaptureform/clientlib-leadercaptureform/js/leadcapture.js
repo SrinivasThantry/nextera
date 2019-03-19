@@ -64,6 +64,8 @@ $(document).ready(function(){
 
 		 var email = $('#email').val();
 
+        var myCheck = $('#myCheck').val();
+
 		 var enteredAllMandatoryFields = true;
 
 
@@ -95,7 +97,15 @@ $(document).ready(function(){
         }else{
 			$('#email').removeClass('error');
         }
-		
+
+         if(!this.form.checkbox.checked)
+{
+   // alert('You must agree to receive information updates and marketing offers by email.');
+    document.getElementById("legalAgreementCopy").style.color="red";
+    return false;
+}
+
+
 		if(!enteredAllMandatoryFields)
 			return false;
 
@@ -130,8 +140,9 @@ $(document).ready(function(){
 
 
             }else{
+                       event.preventDefault();
 
-                alert(responseData.service);
+                window.location = "/content/nexterahome/en/homestrcture/thank-you.html";
             }
 
 

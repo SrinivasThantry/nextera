@@ -2,10 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-05T18:18:05.565Z"
-        cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2019-01-30T18:03:24.208Z"
-        cq:lastReplicatedBy="peakster3"
+        cq:lastModified="{Date}2019-03-15T18:10:09.607Z"
+        cq:lastModifiedBy="peakster4"
+        cq:lastReplicated="{Date}2019-03-15T18:10:21.387Z"
+        cq:lastReplicatedBy="peakster4"
         cq:lastReplicationAction="Activate"
         cq:template="/apps/nexterahome/templates/nextera-home"
         jcr:isCheckedOut="{Boolean}true"
@@ -44,8 +44,8 @@
                 cq:lastReplicationAction="Activate"
                 jcr:created="{Date}2019-01-17T16:53:11.472Z"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-02-05T18:18:05.556Z"
-                jcr:lastModifiedBy="admin"
+                jcr:lastModified="{Date}2019-03-15T18:10:09.597Z"
+                jcr:lastModifiedBy="peakster4"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/ourphilosophy"
@@ -55,7 +55,7 @@
                 imagePath="/content/dam/nexterahome/philosophies/philosophy.png"
                 serviceDescription="&lt;b>NextEra Home&lt;/b> transforms the home warranty industry by offering a simple healthy home monthly service plan. As an affiliate of the largest renewable energy company in the world, &lt;a target=&quot;_blank&quot; href=&quot;http://www.nexteraenergy.com/&quot;>NextEra Energy&lt;/a>, NextEra Home offers service plans that can help you manage your home and become a responsible citizen of a sustainable world. "
                 serviceDescription2="Backed by the largest renewable energy company in the world, we help you manage your home and become a responsible citizen of a sustainable world."
-                serviceTitle="A new, modern approach to home services."
+                serviceTitle="A new modern approach to home services."
                 subtitle="Transforming the home warranty industry"
                 title="Our philosophy">
                 <philosophies jcr:primaryType="nt:unstructured">
