@@ -101,7 +101,7 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 					log.error("leadcaptureNode::" + leadcaptureNode);
 				//	Node nexteraNode = res.adaptTo(Node.class);
 					
-					Node nexteracustNode = leadcaptureNode.addNode(useobj.getCustomerIdentifier() + "-leadcapture");
+					Node nexteracustNode = leadcaptureNode.addNode(useobj.getCustomerIdentifier() + "-leadcapture","nt:unstructured");
 					log.error("nexteracustNode::" + nexteracustNode.getPath());
 					nexteracustNode.setProperty("FirstName", useobj.getFirstName());
 					nexteracustNode.setProperty("lastName", useobj.getLastName());

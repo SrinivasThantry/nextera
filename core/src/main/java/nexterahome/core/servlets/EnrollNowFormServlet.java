@@ -103,8 +103,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 					
 					log.error("nexteraNode::" + nexteraNode);
 				//	Node nexteraNode = res.adaptTo(Node.class);
-					
-					Node nexteracustNode = nexteraNode.addNode(useobj.getCustomerIdentifier() + "-nextera");
+					Node nexteracustNode = nexteraNode.addNode(useobj.getCustomerIdentifier() + "-nextera","nt:unstructured");
 					log.error("nexteracustNode::" + nexteracustNode.getPath());
 					nexteracustNode.setProperty("FirstName", useobj.getFirstName());
 					nexteracustNode.setProperty("lastName", useobj.getLastName());
