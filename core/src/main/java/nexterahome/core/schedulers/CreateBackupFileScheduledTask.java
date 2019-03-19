@@ -186,7 +186,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 					}
 
 					obj.add("data", array);
-					obj.add("custermerdata", array2);
+					obj.add("customerdata", array2);
 				}
 			}
 
