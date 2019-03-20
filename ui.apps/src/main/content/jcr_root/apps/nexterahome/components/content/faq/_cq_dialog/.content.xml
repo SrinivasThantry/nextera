@@ -35,6 +35,11 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 fieldLabel="Description"
                                 name="./description"/>
+                            <faqcta
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="FAQ CTA"
+                                name="./faqcta"/>
                         </items>
                     </column>
                 </items>

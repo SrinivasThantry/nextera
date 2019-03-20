@@ -30,25 +30,55 @@ $(document).ready(function() {
         zipvalidate(evt);
 
     });
-    $('#footerfaq a').click(function(evt) {
+    $('#footerfaq > a').click(function(event) {
+    	console.log("debug");
     	 var text = event.currentTarget.innerText;
     	 
     	 if (text === 'HOME' || text === 'OUR PHILOSOPHY' || text === 'LOGIN') {
     		 return;
     	 }else{
     		 console.log("entered here");
-        evt.preventDefault();
-        zipvalidate(evt);
+    		 event.preventDefault();
+    		 zipvalidate(event);
     	 }
     	 
 
     });
-    
+    $('#advantageid a').click(function(event) {
+    	console.log("debug");
+   	 var text = event.currentTarget.innerText;
+   	 
+   	 if (text === 'HOME' || text === 'OUR PHILOSOPHY' || text === 'LOGIN') {
+   		 return;
+   	 }else{
+   		 console.log("entered here");
+   		event.preventDefault();
+       zipvalidate(event);
+   	 }
+   	 
+
+   });
+    $('#headerfaq > a').click(function(event) {
+    	console.log("debug");
+   	 var text = event.currentTarget.innerText;
+   	 
+   	 if (text === 'HOME' || text === 'OUR PHILOSOPHY' || text === 'LOGIN') {
+   		 return;
+   	 }else{
+   		 console.log("entered here");
+   		event.preventDefault();
+       zipvalidate(event);
+   	 }
+   	 
+
+   });
+   
     
     function zipvalidate(event) {
     	
     	 var text = event.currentTarget.innerText;
-    	 
+    	 text = text.trim();
+    	 text = text.toUpperCase();
     	 if (text === 'HOME' || text === 'OUR PHILOSOPHY') {
     	 }else{
     		 console.log("entered here111");
@@ -66,6 +96,7 @@ $(document).ready(function() {
         }else{
         	sessionStorage.removeItem('zipcodeobj');
         	sessionStorage.clear();
+        	text = text.trim();
         if (text === 'FAQ' || text === 'SERVICE PLANS' || text === 'FIND A PLAN' || text === 'HAVE A QUESTION?' || text === "service plans" || text === "VIEW SERVICE PLANS" || text === "READY TO ENROLL?") {
         	if(text === 'HAVE A QUESTION?' || text === 'FAQ')
         		pagename = 'FAQ';

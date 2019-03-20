@@ -104,7 +104,37 @@ public class CreateBackupFileScheduledTask implements Runnable {
 							String email = childNode.hasProperty("email") ? childNode.getProperty("email").getString()
 									: "";
 							JsonObject jsonobj = new JsonObject();
-							if (!childNode.getName().equalsIgnoreCase("leadcapture")) {
+							if (childNode.getName().equalsIgnoreCase("leadcapture")) {
+
+								javax.jcr.NodeIterator itr = nexteraNode.getNodes();
+								while (itr.hasNext()) {
+									try {
+
+										Node childNode1 = (Node) itr.next();
+										String firstName1 = childNode1.hasProperty("FirstName")
+												? childNode1.getProperty("FirstName").getString() : "";
+										String lastName1 = childNode1.hasProperty("lastName")
+												? childNode1.getProperty("lastName").getString() : "";
+										String zip1 = childNode1.hasProperty("zip")
+												? childNode1.getProperty("zip").getString() : "";
+										String email1 = childNode1.hasProperty("email")
+												? childNode1.getProperty("email").getString() : "";
+
+										jsonobj.addProperty("firstName", firstName1);
+										jsonobj.addProperty("lastName", lastName1);
+
+										jsonobj.addProperty("email", email1);
+
+										jsonobj.addProperty("zip", zip1);
+
+										counter = counter + 1;
+										array2.add(jsonobj);
+									} catch (Exception e) {
+										// TODO: handle exception
+									}
+								}
+
+							} else {
 
 								String id = childNode.hasProperty("customerIdentifier")
 										? childNode.getProperty("customerIdentifier").getValue().getLong() + "" : "";
@@ -168,17 +198,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 								jsonobj.addProperty("state", state);
 								jsonobj.addProperty("city", city);
 								array.add(jsonobj);
-							}else{
 
-							jsonobj.addProperty("firstName", firstName);
-							jsonobj.addProperty("lastName", lastName);
-
-							jsonobj.addProperty("email", email);
-
-							jsonobj.addProperty("zip", zip);
-
-							counter = counter + 1;
-							array2.add(jsonobj);
 							}
 						}
 					} catch (Exception e) {
