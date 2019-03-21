@@ -89,7 +89,8 @@ $(document).ready(function() {
      		pagename = 'FAQ';
          
         $('#zipCode').val("");
-        if(checkStorage('zipcodeobj', 10)){
+        console.log(checkStorage('zipcodeobj', 1));
+        if(checkStorage('zipcodeobj', 1)){
         	var obj = JSON.parse(sessionStorage.getItem('zipcodeobj'));
         	console.log(obj.zipcode);
         	submitzip(event,obj.zipcode);
@@ -119,27 +120,9 @@ $(document).ready(function() {
 
     
     
-    function compareDates(date1, date2, time) {
-        time = time ? time : 'm';
-        var dateStart     = new Date(date1),
-            dateEnd       = date2 != '' ? new Date(date2) : new Date(),
-            one_min       = 1000 * 60,
-            one_hour      = one_min * 60,
-            one_day       = one_hour * 24,
-            date1_ms      = dateStart.getTime(),
-            date2_ms      = dateEnd.getTime(),
-            difference_ms = date2_ms - date1_ms;
-        if (time === 'd') {
-          return Math.floor(difference_ms / one_day);
-        } else if (time === 'h') {
-          return Math.floor(difference_ms / one_hour);
-        }
-        return Math.floor(difference_ms / one_min);
-      }
-    
     
     function checkStorage (key, m) {
-        m = m ? m : 20;
+        m = m ? m : 1;
     	var item = JSON.parse(sessionStorage.getItem('zipcodeobj'));
         if (item === undefined || item === null) {
           return false;
@@ -149,10 +132,14 @@ $(document).ready(function() {
           }
         if(item === null)
         	return false;
-        if (compareDates(item.created, new Date().toISOString(), 'm') > m) {
-          return false;
-        }
-        return true;
+        
+        var expirationDate = new Date(item.created);
+        console.log(expirationDate+":::::::::::"+new Date());
+        if (expirationDate > new Date()) {
+            return true;
+          }
+        
+        return false;
       };
     
 
@@ -252,7 +239,7 @@ $(document).ready(function() {
                 	
                 	
                 	var newStorage = {};
-                    newStorage.created = new Date().toISOString();
+                	newStorage.created = new Date(new Date().getTime() + (60000 * 10))
                     newStorage.zipcode = zipcode;        
                     sessionStorage.setItem('zipcodeobj', JSON.stringify(newStorage));
                 	
