@@ -62,13 +62,17 @@ $(document).ready(function(){
 
 		 var form1Zipcode = $('#form1Zipcode').val();
 
-		 var email = $('#email').val();
+        var email = $('#email').val();
+        var atposition=email.indexOf("@");
+        var dotposition=email.lastIndexOf(".");
+
 
         var myCheck = $('#myCheck').val();
 
 		 var enteredAllMandatoryFields = true;
 
-
+		 var phonenumbertype = $('#phonenumbertype').val();
+        var phonenumber = $('#phonenumber').val();
 
 
         if(firstName.length==0){
@@ -91,11 +95,28 @@ $(document).ready(function(){
 			$('#form1Zipcode').removeClass('error');
         }
 
-		if(email.length==0){
+		if((email.length==0)||(atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length)){
 			$('#email').addClass('error');
+             document.getElementById('errorname').innerHTML="Please enter Valid email address";
+             document.getElementById("errorname").style.color="red";
 			enteredAllMandatoryFields = false;
         }else{
 			$('#email').removeClass('error');
+        }
+
+        if(phonenumber.length==0){
+			$('#phonenumber').addClass('error');
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumber').removeClass('error');
+        }
+
+        if(phonenumbertype.length==0 || phonenumbertype=="none"){
+
+			$('#phonenumbertype').addClass('error');
+			enteredAllMandatoryFields = false;
+        }else{
+			$('#phonenumbertype').removeClass('error');
         }
 
          if(!this.form.checkbox.checked)
