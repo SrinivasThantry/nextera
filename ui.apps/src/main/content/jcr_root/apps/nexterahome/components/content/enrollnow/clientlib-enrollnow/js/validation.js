@@ -225,6 +225,8 @@ $(document).ready(function(){
         var PlanName="";
         var MarketingProgramId="";
         var Deductible="";
+        plan=plan.trim();
+        console.log(plan=="Healthy%20Appliances%20Plan"+":::::"+(plan==="Healthy%20Appliances%20Plan"));
         if(plan=="Healthy%20Appliances%20Plan"){
             PlanName="HealthyAppliances";
             MarketingProgramId="8602";

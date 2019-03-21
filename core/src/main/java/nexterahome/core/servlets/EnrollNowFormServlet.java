@@ -99,7 +99,7 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 					log.error("rr::" + rr);
 					Session session = rr.adaptTo(Session.class);
 					log.error("session::" + session);
-					Node nexteraNode = session.getNode("/content/usergenerated/nextera");
+					Node nexteraNode = session.getNode("/content/usergenerated/nextera/enrollnow");
 					
 					log.error("nexteraNode::" + nexteraNode);
 				//	Node nexteraNode = res.adaptTo(Node.class);

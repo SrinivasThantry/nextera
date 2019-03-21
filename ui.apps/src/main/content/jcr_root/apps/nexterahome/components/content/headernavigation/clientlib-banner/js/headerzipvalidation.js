@@ -166,10 +166,7 @@ $(document).ready(function() {
     	var zipcode = "";
     	if(zip === undefined){    	
     		zipcode = $('#zipCode').val();
-    		var newStorage = {};
-            newStorage.created = new Date().toISOString();
-            newStorage.zipcode = zipcode;        
-            sessionStorage.setItem('zipcodeobj', JSON.stringify(newStorage));
+    		
     	}
     	else
     		zipcode = zip;
@@ -192,6 +189,8 @@ $(document).ready(function() {
             async: false,
             data: 'zipcode=' + zipcode,
             success: function(responseData) {
+            	
+            	var hasvalidzipcode = false;
                 console.log(JSON.stringify(responseData.validZipcode));
 
                 if (responseData.validZipcode) {
@@ -210,13 +209,14 @@ $(document).ready(function() {
                         event.preventDefault();
                         pagename="";
                         window.location = redirectpath;
+                        hasvalidzipcode=true;
 
                     } else if (responseData.service == 'FPL') {
 
                         event.preventDefault();
                         pagename="";
                         window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
-
+                        hasvalidzipcode = false;
                     } else if (responseData.service == 'texas') {
 
                         if (pagename === 'SERVICE PLANS')
@@ -229,12 +229,12 @@ $(document).ready(function() {
                         pagename="";
                         window.location = redirectpath;
 
-
+                        hasvalidzipcode=true;
                     } else {
                         event.preventDefault();
                         pagename="";
                         window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
-
+                        hasvalidzipcode = false;
                     }
 
 
@@ -242,10 +242,21 @@ $(document).ready(function() {
                     event.preventDefault();
                     pagename="";
                     window.location = "/content/nexterahome/en/homestrcture/leadercaptureform.html";
-
+                    hasvalidzipcode = false;
                     // alert(responseData.service);
                 }
-
+                
+                /////////store session storage based on response
+                
+                if(hasvalidzipcode){
+                	
+                	
+                	var newStorage = {};
+                    newStorage.created = new Date().toISOString();
+                    newStorage.zipcode = zipcode;        
+                    sessionStorage.setItem('zipcodeobj', JSON.stringify(newStorage));
+                	
+                }
 
             }
 

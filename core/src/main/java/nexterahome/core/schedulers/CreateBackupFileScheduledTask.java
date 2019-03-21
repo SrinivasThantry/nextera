@@ -24,6 +24,7 @@ import java.util.Map;
 
 import javax.jcr.Binary;
 import javax.jcr.Node;
+import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.ValueFactory;
 
@@ -81,21 +82,20 @@ public class CreateBackupFileScheduledTask implements Runnable {
 			Session session = rr.adaptTo(Session.class);
 			ValueFactory vf = session.getValueFactory();
 			logger.error("session::" + session);
-			Node nexteraNode = session.getNode("/content/usergenerated/nextera");
+			Node nexteraNode = session.getNode("/content/usergenerated/nextera/enrollnow");
 
 			logger.error("excel start saved");
 			JsonObject obj = new JsonObject();
 			int counter = 1;
 			if (nexteraNode.hasNodes()) {
 				JsonArray array = new JsonArray();
-				JsonArray array2 = new JsonArray();
-
+				boolean hasdata = false;
 				javax.jcr.NodeIterator iter = nexteraNode.getNodes();
 				while (iter.hasNext()) {
 					try {
 						Node childNode = (Node) iter.next();
 						if (!childNode.getName().equalsIgnoreCase("customerData")) {
-
+							
 							String firstName = childNode.hasProperty("FirstName")
 									? childNode.getProperty("FirstName").getString() : "";
 							String lastName = childNode.hasProperty("lastName")
@@ -104,145 +104,165 @@ public class CreateBackupFileScheduledTask implements Runnable {
 							String email = childNode.hasProperty("email") ? childNode.getProperty("email").getString()
 									: "";
 							JsonObject jsonobj = new JsonObject();
-							if (childNode.getName().equalsIgnoreCase("leadcapture")) {
 
-								javax.jcr.NodeIterator itr = nexteraNode.getNodes();
-								while (itr.hasNext()) {
-									try {
+							String id = childNode.hasProperty("customerIdentifier")
+									? childNode.getProperty("customerIdentifier").getValue().getLong() + "" : "";
 
-										Node childNode1 = (Node) itr.next();
-										String firstName1 = childNode1.hasProperty("FirstName")
-												? childNode1.getProperty("FirstName").getString() : "";
-										String lastName1 = childNode1.hasProperty("lastName")
-												? childNode1.getProperty("lastName").getString() : "";
-										String zip1 = childNode1.hasProperty("zip")
-												? childNode1.getProperty("zip").getString() : "";
-										String email1 = childNode1.hasProperty("email")
-												? childNode1.getProperty("email").getString() : "";
+							String marketingOptIn = childNode.hasProperty("marketingOptIn")
+									? childNode.getProperty("marketingOptIn").getValue().getBoolean() + "" : "";
+							String addressLine1 = childNode.hasProperty("addressLine1")
+									? childNode.getProperty("addressLine1").getString() : "";
+							String addressLine2 = childNode.hasProperty("addressLine2")
+									? childNode.getProperty("addressLine2").getString() : "";
 
-										jsonobj.addProperty("firstName", firstName1);
-										jsonobj.addProperty("lastName", lastName1);
+							String state = childNode.hasProperty("state") ? childNode.getProperty("state").getString()
+									: "";
+							String city = childNode.hasProperty("city") ? childNode.getProperty("city").getString()
+									: "";
+							String coverageAddress = childNode.hasProperty("coverageAddress")
+									? childNode.getProperty("coverageAddress").getString() : "";
+							String isMailingAddressSameasCoverageAddress = childNode
+									.hasProperty("isMailingAddressSameasCoverageAddress")
+											? childNode.getProperty("isMailingAddressSameasCoverageAddress").getString()
+													+ ""
+											: "";
+							String planName = childNode.hasProperty("planName")
+									? childNode.getProperty("planName").getString() : "";
+							String marketId = childNode.hasProperty("marketingProgramId")
+									? childNode.getProperty("marketingProgramId").getValue().getLong() + "" : "";
+							String deductiblestr = childNode.hasProperty("deductible")
+									? childNode.getProperty("deductible").getValue().getLong() + "" : "";
+							String promoCode = childNode.hasProperty("promoCode")
+									? childNode.getProperty("promoCode").getString() : "";
 
-										jsonobj.addProperty("email", email1);
+							String phonenumber = childNode.hasProperty("phonenumber")
+									? childNode.getProperty("phonenumber").getString() : "";
 
-										jsonobj.addProperty("zip", zip1);
+							String phonenumbertype = childNode.hasProperty("phonenumbertype")
+									? childNode.getProperty("phonenumbertype").getString() : "";
 
-										counter = counter + 1;
-										array2.add(jsonobj);
-									} catch (Exception e) {
-										// TODO: handle exception
-									}
-								}
+							// ---------------------------------------------
+							jsonobj.addProperty("firstName", firstName);
+							jsonobj.addProperty("lastName", lastName);
 
-							} else {
+							jsonobj.addProperty("email", email);
 
-								String id = childNode.hasProperty("customerIdentifier")
-										? childNode.getProperty("customerIdentifier").getValue().getLong() + "" : "";
+							jsonobj.addProperty("zip", zip);
 
-								String marketingOptIn = childNode.hasProperty("marketingOptIn")
-										? childNode.getProperty("marketingOptIn").getValue().getBoolean() + "" : "";
-								String addressLine1 = childNode.hasProperty("addressLine1")
-										? childNode.getProperty("addressLine1").getString() : "";
-								String addressLine2 = childNode.hasProperty("addressLine2")
-										? childNode.getProperty("addressLine2").getString() : "";
+							counter = counter + 1;
 
-								String state = childNode.hasProperty("state")
-										? childNode.getProperty("state").getString() : "";
-								String city = childNode.hasProperty("city") ? childNode.getProperty("city").getString()
-										: "";
-								String coverageAddress = childNode.hasProperty("coverageAddress")
-										? childNode.getProperty("coverageAddress").getString() : "";
-								String isMailingAddressSameasCoverageAddress = childNode
-										.hasProperty("isMailingAddressSameasCoverageAddress")
-												? childNode.getProperty("isMailingAddressSameasCoverageAddress")
-														.getString() + ""
-												: "";
-								String planName = childNode.hasProperty("planName")
-										? childNode.getProperty("planName").getString() : "";
-								String marketId = childNode.hasProperty("marketingProgramId")
-										? childNode.getProperty("marketingProgramId").getValue().getLong() + "" : "";
-								String deductiblestr = childNode.hasProperty("deductible")
-										? childNode.getProperty("deductible").getValue().getLong() + "" : "";
-								String promoCode = childNode.hasProperty("promoCode")
-										? childNode.getProperty("promoCode").getString() : "";
-
-								String phonenumber = childNode.hasProperty("phonenumber")
-										? childNode.getProperty("phonenumber").getString() : "";
-
-								String phonenumbertype = childNode.hasProperty("phonenumbertype")
-										? childNode.getProperty("phonenumbertype").getString() : "";
-
-								// ---------------------------------------------
-								jsonobj.addProperty("firstName", firstName);
-								jsonobj.addProperty("lastName", lastName);
-
-								jsonobj.addProperty("email", email);
-
-								jsonobj.addProperty("zip", zip);
-
-								counter = counter + 1;
-
-								jsonobj.addProperty("phonenumber", phonenumber);
-								jsonobj.addProperty("phonenumbertype", phonenumbertype);
-								jsonobj.addProperty("marketingOptIn", marketingOptIn);
-								jsonobj.addProperty("addressLine1", addressLine1);
-								jsonobj.addProperty("addressLine2", addressLine2);
-								jsonobj.addProperty("coverageAddress", coverageAddress);
-								jsonobj.addProperty("isMailingAddressSameasCoverageAddress",
-										isMailingAddressSameasCoverageAddress);
-								jsonobj.addProperty("planName", planName);
-								jsonobj.addProperty("marketId", marketId);
-								jsonobj.addProperty("deductiblestr", deductiblestr);
-								jsonobj.addProperty("promoCode", promoCode);
-								jsonobj.addProperty("id", id);
-								jsonobj.addProperty("state", state);
-								jsonobj.addProperty("city", city);
-								array.add(jsonobj);
-
-							}
+							jsonobj.addProperty("phonenumber", phonenumber);
+							jsonobj.addProperty("phonenumbertype", phonenumbertype);
+							jsonobj.addProperty("marketingOptIn", marketingOptIn);
+							jsonobj.addProperty("addressLine1", addressLine1);
+							jsonobj.addProperty("addressLine2", addressLine2);
+							jsonobj.addProperty("coverageAddress", coverageAddress);
+							jsonobj.addProperty("isMailingAddressSameasCoverageAddress",
+									isMailingAddressSameasCoverageAddress);
+							jsonobj.addProperty("planName", planName);
+							jsonobj.addProperty("marketId", marketId);
+							jsonobj.addProperty("deductiblestr", deductiblestr);
+							jsonobj.addProperty("promoCode", promoCode);
+							jsonobj.addProperty("id", id);
+							jsonobj.addProperty("state", state);
+							jsonobj.addProperty("city", city);
+							array.add(jsonobj);
+							hasdata=true;
 						}
 					} catch (Exception e) {
 						logger.error("ex itr nodes" + e);
 					}
-
+					if(hasdata)
 					obj.add("data", array);
-					obj.add("customerdata", array2);
+
 				}
 			}
+			// for lead capture
 
-			// create file in AEM
+			Node leadcapNode = nexteraNode.getParent().getNode("leadcapture");
+			logger.error("leadcapNoder::" + leadcapNode);
+			if (leadcapNode.hasNodes()) {
+				javax.jcr.NodeIterator iter = leadcapNode.getNodes();
+				JsonArray array2 = new JsonArray();
+				boolean hasdata = false;
+				while (iter.hasNext()) {
+					try {
 
-			InputStream is = new ByteArrayInputStream(obj.toString().getBytes(Charset.forName("UTF-8")));
-			logger.error("is input stream:" + obj.toString());
+						Node childNode1 = (Node) iter.next();
+						if (!childNode1.getName().equalsIgnoreCase("customerData")) {
+						logger.error("childNode1::" + childNode1);
+						String firstName1 = childNode1.hasProperty("FirstName")
+								? childNode1.getProperty("FirstName").getString() : "";
+						String lastName1 = childNode1.hasProperty("lastName")
+								? childNode1.getProperty("lastName").getString() : "";
+						String zip1 = childNode1.hasProperty("zip") ? childNode1.getProperty("zip").getString() : "";
+						String email1 = childNode1.hasProperty("email") ? childNode1.getProperty("email").getString()
+								: "";
+						JsonObject jsonobj = new JsonObject();
+						jsonobj.addProperty("firstName", firstName1);
+						jsonobj.addProperty("lastName", lastName1);
 
-			Binary contentValue = vf.createBinary(is);
-			logger.error("contentValue:" + contentValue);
-			if (nexteraNode.hasNode("customerData")) {
-				Node removeNode = nexteraNode.getNode("customerData");
-				removeNode.remove();
+						jsonobj.addProperty("email", email1);
+
+						jsonobj.addProperty("zip", zip1);
+
+						counter = counter + 1;
+						array2.add(jsonobj);
+						hasdata=true;
+						}
+					} catch (Exception e) {
+						logger.error("::exception in lead capture::"+e);
+					}
+					if(hasdata)
+					obj.add("customerdata", array2);
+				}
 
 			}
-			Node node = nexteraNode.addNode("customerData");
-			Node fileNode = node.addNode("data.json", "nt:file");
-
-			fileNode.addMixin("mix:referenceable");
-
-			Node reNode = fileNode.addNode("jcr:content", "nt:resource");
-
-			reNode.setProperty("jcr:mimeType", "text/json");
-
-			reNode.setProperty("jcr:data", contentValue);
-
-			Calendar lstModified = Calendar.getInstance();
-			lstModified.setTimeInMillis(lstModified.getTimeInMillis());
-			reNode.setProperty("jcr:lastModified", lstModified);
-			logger.error("reNode save:" + reNode);
+			// create file in AEM
+			if(obj.has("data")){
+				
+			createFile(obj.get("data").toString(), nexteraNode, vf, "enrollnowdata.json");
+			}
+			// create file for lead capture
+			if(obj.has("customerdata")){
+			createFile(obj.get("customerdata").toString(), leadcapNode, vf,"leadcapturedata.json");
+			}
 			session.save();
 			session.logout();
 
 		} catch (Exception e) {
 			logger.error("ex in schedular::" + e);
 		}
+	}
+	
+	private void createFile(String obj, Node nexteraNode, ValueFactory vf, String filename) throws RepositoryException{
+		
+		InputStream is = new ByteArrayInputStream(obj.getBytes(Charset.forName("UTF-8")));
+		logger.error("is input stream:" + obj.toString());
+
+		Binary contentValue = vf.createBinary(is);
+		logger.error("contentValue:" + contentValue);
+		if (nexteraNode.hasNode("customerData")) {
+			Node removeNode = nexteraNode.getNode("customerData");
+			removeNode.remove();
+
+		}
+		Node node = nexteraNode.addNode("customerData");
+		Node fileNode = node.addNode(filename, "nt:file");
+
+		fileNode.addMixin("mix:referenceable");
+
+		Node reNode = fileNode.addNode("jcr:content", "nt:resource");
+
+		reNode.setProperty("jcr:mimeType", "text/json");
+
+		reNode.setProperty("jcr:data", contentValue);
+
+		Calendar lstModified = Calendar.getInstance();
+		lstModified.setTimeInMillis(lstModified.getTimeInMillis());
+		reNode.setProperty("jcr:lastModified", lstModified);
+		logger.error("reNode save:" + reNode);
+		
 	}
 
 	@Activate
