@@ -228,7 +228,7 @@ body {
     padding: 25px;
   }
 /*leader*/
- .contact-wrapl {
+ .contact-wrap {
     width: 815px;
     margin: auto;
 
@@ -465,8 +465,8 @@ a.footerLink2:last-of-type:after {
         margin-top: -540px;
         margin-bottom: 100px;
     }
-.contact-wrapl {
-  padding: 15px;
+.contact-wrap {
+  padding: 0;
 }
 
 
@@ -1523,6 +1523,14 @@ button.btn.btn-primary.inlineBlock.w80 {
 /** START MEDIA QUERIES **/
 /** Extra small devices (portrait phones, less than 576px) **/
 @media screen and (min-width: 320px) and (max-width: 575px) {
+
+    .inputZipCode {
+       
+    }
+    .contact-wrap {
+        width: auto;
+    	margin: auto 10px;
+    }
     .accordion-content.default {
         font-size: 13px;
         line-height: 21px;
@@ -1932,10 +1940,16 @@ ul.benefitsList li {
         text-align: center;
     }
     .enroll-now {
-        background: transparent;
-        margin-top: 0;
-        margin-bottom: 100px;
+		background: transparent;
+    	margin-top: -600px;
+    	margin-bottom: 100px;
+    	margin: -600px 10px 100px 10px;
+    	width:auto;
     }
+	.contact-wrap {
+    	width: 100%;
+    	margin: auto;
+	}
     .faq-container {
         background: transparent;
         margin-bottom: 100px;
