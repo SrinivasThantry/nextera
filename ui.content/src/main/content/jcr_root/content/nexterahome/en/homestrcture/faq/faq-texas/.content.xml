@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-20T08:03:12.321+05:30"
+        cq:lastModified="{Date}2019-03-20T02:17:42.571-04:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T18:40:05.173Z"
         cq:lastReplicatedBy="peakster4"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ Texas"
-        jcr:uuid="aae213a8-5fbb-41ee-8ff3-8716e32fc6a6"
+        jcr:uuid="c9edcc71-8299-4ce5-a672-d4029ab391bd"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ Texas"
         pageTitle="FAQ Texas">
@@ -38,12 +38,12 @@
             <faq
                 jcr:created="{Date}2019-01-14T00:59:03.662+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-20T08:03:12.240+05:30"
+                jcr:lastModified="{Date}2019-03-20T02:17:42.558-04:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/faq"
                 description="We are here to make things easy"
-                faqcta="Have additional questions? Contact NextEra Home."
+                faqcta="Have additional questions?"
                 headerlabel="FAQ">
                 <faqAns jcr:primaryType="nt:unstructured">
                     <item0

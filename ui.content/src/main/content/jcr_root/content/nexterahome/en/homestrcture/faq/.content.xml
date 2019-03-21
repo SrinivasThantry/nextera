@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-15T18:31:50.854Z"
-        cq:lastModifiedBy="peakster4"
+        cq:lastModified="{Date}2019-03-20T02:12:58.331-04:00"
+        cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T18:32:21.662Z"
         cq:lastReplicatedBy="peakster4"
         cq:lastReplicationAction="Activate"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ"
-        jcr:uuid="56d10007-4b65-4e51-b0d9-1b1f3c694bcc"
+        jcr:uuid="e868d6ef-fdae-4d7e-ad07-b8abf03195c0"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ"
         pageTitle="FAQ">
@@ -38,11 +38,12 @@
             <faq
                 jcr:created="{Date}2019-01-14T00:59:03.662+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-15T18:31:50.844Z"
-                jcr:lastModifiedBy="peakster4"
+                jcr:lastModified="{Date}2019-03-20T02:12:58.280-04:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/faq"
                 description="We are here to make things easy"
+                faqcta="Have additional questions?"
                 headerlabel="FAQ">
                 <faqAns jcr:primaryType="nt:unstructured">
                     <item0
