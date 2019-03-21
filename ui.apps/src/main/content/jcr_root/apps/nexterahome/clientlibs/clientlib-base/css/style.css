@@ -705,6 +705,7 @@ input.inputZipCode {
     border: 1px solid #ccc;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
     padding: 5px 30px;
+    margin-bottom: 10px;
   }
 .itemSpace {
     display: inline-block;
