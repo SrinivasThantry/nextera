@@ -15,22 +15,10 @@
       <div class="d-none d-sm-none d-md-none d-lg-block col-lg-7">
         <div class="footerLinkContainer">
 	<div data-sly-use.topLinks="${resource.path}/topLinks">
-        <!--<div data-sly-list="${topLinks.listChildren}">
-            <a href="${item.pathbr}" target="${item.openInNewTab=='yes'? '_blank':''}" data-toggle="${navlink.popup=='yes'? 'modal':''}" data-target="${navlink.popup=='yes'? '#zipcodeGate':''}" class="footerLink">${item.linkTitle}</a>
-        </div>-->
-        <div id="footerfaq">
-            <a href="/content/nexterahome/en/homestrcture/home.html" class="footerLink">HOME</a>
-        
-            <a href="/content/nexterahome/en/homestrcture/serviceplans.html" class="footerLink">SERVICE PLANS</a>
-        
-            <a href="/content/nexterahome/en/homestrcture/faq.html" class="footerLink">FAQ</a>
-        
-            <a href="/content/nexterahome/en/homestrcture/ourphilosophy.html" class="footerLink">OUR PHILOSOPHY</a>
-        
-            <a href="https://nextera.assurantcustomerportal.com" target="_blank" class="footerLink">LOGIN</a>
-        
-            <a href="/content/nexterahome/en/homestrcture/serviceplans.html" class="footerLink">FIND A PLAN</a>
+        <div id="ancherfooterid" data-sly-list="${topLinks.listChildren}">
+            <a href="${item.pathbr}" target="${item.openInNewTab=='yes'? '_blank':''}" class="footerLink">${item.linkTitle}</a>
         </div>
+
 	</div>
 
           </div> 

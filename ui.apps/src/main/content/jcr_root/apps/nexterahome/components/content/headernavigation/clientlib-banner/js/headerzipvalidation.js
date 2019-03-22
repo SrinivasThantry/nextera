@@ -24,6 +24,8 @@ $(document).ready(function() {
 
     $('#anchorlist > a').click(zipvalidate);
     
+    $('#ancherfooterid > a').click(zipvalidate);
+    
     $('#advantagezipqry a').click(function(evt) {
 
         evt.preventDefault();
@@ -79,7 +81,7 @@ $(document).ready(function() {
     	 var text = event.currentTarget.innerText;
     	 text = text.trim();
     	 text = text.toUpperCase();
-    	 if (text === 'HOME' || text === 'OUR PHILOSOPHY') {
+    	 if (text === 'HOME' || text === 'OUR PHILOSOPHY' || text === 'JOIN US' || text === 'LOGIN') {
     	 }else{
     		 console.log("entered here111");
     		 event.preventDefault(); 

@@ -65,6 +65,20 @@
                                 fieldDescription="Legal Agreement"
                                 fieldLabel="Legal Agreement copy"
                                 name="./legalAgreementCopy"/>
+                            <phonenumbertype
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Phone Number Type Label"
+                                fieldLabel="Phone Number type"
+                                name="./phonenumbertype"
+                                required="true"/>
+                            <phonenumber
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Phone Number Label"
+                                fieldLabel="Phone Number"
+                                name="./phonenumber"
+                                required="true"/>
                         </items>
                     </column>
                 </items>
@@ -121,6 +135,29 @@
                     </column>
                 </items>
             </sorry>
+            <comments
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CTA"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Sorry Label"
+                                fieldLabel="comments Label"
+                                name="./commentsl"/>
+                        </items>
+                    </column>
+                </items>
+            </comments>
         </items>
     </content>
 </jcr:root>

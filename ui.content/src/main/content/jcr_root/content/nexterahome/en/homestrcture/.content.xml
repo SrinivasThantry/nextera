@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/nextera-fav"
-        cq:lastModified="{Date}2019-03-20T10:07:31.120-04:00"
+        cq:lastModified="{Date}2019-03-22T06:39:54.997+05:30"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-02-18T16:58:10.830Z"
         cq:lastReplicatedBy="peakster1"
@@ -111,7 +111,7 @@
                 cq:lastReplicated="{Date}2019-01-24T03:22:48.625Z"
                 cq:lastReplicatedBy="peakster4"
                 cq:lastReplicationAction="Activate"
-                jcr:lastModified="{Date}2019-03-12T12:57:27.845-04:00"
+                jcr:lastModified="{Date}2019-03-22T06:39:54.938+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
@@ -163,6 +163,12 @@
                         openInNewTab="no"
                         pathbr="/content/nexterahome/en/homestrcture/serviceplans.html"
                         popup="yes"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        linkTitle="Join Us"
+                        openInNewTab="no"
+                        pathbr="/content/nexterahome/en/homestrcture/leadercaptureform.html"
+                        popup="no"/>
                 </topLinks>
                 <bottomLinks jcr:primaryType="nt:unstructured">
                     <item0
@@ -193,4 +199,6 @@
     <enrollnow/>
     <sitemap/>
     <leadercaptureform/>
+    <joinus/>
+    <FaqLeadCaptureForm/>
 </jcr:root>

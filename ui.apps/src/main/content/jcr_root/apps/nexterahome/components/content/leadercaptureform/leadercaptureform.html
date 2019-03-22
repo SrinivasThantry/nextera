@@ -13,13 +13,13 @@
                         <div class="enrollText" data-sly-test="${properties.formHeading}">${properties.formHeading}</div>
                         <!-- ROW 1 -->
                         <div class="row">
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12cb">
                             <div class="input-block floating-field" data-sly-test="First Name">
                             <label>First Name</label>
                             <input required="" id="firstName" value="" type="text" maxlength="30" class="form-control">
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="input-block floating-field" data-sly-test="Last Name">
                             <label>Last Name</label>
                             <input required="" id="lastName" value="" type="text" maxlength="30" class="form-control">
@@ -29,13 +29,13 @@
 
                     <!-- ROW 2 -->
                         <div class="row">
-                       <div class="col-sm-12 col-md-6">
+                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="input-block floating-field" data-sly-test="ZIP Code">
                             <label>ZIP Code</label>
-                            <input required="" id="form1Zipcode" value="" type="text" maxlength="30" class="form-control">
+                            <input required="" id="form1Zipcode" value="" type="text" maxlength="5" class="form-control">
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="input-block floating-field" data-sly-test="Email">
                             <label>Email</label>
 
@@ -46,7 +46,42 @@
 
                         </div>
 
-                       <div class="row checkbox-groupg">
+
+						<!--Row 3-->
+							  <div class="row">
+
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group" data-sly-test="${properties.phonenumbertype}">
+                      			<label>${properties.phonenumbertype}</label>
+                                   <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype">
+                                        <option value="none">Phone Type</option>
+                                        <option>Home</option>
+                                        <option>Mobile</option>
+                                        </select>
+                       				 </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="input-block floating-field" data-sly-test="${properties.phonenumber}">
+                            <label>${properties.phonenumber}</label>
+                            <input required id="phonenumber" value="" type="text" maxlength="10" class="form-control">
+                            
+                            </div>
+                        </div>
+                        </div>
+
+                        <!--Row 3-->
+
+                         <!--comments-->
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: -25px;">
+                           <div class="input-block floating-field" data-sly-test="${properties.commentsl}">
+                     <label>${properties.commentsl}</label>
+   					 <textarea id="comments" name="comments" placeholder="Write something.." maxlength="500" style="height: 200px;width: 500px;"></textarea>
+                     </div>
+                     </div>
+                    <!--comments-->
+
+						<!--checkbox-->
+                         <div class="row checkbox-groupg" style="margin-top: 20px;">
                         <div class="col-md-12">
                         <label data-sly-test="${properties.legalAgreementCopy}" class="control control-checkbox" id="legalAgreementCopy">${properties.legalAgreementCopy}
 
@@ -54,11 +89,11 @@
                                 <div class="control-indicator"></div>	
                         </label></div>
                     </div>
+                    <!--checkbox-->
 
 
 
-
-                        	<button type="button" id="submit" onclick="check()" style="margin-left: 250px; margin-top: 30px;" class="btn btn-primary float-right">
+                        	<button type="button" id="submit"  style="margin-left: 250px; margin-top: 30px;" class="btn btn-primary float-right">
                             	Submit
                         	</button>
 
