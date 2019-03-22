@@ -158,6 +158,37 @@
                     </column>
                 </items>
             </comments>
+            <phonenumber
+                jcr:primaryType="nt:unstructured"
+                jcr:title="phonenumber"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <phonenumbertype
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Phone Number Type Label"
+                                fieldLabel="Phone Number type"
+                                name="./phonenumbertype"
+                                required="true"/>
+                            <phonenumber
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter Phone Number Label"
+                                fieldLabel="Phone Number"
+                                name="./phonenumber"
+                                required="true"/>
+                        </items>
+                    </column>
+                </items>
+            </phonenumber>
         </items>
     </content>
 </jcr:root>

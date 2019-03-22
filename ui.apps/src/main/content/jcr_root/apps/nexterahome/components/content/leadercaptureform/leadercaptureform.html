@@ -53,10 +53,10 @@
                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 							<div class="form-group" data-sly-test="${properties.phonenumbertype}">
                       			<label>${properties.phonenumbertype}</label>
-                                   <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype">
-                                        <option value="none">Phone Type</option>
-                                        <option>Home</option>
-                                        <option>Mobile</option>
+                                   <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype" style="font-family: none;">
+                                        <option value="0">Phone Type</option>
+                                        <option value="1">Home</option>
+                                        <option value="2">Mobile</option>
                                         </select>
                        				 </div>
                         </div>
@@ -71,17 +71,9 @@
 
                         <!--Row 3-->
 
-                         <!--comments-->
-                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: -25px;">
-                           <div class="input-block floating-field" data-sly-test="${properties.commentsl}">
-                     <label>${properties.commentsl}</label>
-   					 <textarea id="comments" name="comments" placeholder="Write something.." maxlength="500" style="height: 200px;width: 500px;"></textarea>
-                     </div>
-                     </div>
-                    <!--comments-->
 
 						<!--checkbox-->
-                         <div class="row checkbox-groupg" style="margin-top: 20px;">
+                         <div class="row checkbox-groupg" style="margin-top: 0px;">
                         <div class="col-md-12">
                         <label data-sly-test="${properties.legalAgreementCopy}" class="control control-checkbox" id="legalAgreementCopy">${properties.legalAgreementCopy}
 
@@ -91,9 +83,17 @@
                     </div>
                     <!--checkbox-->
 
+  <!--comments-->
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 45px;">
+                           <div class="input-block floating-field" data-sly-test="${properties.commentsl}">
+                     <label style="top:-20px">${properties.commentsl}</label>
+   					 <textarea id="comments" name="comments" placeholder="Write something.." maxlength="500" style="height: 200px;width: 500px;"></textarea>
+                     </div>
+                     </div>
+                    <!--comments-->
 
 
-                        	<button type="button" id="submit"  style="margin-left: 250px; margin-top: 30px;" class="btn btn-primary float-right">
+                        	<button type="button" id="submit"  style="margin-left: 250px; margin-top: 120px;" class="btn btn-primary float-right">
                             	Submit
                         	</button>
 
