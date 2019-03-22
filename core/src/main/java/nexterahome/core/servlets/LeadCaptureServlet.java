@@ -80,7 +80,12 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 			useobj = getRequestJson(req, useobj);
 			String payload = validateInaddPropertyCheck(useobj.getPayload());
 			log.error(":: payload::"+payload);
-			String service = enrollNowService.getService(useobj.getZip(), req.getResourceResolver());
+			String service = "";
+			if(useobj.getPhonenumber()!=null && useobj.getPhonenumbertype() != null)
+				service = "joinus";
+			else
+				service = enrollNowService.getService(useobj.getZip(), req.getResourceResolver());
+				
 
 			if (true) {
 				// save to node
@@ -96,17 +101,27 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 					log.error("rr::" + rr);
 					Session session = rr.adaptTo(Session.class);
 					log.error("session::" + session);
-					Node leadcaptureNode = session.getNode("/content/usergenerated/nextera/leadcapture");
+					Node leadcaptureNode = null;
+					
+					if(service.equalsIgnoreCase("joinus"))
+						leadcaptureNode = session.getNode("/content/usergenerated/nextera/joinus");
+					else
+						leadcaptureNode = session.getNode("/content/usergenerated/nextera/leadcapture");
+						
 					
 					log.error("leadcaptureNode::" + leadcaptureNode);
 				//	Node nexteraNode = res.adaptTo(Node.class);
 					
-					Node nexteracustNode = leadcaptureNode.addNode(useobj.getCustomerIdentifier() + "-leadcapture","nt:unstructured");
+					Node nexteracustNode = leadcaptureNode.addNode(useobj.getCustomerIdentifier() + "-data","nt:unstructured");
 					log.error("nexteracustNode::" + nexteracustNode.getPath());
 					nexteracustNode.setProperty("FirstName", useobj.getFirstName());
 					nexteracustNode.setProperty("lastName", useobj.getLastName());
 					nexteracustNode.setProperty("email", useobj.getEmail());
 					nexteracustNode.setProperty("zip", useobj.getZip());
+					if(service.equalsIgnoreCase("joinus")){
+						nexteracustNode.setProperty("phonenumber", useobj.getPhonenumber());
+						nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
+					}
 					nexteracustNode.save();
 					session.save();
 				  	session.logout();
@@ -141,6 +156,9 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 		String EmailAddress = request.getParameter("EmailAddress");
 		String ZipCode = request.getParameter("zipCode");
 		
+		String phonenumber = request.getParameter("phonenumber");
+		String phonenumbertype = request.getParameter("phonenumbertype");
+		
 		try {
 			JsonObject customerDataJson = new JsonObject();
 			long id = getCustomerIdentifier();
@@ -155,6 +173,12 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 			useobj.setEmail(EmailAddress);
 			customerDataJson.addProperty("ZipCode", ZipCode);
 			useobj.setZip(ZipCode);
+			if(phonenumber!=null && phonenumbertype!=null){
+				customerDataJson.addProperty("phonenumber", phonenumber);
+				useobj.setPhonenumber(phonenumber);
+				customerDataJson.addProperty("phonenumbertype", phonenumbertype);
+				useobj.setPhonenumbertype(phonenumbertype);
+			}
 			requestJson = gson.toJson(customerDataJson);
 			log.error(":::"+customerDataJson);
 			useobj.setPayload(requestJson);

@@ -218,15 +218,65 @@ public class CreateBackupFileScheduledTask implements Runnable {
 				}
 
 			}
+			
+			// for join us
+
+						Node joinusNode = nexteraNode.getParent().getNode("joinus");
+						logger.error("joinus::" + joinusNode);
+						if (joinusNode.hasNodes()) {
+							javax.jcr.NodeIterator iter = joinusNode.getNodes();
+							JsonArray array2 = new JsonArray();
+							boolean hasdata = false;
+							while (iter.hasNext()) {
+								try {
+
+									Node childNode1 = (Node) iter.next();
+									if (!childNode1.getName().equalsIgnoreCase("customerData")) {
+									logger.error("childNode1::" + childNode1);
+									String firstName1 = childNode1.hasProperty("FirstName")
+											? childNode1.getProperty("FirstName").getString() : "";
+									String lastName1 = childNode1.hasProperty("lastName")
+											? childNode1.getProperty("lastName").getString() : "";
+									String zip1 = childNode1.hasProperty("zip") ? childNode1.getProperty("zip").getString() : "";
+									String email1 = childNode1.hasProperty("email") ? childNode1.getProperty("email").getString() : "";
+									String phonenumber = childNode1.hasProperty("phonenumber") ? childNode1.getProperty("phonenumber").getString() : "";
+									String phonenumbertype = childNode1.hasProperty("phonenumbertype") ? childNode1.getProperty("phonenumbertype").getString() : "";
+									JsonObject jsonobj = new JsonObject();
+									jsonobj.addProperty("firstName", firstName1);
+									jsonobj.addProperty("lastName", lastName1);
+
+									jsonobj.addProperty("email", email1);
+
+									jsonobj.addProperty("zip", zip1);
+									jsonobj.addProperty("phonenumber", phonenumber);
+									jsonobj.addProperty("phonenumbertype", phonenumbertype);
+
+									counter = counter + 1;
+									array2.add(jsonobj);
+									hasdata=true;
+									}
+								} catch (Exception e) {
+									logger.error("::exception in lead capture::"+e);
+								}
+								if(hasdata)
+								obj.add("joinus", array2);
+							}
+
+						}
+			
+			
+			
 			// create file in AEM
-			if(obj.has("data")){
-				
-			createFile(obj.get("data").toString(), nexteraNode, vf, "enrollnowdata.json");
-			}
+			if(obj.has("data"))				
+				createFile(obj.get("data").toString(), nexteraNode, vf, "enrollnowdata.json");
+			
 			// create file for lead capture
-			if(obj.has("customerdata")){
-			createFile(obj.get("customerdata").toString(), leadcapNode, vf,"leadcapturedata.json");
-			}
+			if(obj.has("customerdata"))
+				createFile(obj.get("customerdata").toString(), leadcapNode, vf,"leadcapturedata.json");
+			
+			if(obj.has("joinus"))
+				createFile(obj.get("joinus").toString(), joinusNode, vf,"joinus.json");
+				
 			session.save();
 			session.logout();
 

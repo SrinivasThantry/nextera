@@ -71,14 +71,14 @@
                                 fieldDescription="Enter Phone Number Type Label"
                                 fieldLabel="Phone Number type"
                                 name="./phonenumbertype"
-                                required="true"/>
+                                required="false"/>
                             <phonenumber
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 fieldDescription="Enter Phone Number Label"
                                 fieldLabel="Phone Number"
                                 name="./phonenumber"
-                                required="true"/>
+                                required="false"/>
                         </items>
                     </column>
                 </items>
