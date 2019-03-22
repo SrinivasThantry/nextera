@@ -73,7 +73,8 @@ $(document).ready(function(){
 
 		 var phonenumbertype = $('#phonenumbertype').val();
         var phonenumber = $('#phonenumber').val();
-
+        var comments = $('#comments').val();
+        
 
         if(firstName.length==0){
 			$('#firstName').addClass('error');
@@ -135,7 +136,7 @@ $(document).ready(function(){
             type: 'POST', 
 			url:'/bin/leadcapture',
             async: false,
-            data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&zipCode='+ zipcode+'&phonenumber='+ phonenumber+'&phonenumbertype='+ phonenumbertype,
+            data: 'FirstName='+ firstName +'&LastName='+ lastName +'&EmailAddress='+ email +'&zipCode='+ zipcode+'&phonenumber='+ phonenumber+'&phonenumbertype='+ phonenumbertype+'&comments='+ comments,
             success: function(responseData){
 			console.log(JSON.stringify(responseData.service));
 

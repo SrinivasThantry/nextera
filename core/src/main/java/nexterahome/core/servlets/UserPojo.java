@@ -21,8 +21,18 @@ public class UserPojo {
 	private String payload;
 	private String phonenumbertype;
 	private String phonenumber;
+	private String comments;
 	
 	
+	
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
 
 	public String getPhonenumbertype() {
 		return phonenumbertype;

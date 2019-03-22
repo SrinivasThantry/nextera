@@ -81,8 +81,13 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 			String payload = validateInaddPropertyCheck(useobj.getPayload());
 			log.error(":: payload::"+payload);
 			String service = "";
-			if(useobj.getPhonenumber()!=null && useobj.getPhonenumbertype() != null)
+			
+			if(useobj.getPhonenumber()!=null && useobj.getPhonenumbertype() != null){
 				service = "joinus";
+				if(useobj.getComments() != null)
+					service = "comments";
+			}
+				
 			else
 				service = enrollNowService.getService(useobj.getZip(), req.getResourceResolver());
 				
@@ -105,6 +110,8 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 					
 					if(service.equalsIgnoreCase("joinus"))
 						leadcaptureNode = session.getNode("/content/usergenerated/nextera/joinus");
+					if(service.equalsIgnoreCase("comments"))
+						leadcaptureNode = session.getNode("/content/usergenerated/nextera/comments");
 					else
 						leadcaptureNode = session.getNode("/content/usergenerated/nextera/leadcapture");
 						
@@ -121,7 +128,10 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 					if(service.equalsIgnoreCase("joinus")){
 						nexteracustNode.setProperty("phonenumber", useobj.getPhonenumber());
 						nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
+						
 					}
+					if(service.equalsIgnoreCase("comments")){
+					nexteracustNode.setProperty("comments", useobj.getComments());
 					nexteracustNode.save();
 					session.save();
 				  	session.logout();
@@ -158,6 +168,7 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 		
 		String phonenumber = request.getParameter("phonenumber");
 		String phonenumbertype = request.getParameter("phonenumbertype");
+		String comments = request.getParameter("comments");
 		
 		try {
 			JsonObject customerDataJson = new JsonObject();
@@ -178,6 +189,11 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 				useobj.setPhonenumber(phonenumber);
 				customerDataJson.addProperty("phonenumbertype", phonenumbertype);
 				useobj.setPhonenumbertype(phonenumbertype);
+				if(comments!= null){
+					customerDataJson.addProperty("comments", comments);
+					useobj.setComments(comments);
+				}
+				
 			}
 			requestJson = gson.toJson(customerDataJson);
 			log.error(":::"+customerDataJson);
