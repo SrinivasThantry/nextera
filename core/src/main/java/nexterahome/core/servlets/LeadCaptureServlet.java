@@ -130,7 +130,7 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 						nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
 						
 					}
-					if(service.equalsIgnoreCase("comments")){
+					if(service.equalsIgnoreCase("comments"))
 					nexteracustNode.setProperty("comments", useobj.getComments());
 					nexteracustNode.save();
 					session.save();

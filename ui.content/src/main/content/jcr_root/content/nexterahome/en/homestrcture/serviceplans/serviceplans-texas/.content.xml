@@ -244,41 +244,6 @@
             jcr:lastModifiedBy="peakster1"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/iparsys">
-            <nexterahomeadvantage
-                jcr:created="{Date}2019-01-28T15:03:09.461Z"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-02-18T19:35:27.437Z"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexterahome/components/content/nexterahomeadvantage"
-                ctalabel="HAVE A QUESTION?"
-                ctaurl="/content/nexterahome/en/homestrcture/faq.html"
-                disclaimertext=" &lt;font color=&quot;black&quot;>Service plans are offered through NextEra Home and are administered and provided by Federal Warranty Service Corporation.&lt;/font>"
-                workdescription="Enroll in a plan, and put your worry to rest. Low monthly payments, no long-term contracts and the freedom to cancel anytime."
-                worksheader="The NextEra Home Advantage">
-                <iconTexts jcr:primaryType="nt:unstructured">
-                    <item0
-                        jcr:primaryType="nt:unstructured"
-                        icondescription="We help keep your home healthy."
-                        iconpath="/content/dam/nexterahome/homeimages/home.svg"
-                        icontitle="Home"/>
-                    <item1
-                        jcr:primaryType="nt:unstructured"
-                        icondescription="Appliance or system sick? &lt;br>Call&lt;/br> &lt;u> &lt;a href=&quot;tel:+18003157452&quot; id=&quot;home-page-phone&quot;>&lt;b>800-315-7452&lt;/b>&lt;/a>&lt;/u> today. "
-                        iconpath="/content/dam/nexterahome/homeimages/phone.svg"
-                        icontitle="Phone"/>
-                    <item2
-                        jcr:primaryType="nt:unstructured"
-                        icondescription="Technicians for quick repair and replacement."
-                        iconpath="/content/dam/nexterahome/homeimages/truck.svg"
-                        icontitle="Truck"/>
-                    <item3
-                        jcr:primaryType="nt:unstructured"
-                        icondescription="The work is handled so you can get back to your life."
-                        iconpath="/content/dam/nexterahome/homeimages/hammock.svg"
-                        icontitle="Hammock"/>
-                </iconTexts>
-            </nexterahomeadvantage>
             <iparsys_fake_par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/iparsys/par"/>
