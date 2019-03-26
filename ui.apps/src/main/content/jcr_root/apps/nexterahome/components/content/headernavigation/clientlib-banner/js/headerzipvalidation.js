@@ -237,9 +237,7 @@ $(document).ready(function() {
                         event.preventDefault();
                         pagename="";
                        window.location = redirectpath;
-                        $('#Service Plans').addClass('active');  
-                        var element = document.getElementById("Service Plans");
-                        element.classList.add("active");
+                  
                         hasvalidzipcode=true;
                     } else {
                         event.preventDefault();

@@ -167,7 +167,7 @@
                         jcr:primaryType="nt:unstructured"
                         linkTitle="Join Us"
                         openInNewTab="no"
-                        pathbr="/content/nexterahome/en/homestrcture/leadercaptureform.html"
+                        pathbr="/content/nexterahome/en/homestrcture/joinus.html"
                         popup="no"/>
                 </topLinks>
                 <bottomLinks jcr:primaryType="nt:unstructured">
