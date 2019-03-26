@@ -79,7 +79,6 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 			UserPojo useobj = new UserPojo();
 			useobj = getRequestJson(req, useobj);
 			String payload = validateInaddPropertyCheck(useobj.getPayload());
-			log.error(":: payload::"+payload);
 			String service = "";
 			
 			if(useobj.getPhonenumber()!=null && useobj.getPhonenumbertype() != null){
@@ -96,23 +95,20 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 				// save to node
 				try {
 
-					log.error(":: inside node and file creation::");
+					log.error(service.equals("joinus")+":: inside node and file creation::"+service);
 					// Create a node that represents the root node
 					// Get the root node
 					Map <String, Object> param = new HashMap<String, Object>();
 					param.put(ResourceResolverFactory.SUBSERVICE, "writeService");
-					log.error("param::" + param);
 					ResourceResolver rr = resolverFactory.getServiceResourceResolver(param);
-					log.error("rr::" + rr);
 					Session session = rr.adaptTo(Session.class);
-					log.error("session::" + session);
 					Node leadcaptureNode = null;
 					
-					if(service.equalsIgnoreCase("joinus"))
+					if(service.equals("joinus"))
 						leadcaptureNode = session.getNode("/content/usergenerated/nextera/joinus");
-					if(service.equalsIgnoreCase("comments"))
+					if(service.equals("comments"))
 						leadcaptureNode = session.getNode("/content/usergenerated/nextera/comments");
-					else
+					else if(!service.equals("joinus") && !service.equals("comments"))
 						leadcaptureNode = session.getNode("/content/usergenerated/nextera/leadcapture");
 						
 					
