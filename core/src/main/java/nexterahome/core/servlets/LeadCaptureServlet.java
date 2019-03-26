@@ -125,7 +125,7 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 					nexteracustNode.setProperty("lastName", useobj.getLastName());
 					nexteracustNode.setProperty("email", useobj.getEmail());
 					nexteracustNode.setProperty("zip", useobj.getZip());
-					if(service.equalsIgnoreCase("joinus")){
+					if(service.equalsIgnoreCase("joinus") || service.equalsIgnoreCase("comments")){
 						nexteracustNode.setProperty("phonenumber", useobj.getPhonenumber());
 						nexteracustNode.setProperty("phonenumbertype", useobj.getPhonenumbertype());
 						
@@ -184,12 +184,12 @@ public class LeadCaptureServlet extends SlingAllMethodsServlet {
 			useobj.setEmail(EmailAddress);
 			customerDataJson.addProperty("ZipCode", ZipCode);
 			useobj.setZip(ZipCode);
-			if(phonenumber!=null && phonenumbertype!=null){
+			if(phonenumber!=null && phonenumbertype!=null && !phonenumber.equals("undefined") && !phonenumbertype.equals("undefined")){
 				customerDataJson.addProperty("phonenumber", phonenumber);
 				useobj.setPhonenumber(phonenumber);
 				customerDataJson.addProperty("phonenumbertype", phonenumbertype);
 				useobj.setPhonenumbertype(phonenumbertype);
-				if(comments!= null){
+				if(comments!= null && !comments.equals("undefined")){
 					customerDataJson.addProperty("comments", comments);
 					useobj.setComments(comments);
 				}

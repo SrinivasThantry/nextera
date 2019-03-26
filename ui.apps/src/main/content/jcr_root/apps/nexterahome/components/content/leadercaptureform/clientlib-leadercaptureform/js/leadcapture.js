@@ -104,7 +104,7 @@ $(document).ready(function(){
         }else{
 			$('#email').removeClass('error');
         }
-
+		if(phonenumber != undefined && phonenumbertype != undefined){
         if(phonenumber.length==0){
 			$('#phonenumber').addClass('error');
 			enteredAllMandatoryFields = false;
@@ -112,20 +112,22 @@ $(document).ready(function(){
 			$('#phonenumber').removeClass('error');
         }
 
-        if(phonenumbertype.length==0 || phonenumbertype=="none"){
+        if(phonenumbertype== '0' || phonenumbertype=="none"){
 
 			$('#phonenumbertype').addClass('error');
 			enteredAllMandatoryFields = false;
         }else{
 			$('#phonenumbertype').removeClass('error');
         }
-
+		}
          if(!this.form.checkbox.checked)
-{
-   // alert('You must agree to receive information updates and marketing offers by email.');
-    document.getElementById("legalAgreementCopy").style.color="red";
-    return false;
-}
+		{
+		    //alert('You must agree to receive information updates and marketing offers by email.');
+		    document.getElementById("legalAgreementCopy").style.color="red";
+		    return false;
+		}else{
+			document.getElementById("legalAgreementCopy").style.color="black";
+		}
 
 
 		if(!enteredAllMandatoryFields)

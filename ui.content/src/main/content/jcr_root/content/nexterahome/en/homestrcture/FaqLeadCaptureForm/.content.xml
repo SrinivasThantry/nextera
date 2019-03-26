@@ -25,10 +25,6 @@
                 sling:resourceType="nexterahome/components/content/text"
                 text="&lt;p>This is a content page&lt;/p>"
                 textIsRich="true"/>
-        </par>
-        <footer
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/iparsys">
             <leadercaptureform
                 jcr:created="{Date}2019-03-20T22:51:12.182-04:00"
                 jcr:createdBy="admin"
@@ -48,6 +44,9 @@
                 titleh1="Enter name"
                 titlel="write text here"
                 zipcode="ZIP Code"/>
-        </footer>
+        </par>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys"/>
     </jcr:content>
 </jcr:root>

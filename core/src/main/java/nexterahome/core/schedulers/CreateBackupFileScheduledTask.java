@@ -264,6 +264,52 @@ public class CreateBackupFileScheduledTask implements Runnable {
 
 						}
 			
+						// for comments
+						
+						Node commentsNode = nexteraNode.getParent().getNode("comments");
+						logger.error("comments::" + commentsNode);
+						if (commentsNode.hasNodes()) {
+							javax.jcr.NodeIterator iter = commentsNode.getNodes();
+							JsonArray array2 = new JsonArray();
+							boolean hasdata = false;
+							while (iter.hasNext()) {
+								try {
+
+									Node childNode1 = (Node) iter.next();
+									if (!childNode1.getName().equalsIgnoreCase("customerData")) {
+									logger.error("childNode1::" + childNode1);
+									String firstName1 = childNode1.hasProperty("FirstName")
+											? childNode1.getProperty("FirstName").getString() : "";
+									String lastName1 = childNode1.hasProperty("lastName")
+											? childNode1.getProperty("lastName").getString() : "";
+									String zip1 = childNode1.hasProperty("zip") ? childNode1.getProperty("zip").getString() : "";
+									String email1 = childNode1.hasProperty("email") ? childNode1.getProperty("email").getString() : "";
+									String phonenumber = childNode1.hasProperty("phonenumber") ? childNode1.getProperty("phonenumber").getString() : "";
+									String phonenumbertype = childNode1.hasProperty("phonenumbertype") ? childNode1.getProperty("phonenumbertype").getString() : "";
+									String comments = childNode1.hasProperty("comments") ? childNode1.getProperty("comments").getString() : "";
+									JsonObject jsonobj = new JsonObject();
+									jsonobj.addProperty("firstName", firstName1);
+									jsonobj.addProperty("lastName", lastName1);
+
+									jsonobj.addProperty("email", email1);
+
+									jsonobj.addProperty("zip", zip1);
+									jsonobj.addProperty("phonenumber", phonenumber);
+									jsonobj.addProperty("phonenumbertype", phonenumbertype);
+									jsonobj.addProperty("comments", comments);
+
+									counter = counter + 1;
+									array2.add(jsonobj);
+									hasdata=true;
+									}
+								} catch (Exception e) {
+									logger.error("::exception in lead capture::"+e);
+								}
+								if(hasdata)
+								obj.add("comments", array2);
+							}
+
+						}
 			
 			
 			// create file in AEM
@@ -276,6 +322,9 @@ public class CreateBackupFileScheduledTask implements Runnable {
 			
 			if(obj.has("joinus"))
 				createFile(obj.get("joinus").toString(), joinusNode, vf,"joinus.json");
+			
+			if(obj.has("comments"))
+				createFile(obj.get("comments").toString(), commentsNode, vf,"comments.json");
 				
 			session.save();
 			session.logout();

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-20T02:18:18.210-04:00"
+        cq:lastModified="{Date}2019-03-26T07:00:42.336+05:30"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T18:38:27.654Z"
         cq:lastReplicatedBy="peakster4"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ illinois"
-        jcr:uuid="0cd17601-2f34-4927-bcd1-53cd1fe52b6f"
+        jcr:uuid="a597e1f8-e4d4-4bec-970b-0e8d9f3753f9"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ illinois"
         pageTitle="FAQ illinois">
@@ -38,12 +38,13 @@
             <faq
                 jcr:created="{Date}2019-01-14T00:59:03.662+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-20T02:18:18.200-04:00"
+                jcr:lastModified="{Date}2019-03-26T07:00:42.302+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/faq"
                 description="We are here to make things easy"
                 faqcta="Have additional questions?"
+                faqurl="/content/nexterahome/en/homestrcture/FaqLeadCaptureForm.html"
                 headerlabel="FAQ">
                 <faqAns jcr:primaryType="nt:unstructured">
                     <item0
