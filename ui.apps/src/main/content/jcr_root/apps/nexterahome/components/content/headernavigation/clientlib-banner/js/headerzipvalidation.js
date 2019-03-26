@@ -1,7 +1,27 @@
 $(document).ready(function() {
 
     var pagename = "";
-
+    
+    var pathname = window.location.pathname;
+    switch(pathname) {
+       case "/content/nexterahome/en/homestrcture/serviceplans/serviceplans-texas.html" :
+    	   var element = document.getElementById("Service Plans");
+           element.classList.add("active");
+           break;
+       case "/content/nexterahome/en/homestrcture/serviceplans/serviceplans-illinois.html" :
+    	   var element = document.getElementById("Service Plans");
+           element.classList.add("active");
+           break;
+       case "/content/nexterahome/en/homestrcture/faq/faq-illinois.html" :
+    	   var element = document.getElementById("FAQ");
+           element.classList.add("active");
+           break;
+           
+       case "/content/nexterahome/en/homestrcture/faq/faq-texas.html" :
+    	   var element = document.getElementById("FAQ");
+           element.classList.add("active");
+           break;
+    }
 
     console.log(":::::::::enter:");
 
@@ -216,8 +236,10 @@ $(document).ready(function() {
                         	redirectpath = '/content/nexterahome/en/homestrcture/serviceplans/serviceplans-texas.html';
                         event.preventDefault();
                         pagename="";
-                        window.location = redirectpath;
-
+                       window.location = redirectpath;
+                        $('#Service Plans').addClass('active');  
+                        var element = document.getElementById("Service Plans");
+                        element.classList.add("active");
                         hasvalidzipcode=true;
                     } else {
                         event.preventDefault();
