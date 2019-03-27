@@ -102,7 +102,8 @@ $(document).ready(function(){
              document.getElementById("errorname").style.color="red";
 			enteredAllMandatoryFields = false;
         }else{
-			$('#email').removeClass('error');
+        	$('#email').removeClass('error');
+        	document.getElementById("errorname").style.display="none";
         }
 		if(phonenumber != undefined && phonenumbertype != undefined){
         if(phonenumber.length==0){

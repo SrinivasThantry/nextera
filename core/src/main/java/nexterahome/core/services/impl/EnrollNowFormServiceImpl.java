@@ -93,7 +93,7 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
     	client.getHttpConnectionManager().getParams().setConnectionTimeout(3000);  
     	client.getHttpConnectionManager().getParams().setSoTimeout(2000); 
     	
-    	GetMethod  getRequest = new GetMethod("https://api-atl.assurant.com/assurant/security/token");
+    	GetMethod  getRequest = new GetMethod("https://preview-api-atl.assurant.com/assurant/security/token");
     	getRequest.addRequestHeader("client_id", "0oa9uclyn3Ul5utMk1t7");
     	getRequest.addRequestHeader("client_secret", "7fKf809f6Z0GiW2GkyF2wsbGYrh9DeXyNKBbmqNT");
     	
@@ -125,7 +125,7 @@ public class EnrollNowFormServiceImpl implements EnrollNowFormService{
 		JsonObject obj = new JsonObject();
 		Gson gson = new Gson();
     	HttpClient client = new HttpClient();
-    	PostMethod postRequest = new PostMethod("https://api-atl.assurant.com/mpos-customer/api/v1/customers");
+    	PostMethod postRequest = new PostMethod("https://preview-api-atl.assurant.com/mpos-customer/api/v1/customers");
     	postRequest.addRequestHeader("Content-Type", "application/json");
     	postRequest.addRequestHeader("apim_access_token", token);
     	client.getHttpConnectionManager().getParams().setConnectionTimeout(5000);  

@@ -203,10 +203,10 @@ public class EnrollNowFormServlet extends SlingAllMethodsServlet {
 			customerDataJson.addProperty("LastName", LastName);
 			useobj.setLastName(LastName);
 			
-			customerDataJson.addProperty("phonenumber", phonenumber);
+			customerDataJson.addProperty("PrimaryPhoneNumber", phonenumber);
 			useobj.setPhonenumber(phonenumber);
 			
-			customerDataJson.addProperty("phonenumbertype", phonenumbertype);
+			customerDataJson.addProperty("PrimaryPhoneNumberType", phonenumbertype);
 			useobj.setPhonenumbertype(phonenumbertype);
 			
 			

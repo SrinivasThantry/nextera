@@ -63,9 +63,9 @@
 							<div class="form-group" data-sly-test="${properties.phonenumbertype}">
                       			<label>${properties.phonenumbertype}</label>
                                    <select required class="form-control" id="phonenumbertype" type="text" name="phonenumbertype" style="font-family: none;">
-                                        <option value="0">Phone Type</option>
-                                        <option value="1">Home</option>
-                                        <option value="2">Mobile</option>
+                                        <option value="none">Phone Type</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Mobile">Mobile</option>
                                         </select>
                        				 </div>
                         </div>
@@ -239,9 +239,9 @@
 							<div class="form-group" data-sly-test="${properties.phonenumbertypeSecondary}">
                       			<label>${properties.phonenumbertypeSecondary}</label>
                                    <select required class="form-control" id="phonenumbertypeSecondary" type="text" name="phonenumbertypeSecondary" style="font-family: none;">
-                                        <option value="0">Phone Type</option>
-                                        <option value="1">Home</option>
-                                        <option value="2">Mobile</option>
+                                        <option value="none">Phone Type</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Mobile">Mobile</option>
                                         </select>
                        				 </div>
                         </div>
@@ -334,7 +334,11 @@
                                 <input required id="emailSecondary" value="" type="text" maxlength="100" class="form-control">
                             </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6" data-sly-test="${properties.promocodeSecondary}">
+                            <div class="input-block floating-field">
+                                <label>${properties.promocodeSecondary}</label>
+                                <input required id="promocodeSecondary" value="" type="text" maxlength="30" class="form-control">
+                            </div>
                             </div>
                         </div>
                     </div>
