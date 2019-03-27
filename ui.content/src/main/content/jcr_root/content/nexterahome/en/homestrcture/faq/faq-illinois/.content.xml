@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-26T07:00:42.336+05:30"
+        cq:lastModified="{Date}2019-03-27T14:26:10.734-04:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T18:38:27.654Z"
         cq:lastReplicatedBy="peakster4"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQ illinois"
-        jcr:uuid="a597e1f8-e4d4-4bec-970b-0e8d9f3753f9"
+        jcr:uuid="0cd17601-2f34-4927-bcd1-53cd1fe52b6f"
         sling:resourceType="nexterahome/components/structure/page"
         navTitle="FAQ illinois"
         pageTitle="FAQ illinois">
@@ -38,7 +38,7 @@
             <faq
                 jcr:created="{Date}2019-01-14T00:59:03.662+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-26T07:00:42.302+05:30"
+                jcr:lastModified="{Date}2019-03-27T14:26:10.725-04:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/faq"
@@ -49,32 +49,32 @@
                 <faqAns jcr:primaryType="nt:unstructured">
                     <item0
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="You can conveniently schedule service for your covered home product  &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;> right here.&lt;/a>Start by searching for your service plan. This will guide you through a few simple steps to get your service scheduled with your service plan provider. "
+                        faqAnswer="You can conveniently schedule service for your covered home product  &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;> right here.&lt;/a> Start by searching for your service plan. This will guide you through a few simple steps to get your service scheduled with your service plan provider. "
                         faqTitle="How can I schedule service for a product covered under my service plan?"
                         openimagepath="/content/dam/nexterahome/homeimages/e-add.svg"/>
                     <item1
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="Yes, a $125 deductible will be due for each service call, payable when you file a claim. To file a claim, search for your service plan in the &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal&lt;/a> and schedule service with your service plan provider. You will be informed at that time how the $125 deductible will be collected or applied to your claim. "
+                        faqAnswer="Yes, a $125 deductible will be due for each service call, payable when you file a claim. To file a claim, search for your service plan in the &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal&lt;/a> and schedule service with your service plan provider. You will be informed at that time how the $125 deductible will be collected or applied to your claim. "
                         faqTitle="If I schedule a service appointment, will I have to pay a deductible?"/>
                     <item2
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="You can view, print or download your service plan terms and conditions at any time on this site. Start by searching for your service plan. On your plan page, click the Menu link for options in the &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal.&lt;/a>"
+                        faqAnswer="You can view, print or download your service plan terms and conditions at any time on this site. Start by searching for your service plan. On your plan page, click the Menu link for options in the &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal.&lt;/a>"
                         faqTitle=" Where can I get a copy of my service plan?"/>
                     <item3
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="The fastest way to check the status of your service appointment is to contact your assigned service technician. If you scheduled your service appointment using the service provider's portal accessible through this site, search for your service plan and click the House Calls Details button for your contact information in the &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal.&lt;/a>&#xd;&#xa;"
+                        faqAnswer="The fastest way to check the status of your service appointment is to contact your assigned service technician. If you scheduled your service appointment using the service provider's portal accessible through this site, search for your service plan and click the House Calls Details button for your contact information in the &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal.&lt;/a>"
                         faqTitle="How do I check the status of my service appointment?"/>
                     <item4
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="To change your service appointment, contact your assigned service technician. If you scheduled your service appointment using this site, search for your service plan and select the House Call Details button for your service technicians contact information in the &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal.&lt;/a>&#xd;&#xa;"
+                        faqAnswer="To change your service appointment, contact your assigned service technician. If you scheduled your service appointment using this site, search for your service plan and select the House Call Details button for your service technicians contact information in the &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal.&lt;/a>"
                         faqTitle="How can I change my service appointment?"/>
                     <item5
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="Your service plan provides coverage within one single-family residence for the cost of parts and labor on covered components that fail due to normal wear and tear. Certain conditions and components such as inadequate maintenance and cosmetic parts are not covered. See your service plan terms and conditions for full coverage details. Still have questions? Sign in to the  &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal&lt;/a>  to view service plan coverages."
+                        faqAnswer="Your service plan provides coverage within one single-family residence for the cost of parts and labor on covered components that fail due to normal wear and tear. Certain conditions and components such as inadequate maintenance and cosmetic parts are not covered. See your service plan terms and conditions for full coverage details. Still have questions? Sign in to the  &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal&lt;/a>  to view service plan coverages."
                         faqTitle="What is covered under my service plan?"/>
                     <item6
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="You can make payments to your service plan by contacting an agent. Sign in to the &lt;a target=&quot;_blank&quot; href=&quot;https://www.nexterahome.com/MyPortal.com&quot;>customer portal&lt;/a>   to get started."
+                        faqAnswer="You can make payments to your service plan by contacting an agent. Sign in to the &lt;a target=&quot;_blank&quot; href=&quot;https://nextera.assurantcustomerportal.com/&quot;>customer portal&lt;/a>   to get started."
                         faqTitle="How can I make a payment?"/>
                     <item7
                         jcr:primaryType="nt:unstructured"
@@ -86,7 +86,7 @@
                         faqTitle="How do I transfer my service plan?"/>
                     <item9
                         jcr:primaryType="nt:unstructured"
-                        faqAnswer="Your home is full of appliances and systems (e.g. heating and air). Sooner or later, they may break from normal wear and tear. It can cost a lot if you need to repair or replace appliances or major systems. A service plan offered through NextEra Home helps cover the cost of repairs or replacements of covered appliances and systems in case of the unexpected.&#xd;&#xa;"
+                        faqAnswer="Your home is full of appliances and systems (e.g. heating and air). Sooner or later, they may break from normal wear and tear. It can cost a lot if you need to repair or replace appliances or major systems. A service plan offered through NextEra Home helps cover the cost of repairs or replacements of covered appliances and systems in case of the unexpected."
                         faqTitle="Why should I purchase a service plan offered through NextEra Home?"/>
                 </faqAns>
             </faq>

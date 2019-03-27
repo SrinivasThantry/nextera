@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-15T19:03:58.807Z"
-        cq:lastModifiedBy="peakster4"
+        cq:lastModified="{Date}2019-03-27T14:14:56.490-04:00"
+        cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T19:04:17.094Z"
         cq:lastReplicatedBy="peakster4"
         cq:lastReplicationAction="Activate"
@@ -67,8 +67,8 @@
             <serviceplanswrapper
                 jcr:created="{Date}2019-01-18T07:48:55.507+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-03-15T19:03:58.770Z"
-                jcr:lastModifiedBy="peakster4"
+                jcr:lastModified="{Date}2019-03-27T14:14:56.446-04:00"
+                jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:ReplicationStatus]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/serviceplanswrapper"
@@ -140,7 +140,7 @@
                     <item5
                         jcr:primaryType="nt:unstructured"
                         featureavailable="no"
-                        featuredesctooltip="These systems and parts are covered by this service plan:&lt;br>&lt;br>&#xd;&#xa;    &lt;strong>Ceiling fans&lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>These ceiling fan parts are covered by this service plan up to $500 a year (located in the main dwelling of the home): mechanized parts or components on two (2) ceiling fans, including: ceiling fan motors and their associated controls (if replaced, builder grade will be allowed) and bearings.&lt;/li>&lt;/ul>&#xd;&#xa;    &#xd;&#xa;    &lt;strong>Garage door opener &lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;    &#xd;&#xa;&#xd;&#xa;     &lt;li>These garage door opener parts are covered by this service plan up to $500 a year: all components and parts, including motor, control board, limit switches, sensors, chains, belts, gears and trolley. &lt;/li>&lt;/ul>&#xd;&#xa;     &#xd;&#xa;  "
+                        featuredesctooltip="These systems and parts are covered by this service plan:&lt;br>&lt;br>&#xd;&#xa;    &lt;strong>Ceiling fans&lt;/strong>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>These ceiling fan parts are covered by this service plan up to $500 a year (located in the main dwelling of the home): mechanized parts or components on two (2) ceiling fans, including: ceiling fan motors and their associated controls (if replaced, builder grade will be allowed) and bearings.&lt;/li>&lt;/ul>&#xd;&#xa;    &#xd;&#xa;    &lt;strong>Garage door opener &lt;/strong>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; &lt;ul class=&quot;green-bullet&quot;>&#xd;&#xa;     &lt;li>These garage door opener parts are covered by this service plan up to $500 a year: all components and parts, including motor, control board, limit switches, sensors, chains, belts, gears and trolley. &lt;/li>&lt;/ul>"
                         featurenameone="Extras "
                         showtooltip="yes"/>
                 </whatsCover>

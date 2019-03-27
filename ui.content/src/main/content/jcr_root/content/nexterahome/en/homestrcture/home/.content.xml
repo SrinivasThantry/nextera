@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-03-15T17:27:14.004Z"
-        cq:lastModifiedBy="peakster4"
+        cq:lastModified="{Date}2019-03-27T14:05:38.519-04:00"
+        cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2019-03-15T17:30:45.898Z"
         cq:lastReplicatedBy="peakster4"
         cq:lastReplicationAction="Activate"
@@ -31,11 +31,11 @@
             <homepagebanner
                 jcr:created="{Date}2019-01-09T23:38:41.246+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-02-06T16:18:56.724Z"
-                jcr:lastModifiedBy="peakster3"
+                jcr:lastModified="{Date}2019-03-27T14:05:08.106-04:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/homepagebanner"
-                ctadescription="View the healthy home service plan options available in Illinois."
+                ctadescription="View the healthy home service plan options."
                 ctalabel="FIND A PLAN"
                 ctaurl="/content/nexterahome/en/homestrcture/serviceplans"
                 description="A service plan offered through NextEra Home provides repairs and replacement of your major home appliances, HVAC, plumbing and more*."
@@ -120,14 +120,14 @@
                 </links>
             </homepagebanner>
             <advantage
-                jcr:lastModified="{Date}2019-03-15T17:27:13.991Z"
-                jcr:lastModifiedBy="peakster4"
+                jcr:lastModified="{Date}2019-03-27T14:05:38.499-04:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexterahome/components/content/advantage"
                 disclaimertext="&lt;font color=&quot;black&quot;>*Coverages vary by plan. View &lt;a href=&quot;/content/nexterahome/en/homestrcture/serviceplans.html&quot;>&lt;u>service plans&lt;/u>&lt;/a> for options, details, and provider information.&lt;/font>"
                 homecareButtonText="READY TO ENROLL?"
                 homecareCTA="/content/nexterahome/en/homestrcture/serviceplans"
-                homecareDescription="Your home is full of complex mechanics and parts that need constant care and attention, just like you.If a surprise arises, we are here with simple service plans for your major home systems and appliances. There is no long- term commitment because you can cancel at any time."
+                homecareDescription="Your home is full of complex mechanics and parts that need constant care and attention, just like you. If a surprise arises, we are here with simple service plans for your major home systems and appliances. There is no long- term commitment because you can cancel at any time."
                 homecareHeading="A plan for those who hate to plan"
                 homecareImagePath="/content/dam/nexterahome/homeimages/planAnimated.gif"
                 homeWarrantiesButtonText="VIEW SERVICE PLANS"
