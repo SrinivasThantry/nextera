@@ -55,7 +55,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 	public static @interface Config {
 
 		@AttributeDefinition(name = "Cron-job expression")
-		String scheduler_expression() default "0 15 10 * * ? *";
+		String scheduler_expression() default "0 15 10 ? * MON-FRI";
 
 		@AttributeDefinition(name = "Concurrent task", description = "Whether or not to schedule this task concurrently")
 		boolean scheduler_concurrent() default false;
@@ -69,7 +69,7 @@ public class CreateBackupFileScheduledTask implements Runnable {
 	@Reference
 	private ResourceResolverFactory resourceResolverFactory;
 
-	private String myParameter;
+	private String myParameter = "0 15 10 ? * MON-FRI";
 
 	@Override
 	public void run() {
